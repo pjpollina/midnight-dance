@@ -1,0 +1,10 @@
+*.txt
+**/*.rpyc
+**/*.bak
+**/*.rpyb
+**/*.rpymc
+
+game/saves/
+game/tl/
+game/cache/
+game/gui/**/*.png
