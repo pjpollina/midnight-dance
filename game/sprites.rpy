@@ -6,7 +6,7 @@ layeredimage everett:
     attribute shame Placeholder("boy", text="a flustered prince :o")
     attribute cough Placeholder("boy", text="a coughing prince DX")
     attribute frail Placeholder("boy", text="a weak prince D':")
-  fit "contain" zoom 0.9 matrixcolor TintMatrix("#A0F")
+  fit "contain" matrixcolor TintMatrix("#A0F")
 
 layeredimage balth:
   group mood:
@@ -19,9 +19,9 @@ layeredimage balth:
 
 layeredimage maid:
   group mood:
-    attribute happy Placeholder("girl", text="a happy maid :)")
+    attribute smile Placeholder("girl", text="a happy maid :)")
     attribute worry Placeholder("girl", text="a worried maid :(")
-  fit "contain" zoom 0.8 matrixcolor TintMatrix("#F0D")
+  fit "contain" matrixcolor TintMatrix("#F0D")
 
 layeredimage guard:
   group mood:

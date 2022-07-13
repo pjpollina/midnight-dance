@@ -1,8 +1,12 @@
 define narrator = Character(None, kind=centered, what_style="say_thought")
 define prolog   = Character(None, kind=narrator, what_slow_cps=0, show_flair=True)
-define everett  = Character("Everett", image="everett")
+define soundfx  = Character(None, kind=narrator, what_slow_cps=0, what_size=24, what_italic=True, advance=False)
+
+define everett  = Character("Everett",   image="everett")
 define balth    = Character("Balthazar", image="balth")
-define maid     = Character("???", image="maid")
+define maid     = Character("Maid",      image="maid")
+define guarda   = Character("Guard #1",  image="guard")
+define guardb   = Character("Guard #2",  image="guard")
 
 ## Say screen ##################################################################
 ##

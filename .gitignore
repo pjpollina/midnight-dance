@@ -8,3 +8,6 @@ game/saves/
 game/tl/
 game/cache/
 game/gui/**/*.png
+
+**/audio/*
+project.json
