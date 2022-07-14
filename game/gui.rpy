@@ -11,6 +11,12 @@ init offset = -2
 init python:
   gui.init(1920, 1080)
 
+  ## Fonts
+  book_antiqua = "gui/fonts/BookAntiqua/Regular.ttf"
+  config.font_replacement_map[book_antiqua, False, True] = ("gui/fonts/BookAntiqua/Italic.ttf", False, False)
+  config.font_replacement_map[book_antiqua, True, False] = ("gui/fonts/BookAntiqua/Bold.ttf", False, False)
+  config.font_replacement_map[book_antiqua, True,  True] = ("gui/fonts/BookAntiqua/BoldItalic.ttf", False, False)
+
 ################################################################################
 ## GUI Configuration Variables
 ################################################################################
@@ -52,16 +58,16 @@ define gui.interface_text_color = '#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "gui/fonts/playfair/regular.ttf"
+define gui.text_font = "gui/fonts/BookAntiqua/Regular.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "gui/fonts/playfair/regular.ttf"
+define gui.interface_text_font = "gui/fonts/BookAntiqua/Regular.ttf"
 
 ## The font used for labels in the game's user interface.
-define gui.label_text_font = "gui/fonts/playfair/bolditalic.ttf"
+define gui.label_text_font = "gui/fonts/BookAntiqua/BoldItalic.ttf"
 
 ## The font used for the game's title.
-define gui.title_text_font = "gui/fonts/playfair/black.ttf"
+define gui.title_text_font = "gui/fonts/BookAntiqua/Bold.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33

@@ -3,6 +3,8 @@
 **/*.bak
 **/*.rpyb
 **/*.rpymc
+**/*.kra
+**/*~
 
 game/saves/
 game/tl/

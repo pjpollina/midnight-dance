@@ -21,7 +21,7 @@ label tmd_04:
       return
 
 image bad_end:
-  Text("Bad End...", size=72, font="gui/fonts/playfair/bolditalic.ttf", color="#FFF")
+  Text("Bad End...", size=72, font="gui/fonts/BookAntiqua/BoldItalic.ttf", color="#FFF")
   align (0.95, 0.95)
   alpha 0.0 xoffset 50
   easein 1.5 alpha 1.0 xoffset 0
