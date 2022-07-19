@@ -11,5 +11,5 @@ game/tl/
 game/cache/
 game/gui/**/*.png
 
-**/audio/*
+.assets/*
 project.json

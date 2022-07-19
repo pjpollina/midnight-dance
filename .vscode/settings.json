@@ -4,8 +4,11 @@
     "**/*.bak":   true,
     "**/*.rpyb":  true,
     "**/*.rpymc": true,
+    "**/*.txt":   true,
+    "**/*.json":  true,
     "game/saves": true,
     "game/cache": true,
     "game/tl":    true,
+    ".assets/":   true,
   },
 }
