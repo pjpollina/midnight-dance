@@ -135,8 +135,6 @@ define gui.radio_button_borders = Borders(27, 6, 6, 6)
 
 define gui.check_button_borders = Borders(27, 6, 6, 6)
 
-define gui.confirm_button_text_xalign = 0.5
-
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
@@ -236,9 +234,6 @@ define gui.main_menu_text_xalign = 1.0
 
 ## Generic frames.
 define gui.frame_borders = Borders(6, 6, 6, 6)
-
-## The frame that is used as part of the confirm screen.
-define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
 
 ## The frame that is used as part of the skip screen.
 define gui.skip_frame_borders = Borders(24, 8, 75, 8)
