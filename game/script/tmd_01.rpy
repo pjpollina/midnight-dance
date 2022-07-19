@@ -2,7 +2,7 @@ label tmd_01:
   "{dots=3.0}"
 
   scene bg balcony
-  show everett smile
+  show everett a smile at center
   with fade
 
   """

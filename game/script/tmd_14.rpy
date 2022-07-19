@@ -29,7 +29,6 @@ label tmd_14:
   Not even{em}
   """
 
-  voice "audio/tap.ogg"
   soundfx "knock{w=0.25} knock{w=0.25} knock!"
 
   "I whipped towards the door at the sound of the door banging. The maid's voice came from the other side again."

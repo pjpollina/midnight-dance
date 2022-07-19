@@ -1,5 +1,4 @@
 label tmd_06:
-  voice "audio/tap.ogg"
   soundfx "knock{w=0.25} knock{w=0.25} knock!{w=0.25}{nw}"
 
   "They were quick!"

@@ -3,7 +3,7 @@ label tmd_04:
   menu:
     extend ""
     "Leave the man outside.":
-      play sound ["<silence 1.5>", "audio/curtains_shut.ogg"]
+      play sound ["<silence 1.5>", curtain_shut]
       """
       Without looking at him, I slowly step forward and close the curtains abruptly. Even if I wished for something more than a dreary day in this bedroom, asking a dangerous stranger for it was unnecessary. 
 

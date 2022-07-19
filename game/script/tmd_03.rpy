@@ -1,8 +1,8 @@
 label tmd_03:
-  voice "audio/tap.ogg"
+  play sound tap_tap_tap
   soundfx "tink.{w=0.25} tink.{w=0.25} tink.{w=0.25}{nw}"
 
-  voice "audio/tap.ogg"
+  play sound tap_tap_tap
   soundfx "tink.{w=0.25} tink.{w=0.25} tink.{w=0.25}{nw}"
 
   everett "Nmh..."
@@ -13,7 +13,7 @@ label tmd_03:
   What woke me up?
   """
 
-  voice "audio/tap.ogg"
+  play sound tap_tap_tap
   soundfx "tink.{w=0.25} tink.{w=0.25} tink.{w=0.25}{nw}"
 
   """
@@ -42,7 +42,7 @@ label tmd_03:
   ..!
   """
 
-  voice "audio/tap.ogg"
+  play sound tap_tap_tap
   soundfx "tink.{w=0.25} tink.{w=0.25} tink.{w=0.25}{nw}"
 
   """
@@ -71,13 +71,13 @@ label tmd_03:
 
   everett "If only I could show you."
 
-  voice "audio/curtains_shut.ogg"
+  play sound curtain_shut
   "As I closed the curtains, the same sound came again from outdoors."
 
-  voice "audio/tap.ogg"
+  play sound tap_tap_tap
   soundfx "tink.{w=0.25} tink.{w=0.25} tink.{w=0.25}{nw}"
 
-  voice "audio/curtains.ogg"
+  play sound curtain_open
   """
   Royally irritated, I flung the curtains back open ready to roll my sleeves up and suffocate what poor thing was out there making that sound.
 
