@@ -23,7 +23,6 @@ style gm_window:
   margin (0, 180, 60, 100)
   xfill True
   yfill True
-  background Solid("#F001") # TODO: DEBUG REMOVAL
 
 ## Navigation screen ###########################################################
 ##
@@ -39,7 +38,7 @@ screen navigation(kind):
       text kind:
         size 96
         color "#DB4"
-        bold True
+        font cardinal
 
     vbox:
       if main_menu:
@@ -57,7 +56,6 @@ screen navigation(kind):
 style nav_window:
   xsize 425
   yfill True
-  background Solid("#FFF1") # TODO: DEBUG REMOVAL
 
 style nav_header:
   ysize 125

@@ -17,6 +17,9 @@ init python:
   config.font_replacement_map[book_antiqua, True, False] = ("gui/fonts/BookAntiqua/Bold.ttf", False, False)
   config.font_replacement_map[book_antiqua, True,  True] = ("gui/fonts/BookAntiqua/BoldItalic.ttf", False, False)
 
+  cardinal = "gui/fonts/Cardinal/Regular.ttf"
+  config.font_replacement_map[cardinal, False, True] = ("gui/fonts/Cardinal/Alternate.ttf", False, False)
+
 ################################################################################
 ## GUI Configuration Variables
 ################################################################################
@@ -126,11 +129,9 @@ define gui.button_text_xalign = 0.0
 ##
 ## These customizations are used by the default interface:
 
-define gui.radio_button_borders = Borders(27, 6, 6, 6)
-
-define gui.check_button_borders = Borders(27, 6, 6, 6)
-
-define gui.page_button_borders = Borders(15, 6, 15, 6)
+#define gui.radio_button_borders = Borders(27, 6, 6, 6)
+#define gui.check_button_borders = Borders(27, 6, 6, 6)
+#define gui.page_button_borders  = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
 define gui.quick_button_text_size = 21
