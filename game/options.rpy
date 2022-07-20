@@ -3,7 +3,7 @@ init python:
   config.name           = _("The Midnight Dance")
   config.version        = "0.0.1"
   config.save_directory = "midnight_dance"
-  config.window_icon    = "gui/window_icon.png"
+  config.window_icon    = "gui/window_icon.webp"
   gui.about = _p("""
   Prince Everett has been sickly ever since he was young. Out of fear for his life, his parents,
   the King and Queen, forced him to stay in his room. On the night of the biggest seasonal event,
