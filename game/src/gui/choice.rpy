@@ -14,10 +14,12 @@ screen choice(items):
     for i in items:
       textbutton i.caption action i.action
 
-style choice_button is default:
-  properties gui.button_properties("choice_button")
-
-style choice_button_text is default:
-  properties gui.button_text_properties("choice_button")
-  idle_color "#000"
+style choice_button:
+  xsize   1185
+  padding (150, 8, 150, 8)
+style choice_button_text:
+  size 33
+  font book_antiqua
+  xalign 0.5
+  idle_color  "#000"
   hover_color "#FFF"

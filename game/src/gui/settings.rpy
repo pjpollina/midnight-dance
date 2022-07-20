@@ -20,38 +20,36 @@ screen settings():
         null height 80
 
         label _("Skip")
-        textbutton _("Unseen Text")   action Preference("skip", "toggle")
-        textbutton _("After Choices") action Preference("after choices", "toggle")
-        textbutton _("Transitions")   action InvertSelected(Preference("transitions", "toggle"))
+        textbutton _("Unseen Text")   style "check_button" action Preference("skip", "toggle")
+        textbutton _("After Choices") style "check_button" action Preference("after choices", "toggle")
+        textbutton _("Transitions")   style "check_button" action InvertSelected(Preference("transitions", "toggle"))
 
       frame:
         has vbox
         align (0.5, 0.0)
-        style_prefix "slider"
 
-        label _("Text Speed")
+        label _("Text Speed") style "slider_label"
         bar value Preference("text speed")
         null height 20
 
-        label _("Auto-Forward Time")
+        label _("Auto-Forward Time") style "slider_label"
         bar value Preference("auto-forward time")
         null height 80
 
-        label _("Music Volume")
+        label _("Music Volume") style "slider_label"
         bar value Preference("music volume")
         null height 20
 
-        label _("Sound Volume")
+        label _("Sound Volume") style "slider_label"
         bar value Preference("sound volume")
         null height 20
 
-        label _("Voice Volume")
+        label _("Voice Volume") style "slider_label"
         bar value Preference("voice volume")
         null height 20
 
 style settings_frame:
-  xysize(700, 800)
-  background None
+  xysize (700, 800)
 style settings_hbox:
   spacing 35
 
@@ -60,7 +58,6 @@ style settings_label:
   padding (10, 10, 10, 10)
 style settings_label_text:
   size 96
-  color "#FFF"
   font cardinal
   text_align 0.5
 
@@ -69,20 +66,7 @@ style slider_label_text is settings_label_text:
   size 40
   font book_antiqua
 
-style slider_slider:
-  xysize(350, 40)
-  left_bar  "gui/slider/full.webp"
-  right_bar "gui/slider/empty.webp"
-  thumb     None
-  xalign    0.5
-
 style radio_button:
-  padding (27, 6, 6, 6)
   foreground "gui/button/radio_[prefix_]foreground.png"
-style radio_button_text
-
 style check_button:
-  properties gui.button_properties("check_button")
-  padding (27, 6, 6, 6)
   foreground "gui/button/check_[prefix_]foreground.png"
-style check_button_text
