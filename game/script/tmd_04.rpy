@@ -4,6 +4,9 @@ label tmd_04:
     extend ""
     "Leave the man outside.":
       play sound ["<silence 1.5>", curtain_shut]
+      pause 1.5
+      scene black
+      pause 2.0
       """
       Without looking at him, I slowly step forward and close the curtains abruptly. Even if I wished for something more than a dreary day in this bedroom, asking a dangerous stranger for it was unnecessary. 
 

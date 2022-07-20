@@ -4,6 +4,7 @@ label start:
   call tmd_02
   call tmd_03
   call tmd_04
+  "End of current animation passthrough. -PJ"
   call tmd_05
   call tmd_06
   call tmd_07

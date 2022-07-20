@@ -1,9 +1,10 @@
 label tmd_02:
   scene bg bedroom lit
-  show everett frown:
-    xpos 0.25
-  with fade
+  show everett b frown:
+    xalign 0.25 xzoom -1.0
+  with Fade(0.0, 1.0, 2.0)
 
+  # TODO: Door sfx
   """
   She closed the balcony doors and pulled the curtains from either side to conceal the outside.
 
@@ -12,30 +13,38 @@ label tmd_02:
 
   show maid worry:
     rotate_pad False
-    xpos 1.25
+    xalign 2.0
     parallel:
-      linear 2.0 xpos 0.75
+      linear 2.0 xalign 0.75
     parallel:
       easein 0.5 rotate -1 yoffset 20
-      easein 0.5 rotate  0 yoffset 0
+      easein 0.5 rotate  0 yoffset  0
       repeat 2
+
   pause 2.0
+
   show maid worry:
-    xpos 0.75 yoffset 0
+    xalign 0.75 yoffset 0
 
   maid "Why are you out of bed again? If Your Majesty knew of this she would remove me for my incompetence."
 
-  everett "You know why, I want to be out there. There is nothing in this room I haven't seen ever since I was born."
-  everett "I'm not even allowed to explore the manor as often as the commoners who visit."
+  everett a "You know why, I want to be out there. There is nothing in this room I haven't seen ever since I was born."
+  everett c "I'm not even allowed to explore the manor as often as the commoners who visit."
 
   maid "It's for your own safety, you know how frail you are. You'd fall over flushed if you stayed out there in the cold."
   maid "You aren't a healthy person, Your Highness{em}"
 
-  everett "And you think I'm foolish enough to not realize that? I didn't ask for the opinion of a servant that leaves every morning!"
-
+  everett smirk "And you think I'm foolish enough to not realize that? I didn't ask for the opinion of a servant that leaves every morning!"
+  show everett b cough
+  show maid:
+    ease 0.1 xzoom -1.0
   "I couldn't take back the words as they slipped out. But my heart dropped at the sight of the maid whose shoulders fell."
 
   everett "I just want to leave, I'm terribly sorry for my attitude. I've grown crazy about these same walls."
+
+  show everett:
+    linear 0.2 xzoom 1.0
+  with Dissolve(0.1)
 
   """
   In my hushed tone, I look away from her and towards the wall. The shadows danced alongside it from the candlelight. 
@@ -62,7 +71,7 @@ label tmd_02:
   """
 
   maid "...I will try my hardest, Your Highness."
-  maid worry "But please, do get some rest. You really worry us sometimes."
+  maid "But please, do get some rest. You really worry us sometimes."
   maid "If just for one more night, please get a good rest so I may bring up the topic tomorrow with Your Majesty."
 
   """
@@ -73,20 +82,29 @@ label tmd_02:
   With every reluctance clinging to my body, I turned towards my bed to hide my irritation.
   """
 
-  everett "I concede, please retire for the night Miss."
-
+  everett frown "I concede, please retire for the night Miss."
   "The sound of clapping reassured me that her feelings weren't hurt anymore, now that she had won."
 
+  show maid smile:
+    linear 0.1 xzoom 1.0
+  with Dissolve(0.1)
   maid "Of course Your Highness! Allow me to dim the lights."
 
   "I settled on the bed as the maid blew the candles out."
-  show bg bedroom with dissolve
+  show bg bedroom
+  show everett:
+    linear 1.0 alpha 0.0
+  with dissolve
 
-  """
-  All were blown out except for the one in her hand. The single flame illuminating her caring expression.
-
-  She came to my side, gently throwing the blankets over me tucking me in.
-  """
+  "All were blown out except for the one in her hand. The single flame illuminating her caring expression."
+  show maid:
+    parallel:
+      linear 2.0 xalign 0.75
+    parallel:
+      easein 0.5 rotate -1 yoffset 20
+      easein 0.5 rotate  0 yoffset  0
+      repeat 2
+  "She came to my side, gently throwing the blankets over me tucking me in."
 
   everett "Thank you, Miss."
 

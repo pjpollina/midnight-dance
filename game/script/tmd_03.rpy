@@ -12,6 +12,9 @@ label tmd_03:
 
   What woke me up?
   """
+  scene bg bedroom:
+    matrixcolor TintMatrix("#555")
+  with Fade(0.0, 1.0, 2.0)
 
   play sound tap_tap_tap
   soundfx "tink.{w=0.25} tink.{w=0.25} tink.{w=0.25}{nw}"
