@@ -20,8 +20,8 @@ transform notify_appear:
     linear 0.5 alpha 0.0
 
 style notify_frame:
-  ypos gui.notify_ypos
+  ypos 68
   background Frame("gui/notify.png", Borders(24, 8, 60, 8))
   padding (24, 8, 60, 8)
-style notify_text is gui_text:
-  properties gui.text_properties("notify")
+style notify_text:
+  size 24

@@ -7,7 +7,7 @@
 screen choice(items):
   style_prefix "choice"
 
-  vbox:
+  hbox:
     align (0.5, 0.6)
     spacing 20
 
@@ -15,11 +15,14 @@ screen choice(items):
       textbutton i.caption action i.action
 
 style choice_button:
-  xsize   1185
-  padding (150, 8, 150, 8)
+  background Solid("#F00A") # TODO: REMOVE DEBUG
+  align (0.5, 0.5)
+  xysize (600, 100)
 style choice_button_text:
-  size 33
-  font book_antiqua
-  xalign 0.5
+  font cardinal
+  align (0.5, 0.5)
+
+  idle_size  40
+  hover_size 44
   idle_color  "#000"
   hover_color "#FFF"

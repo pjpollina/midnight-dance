@@ -32,5 +32,5 @@ style skip_frame:
   background Frame("gui/skip.png", Borders(24, 8, 75, 8))
   padding (24, 8, 75, 8)
 
-style skip_text is gui_text:
-  size gui.notify_text_size
+style skip_text:
+  size 24

@@ -34,9 +34,8 @@ style confirm_hbox:
 style confirm_label:
   align (0.5, 0.5)
 style confirm_label_text:
-  size 52
-  font book_antiqua
-  bold True
+  size 48
+  font cardinal
   color "#DB4"
   outlines [(3, "#111", 1, 1)]
 

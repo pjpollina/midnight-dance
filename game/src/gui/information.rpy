@@ -16,10 +16,9 @@ screen about():
       text "[gui.about!t]\n"
       text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
-style about_label is gui_label
-style about_label_text is gui_label_text:
-  size gui.label_text_size
-style about_text is gui_text
+style about_label
+style about_label_text:
+  size 36
 
 ## Help screen #################################################################
 ##
@@ -125,18 +124,14 @@ screen gamepad_help():
     text  _("Hides the user interface.")
   textbutton _("Calibrate") action GamepadCalibrate()
 
-style help_button is gui_button:
-  properties gui.button_properties("help_button")
+style help_button:
   xmargin 12
-style help_button_text is gui_button_text:
-  properties gui.button_text_properties("help_button")
+style help_button_text
 
-style help_text is gui_text
-
-style help_label is gui_label:
+style help_label:
   xsize 375
   right_padding 30
-style help_label_text is gui_label_text:
-  size gui.text_size
+style help_label_text:
+  size 33
   xalign 1.0
   text_align 1.0

@@ -27,9 +27,12 @@ style main_menu_vbox:
   yalign 1.0
   yoffset -30
 
-style main_menu_text is gui_text:
-  properties gui.text_properties("main_menu", accent=True)
-style main_menu_title is main_menu_text:
-  properties gui.text_properties("title")
-style main_menu_version is main_menu_text:
-  properties gui.text_properties("version")
+style main_menu_title:
+  align (1.0, 1.0)
+  font cardinal
+  size 75
+  color "#000"
+style main_menu_version:
+  align (1.0, 1.0)
+  font book_antiqua
+  color "#000"
