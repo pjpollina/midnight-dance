@@ -31,6 +31,13 @@ init python:
   preferences.text_cps = 35
   preferences.afm_time = 15
 
+  ## Replace the save screen
+  _game_menu_screen = "saves"
+
+  ## The width and height of thumbnails used by the save slots.
+  config.thumbnail_width  = 480
+  config.thumbnail_height = 270
+
   ## For me
   config.keymap['console'] = "K_BACKQUOTE"
 

@@ -15,9 +15,9 @@ screen quick_menu():
     hbox:
       button style "quick_log" action ShowMenu('history')
       button style "quick_options" action ShowMenu('preferences')
-    hbox:
-      button style "quick_save" action ShowMenu("save")
-      button style "quick_load" action ShowMenu("load")
+    #hbox:
+    #  button style "quick_save" action ShowMenu("save")
+    #  button style "quick_load" action ShowMenu("load")
 
 ## Quick Menu styles ###########################################################
 

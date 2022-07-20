@@ -43,11 +43,11 @@ screen navigation(kind):
     vbox:
       if main_menu:
         textbutton _("Start")   action Start()
+        textbutton _("Load")    action ShowMenu("saves")
       else:
-        textbutton _("History") action ShowMenu("history")
-        textbutton _("Save")    action ShowMenu("save")
+        textbutton _("History")   action ShowMenu("history")
+        textbutton _("Save/Load") action ShowMenu("saves")
 
-      textbutton _("Load")      action ShowMenu("load")
       textbutton _("Settings")  action ShowMenu("settings")
       textbutton _("About")     action ShowMenu("about")
       textbutton _("Help")      action ShowMenu("help")
