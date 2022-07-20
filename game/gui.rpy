@@ -21,12 +21,14 @@ init python:
   cardinal = "gui/fonts/Cardinal/Regular.ttf"
   config.font_replacement_map[cardinal, False, True] = ("gui/fonts/Cardinal/Alternate.ttf", False, False)
 
-style button:
-  padding (27, 6, 6, 6)
-style button_text:
+style text:
   size 33
   font book_antiqua
-  idle_color "#FFF"
+  color "#FFF"
+style label_text is text
+
+style button
+style button_text is text:
   hover_color "#DB4"
   selected_color "#FFFA"
 

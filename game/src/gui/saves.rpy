@@ -49,12 +49,7 @@ style saves_file_button:
   hover_foreground "gui/save_frame/hover.webp"
   xysize (480, 270)
 
-style saves_file_text:
-  font book_antiqua
-  size 33
-
 style saves_file_label
 style saves_file_label_text:
   size 48
-  font book_antiqua
   bold True

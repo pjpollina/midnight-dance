@@ -38,6 +38,7 @@ style confirm_label_text:
   font cardinal
   color "#DB4"
   outlines [(3, "#111", 1, 1)]
+  text_align 0.5
 
 style confirm_button xysize (150, 75)
 style confirm_button_text:

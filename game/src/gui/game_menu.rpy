@@ -68,9 +68,7 @@ style nav_vbox:
   align (0.5, 0.5)
   spacing 30
 
-style nav_button is gui_button:
+style nav_button:
   align  (0.5, 0.5)
-style nav_button_text is gui_button_text:
-  align (0.5, 0.5)
-  size 32
+style nav_button_text:
   bold True

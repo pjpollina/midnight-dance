@@ -56,16 +56,14 @@ style settings_hbox:
 style settings_label:
   align   (0.5, 0.0)
   padding (10, 10, 10, 10)
-style settings_label_text:
+style settings_label_text is empty:
   size 96
   font cardinal
   text_align 0.5
 
 style slider_label is settings_label
-style slider_label_text is settings_label_text:
-  size 40
-  font book_antiqua
-
+style slider_label_text:
+  yalign 0.5
 style check_button:
   xysize (300, 49)
   left_padding 40
