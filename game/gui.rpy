@@ -161,9 +161,6 @@ define gui.file_slot_rows = 2
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
 
-## The vertical position of the skip indicator.
-define gui.skip_ypos = 15
-
 ## The vertical position of the notify screen.
 define gui.notify_ypos = 68
 
@@ -180,18 +177,6 @@ define gui.main_menu_text_xalign = 1.0
 ##
 ## These variables control the look of frames that can contain user interface
 ## components when an overlay or window is not present.
-
-## Generic frames.
-define gui.frame_borders = Borders(6, 6, 6, 6)
-
-## The frame that is used as part of the skip screen.
-define gui.skip_frame_borders = Borders(24, 8, 75, 8)
-
-## The frame that is used as part of the notify screen.
-define gui.notify_frame_borders = Borders(24, 8, 60, 8)
-
-## Should frame backgrounds be tiled?
-define gui.frame_tile = False
 
 ## Bars, Scrollbars, and Sliders ###############################################
 ##
@@ -224,31 +209,6 @@ define gui.vslider_borders = Borders(6, 6, 6, 6)
 ## What to do with unscrollable scrollbars in the gui. "hide" hides them, while
 ## None shows them.
 define gui.unscrollable = "hide"
-
-
-## History #####################################################################
-##
-## The history screen displays dialogue that the player has already dismissed.
-
-## The number of blocks of dialogue history Ren'Py will keep.
-define config.history_length = 250
-
-## The height of a history screen entry, or None to make the height variable at
-## the cost of performance.
-define gui.history_height = 210
-
-## The position, width, and alignment of the label giving the name of the
-## speaking character.
-define gui.history_name_xpos = 233
-define gui.history_name_ypos = 0
-define gui.history_name_width = 233
-define gui.history_name_xalign = 1.0
-
-## The position, width, and alignment of the dialogue text.
-define gui.history_text_xpos = 255
-define gui.history_text_ypos = 3
-define gui.history_text_width = 1110
-define gui.history_text_xalign = 0.0
 
 ## NVL-Mode ####################################################################
 ##

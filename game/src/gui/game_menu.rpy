@@ -50,6 +50,7 @@ screen navigation(kind):
       textbutton _("Load")      action ShowMenu("load")
       textbutton _("Settings")  action ShowMenu("settings")
       textbutton _("About")     action ShowMenu("about")
+      textbutton _("Help")      action ShowMenu("help")
       if not main_menu:
         textbutton _("Main Menu") action MainMenu()
 
