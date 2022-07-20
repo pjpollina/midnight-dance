@@ -29,7 +29,7 @@ transform delayed_blink(delay, cycle):
 
 style skip_frame:
   ypos 15
-  background Frame("gui/skip.png", Borders(24, 8, 75, 8))
+  background Frame(Solid("#FFFA"), Borders(24, 8, 75, 8))
   padding (24, 8, 75, 8)
 
 style skip_text:

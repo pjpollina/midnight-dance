@@ -21,7 +21,8 @@ transform notify_appear:
 
 style notify_frame:
   ypos 68
-  background Frame("gui/notify.png", Borders(24, 8, 60, 8))
+  background Frame(Solid("#FFFA"), Borders(24, 8, 60, 8))
   padding (24, 8, 60, 8)
 style notify_text:
   size 24
+  color "#000A"

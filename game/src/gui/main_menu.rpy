@@ -4,10 +4,9 @@
 
 screen main_menu():
   tag menu
-  add "gui/main_menu.png"
+  add Solid("#7F5F5F") # TODO: Get final art
 
   use navigation("")
-
   vbox:
     style "main_menu_vbox"
     text "[config.name!t]":

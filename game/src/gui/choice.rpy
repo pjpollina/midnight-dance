@@ -15,9 +15,9 @@ screen choice(items):
       textbutton i.caption action i.action
 
 style choice_button:
-  background Solid("#F00A") # TODO: REMOVE DEBUG
   align (0.5, 0.5)
   xysize (600, 100)
+  background (Solid("#F00A") if config.developer else None)
 style choice_button_text:
   font cardinal
   align (0.5, 0.5)

@@ -32,7 +32,7 @@ define config.nvl_list_length = 6
 style nvl_window:
   xfill True
   yfill True
-  background "gui/nvl.png"
+  background Solid("#FFF8")
   padding (0, 15, 0, 30)
 
 style nvl_entry:

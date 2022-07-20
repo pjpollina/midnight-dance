@@ -66,7 +66,12 @@ style slider_label_text is settings_label_text:
   size 40
   font book_antiqua
 
-style radio_button:
-  foreground "gui/button/radio_[prefix_]foreground.png"
 style check_button:
-  foreground "gui/button/check_[prefix_]foreground.png"
+  xysize (300, 49)
+  left_padding 40
+  foreground "gui/button/check_[prefix_]foreground.webp"
+style check_button_text:
+  align (0.0, 0.5)
+
+style radio_button is check_button
+style radio_button_text is check_button_text
