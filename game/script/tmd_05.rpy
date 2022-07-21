@@ -1,8 +1,11 @@
 label tmd_05:
-  """
-  The man was clearly injured cradling his shoulder the way he was..
+  play music balthazar fadein 4.0
+  scene cg balthcony with Dissolve(6.0)
 
-  Also who knows how long he'd rap against the glass? I'd lose all my sleep!
+  """
+  The man was clearly injured, cradling his shoulder the way he was{dots=4.5}
+
+  Also, who knows how long he'd rap against the glass? I'd lose all my sleep!
 
   Hesitantly, I approached the balcony glass and pulled it aside.
 

@@ -1,3 +1,5 @@
+## BACKGROUNDS #################################################################
+
 image bg bedroom: # TODO: REPLACE PLACEHOLDER
   "scenes/bedroom_dark.webp"
   align (0.5, 0.5)
@@ -11,3 +13,7 @@ image bg balcony: # TODO: REPLACE PLACEHOLDER
 image bg balcony lit: # TODO: REPLACE PLACEHOLDER
   "scenes/balcony_lit.webp"
   align (0.5, 0.5)
+
+## CGs #########################################################################
+
+image cg balthcony = "scenes/cg_01_balthcony.webp"
