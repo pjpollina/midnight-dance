@@ -17,6 +17,7 @@ label tmd_14:
 
   everett "That's..."
 
+  $ is_stranger = False
   balth "My name."
 
   everett "Everett, it's nice to meet you."

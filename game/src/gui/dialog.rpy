@@ -1,3 +1,8 @@
+init -10 python:
+  is_stranger = True
+  def balth_name():
+    return (_("Stranger{#Balthazar's name before he's introduced}") if is_stranger else "Balthazar")
+
 ## Character definitions #######################################################
 
 define narrator = Character(None, kind=centered, what_style="say_thought", show_qm=False)
@@ -5,7 +10,7 @@ define prolog   = Character(None, kind=narrator, what_slow_cps=0, show_flair=Tru
 define soundfx  = Character(None, kind=narrator, what_slow_cps=0, what_size=24, what_italic=True, advance=False)
 
 define everett  = Character("Everett",   ctc="ctc", image="everett", who_text_color="#3B3065", who_top_padding=12, who_text_size=72)
-define balth    = Character("Balthazar", ctc="ctc", image="balth",   who_text_color="#580617") # TODO: Make name conditional
+define balth    = Character(balth_name,  ctc="ctc", image="balth",   who_text_color="#580617", dynamic=True)
 define maid     = Character("Maid",      ctc="ctc", image="maid",    who_text_color="#8F6A96")
 define guarda   = Character("Guard #1",  ctc="ctc", image="guard",   who_text_color="#5D3B42")
 define guardb   = Character("Guard #2",  ctc="ctc", image="guard",   who_text_color="#5D3B54")
