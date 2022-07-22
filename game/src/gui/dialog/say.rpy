@@ -8,6 +8,7 @@ init -10 python:
 define narrator = Character(None, kind=centered, what_style="say_thought", show_qm=False)
 define prolog   = Character(None, kind=narrator, what_slow_cps=0, show_flair=True)
 define soundfx  = Character(None, kind=narrator, what_slow_cps=0, what_size=24, what_italic=True, advance=False)
+define turmoil  = Character(None, kind=narrator, show_flair=True)
 
 define everett  = Character("Everett",   ctc="ctc", image="everett", who_text_color="#3B3065", who_top_padding=12, who_text_size=72)
 define balth    = Character(balth_name,  ctc="ctc", image="balth",   who_text_color="#580617", dynamic=True)

@@ -1,10 +1,7 @@
 label start:
-  call tmd_00
-  call tmd_01
-  call tmd_02
-  call tmd_03
-  call tmd_04
-  "End of current animation passthrough. -PJ"
+  call tmd_part_a
+  $ save_name = "Past PJ's progress"
+
   call tmd_05
   call tmd_06
   call tmd_07

@@ -40,6 +40,7 @@ screen saves_file(index, name):
       spacing 10
       label name
       text FileTime(index, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("{#Empty file slot}No data"))
+      text FileSaveName(index, empty="") italic True size 24 color "#FFFA"
 
 style saves_file_frame:
   background "gui/save_frame/background.webp"
