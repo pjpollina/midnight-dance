@@ -1,13 +1,5 @@
-################################################################################
-## Initialization
-################################################################################
-
-## The init offset statement causes the initialization statements in this file
-## to run before init statements in any other file.
 init offset = -2
 
-## Calling gui.init resets the styles to sensible default values, and sets the
-## width and height of the game.
 init python:
   gui.init(1920, 1080)
   gui.language = "unicode"
@@ -21,20 +13,51 @@ init python:
   cardinal = "gui/fonts/Cardinal/Regular.ttf"
   config.font_replacement_map[cardinal, False, True] = ("gui/fonts/Cardinal/Alternate.ttf", False, False)
 
-style text:
-  size 33
-  font book_antiqua
-  color "#FFF"
-style label_text is text
+## General styles ##############################################################
 
-style button
-style button_text is text:
+style default:
+  size 33
+  color "#FFF"
+  font book_antiqua
+
+style label_text:
+  size 36
+
+## Button styles ###############################################################
+
+style button:
+  align (0.5, 0.5)
+style button_text:
   hover_color "#DB4"
-  selected_color "#FFFA"
+  selected_color "#FFF6"
+
+style radio_button:
+  xysize (300, 42)
+  left_padding 45
+  idle_background           "gui/buttons/pip/idle.webp"
+  hover_background          "gui/buttons/pip/hover.webp"
+  selected_background       "gui/buttons/pip/selected.webp"
+style radio_button_text:
+  yalign 0.5
+  hover_color          "#FFFF9C"
+  selected_color       "#FFFF9C"
+  outlines          [(1, "#FFF0",     0, 0)]
+  hover_outlines    [(1, "#D06BF75A", 0, 0)]
+  selected_outlines [(1, "#FFF0",     0, 0)]
+
+style check_button is radio_button:
+  selected_hover_background "gui/buttons/pip/unselected.webp"
+style check_button_text is radio_button_text:
+  selected_hover_color "#FFFF9CAA"
+  selected_hover_outlines [(1, "#D06BF75A", 0, 0)]
+
+## Slider styles ################################################################
 
 style slider:
   xysize    (350, 40)
   left_bar  "gui/slider/full.webp"
   right_bar "gui/slider/empty.webp"
+  hover_left_bar  "gui/slider/full_hover.webp"
+  hover_right_bar "gui/slider/empty_hover.webp"
   thumb     None
   xalign    0.5

@@ -17,7 +17,7 @@ screen confirm(message, yes_action, no_action):
       textbutton _("Yeah{#Confirm}") action yes_action
       textbutton _("Nope{#Deny}")    action no_action
 
-## Confirm screen styles #######################################################
+## Confirm styles ##############################################################
 
 style confirm_frame:
   xysize (1510, 640)

@@ -10,7 +10,7 @@ screen history():
   tag menu
   predict False
 
-  use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
+  use game_menu(_("History")):
     style_prefix "history"
     vbox spacing 50:
       for h in _history_list:

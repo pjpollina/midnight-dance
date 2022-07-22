@@ -7,46 +7,51 @@ screen settings():
   tag menu
   style_prefix "settings"
 
-  use game_menu("Settings", scroll="viewport"):
+  use game_menu("Settings"):
     hbox:
       frame:
         has vbox
         align (0.5, 0.0)
 
         label _("Display")
-        textbutton _("Window")     style "radio_button" action Preference("display", "window")
-        textbutton _("Fullscreen") style "radio_button" action Preference("display", "fullscreen")
+        vbox spacing 20:
+          textbutton _("Window")     style "radio_button" action Preference("display", "window")
+          textbutton _("Fullscreen") style "radio_button" action Preference("display", "fullscreen")
 
         null height 80
 
         label _("Skip")
-        textbutton _("Unseen Text")   style "check_button" action Preference("skip", "toggle")
-        textbutton _("After Choices") style "check_button" action Preference("after choices", "toggle")
-        textbutton _("Transitions")   style "check_button" action InvertSelected(Preference("transitions", "toggle"))
+        vbox spacing 20:
+          textbutton _("Unseen Text")   style "check_button" action Preference("skip", "toggle")
+          textbutton _("After Choices") style "check_button" action Preference("after choices", "toggle")
+          textbutton _("Transitions")   style "check_button" action InvertSelected(Preference("transitions", "toggle"))
 
       frame:
         has vbox
         align (0.5, 0.0)
+        style_prefix "slider"
 
-        label _("Text Speed") style "slider_label"
+        label _("Text Speed")
         bar value Preference("text speed")
         null height 20
 
-        label _("Auto-Forward Time") style "slider_label"
+        label _("Auto-Forward Time")
         bar value Preference("auto-forward time")
         null height 80
 
-        label _("Music Volume") style "slider_label"
+        label _("Music Volume")
         bar value Preference("music volume")
         null height 20
 
-        label _("Sound Volume") style "slider_label"
+        label _("Sound Volume")
         bar value Preference("sound volume")
         null height 20
 
-        label _("Voice Volume") style "slider_label"
+        label _("Voice Volume")
         bar value Preference("voice volume")
         null height 20
+
+## Settings styles #############################################################
 
 style settings_frame:
   xysize (700, 800)
@@ -64,12 +69,3 @@ style settings_label_text is empty:
 style slider_label is settings_label
 style slider_label_text:
   yalign 0.5
-style check_button:
-  xysize (300, 49)
-  left_padding 40
-  foreground "gui/button/check_[prefix_]foreground.webp"
-style check_button_text:
-  align (0.0, 0.5)
-
-style radio_button is check_button
-style radio_button_text is check_button_text

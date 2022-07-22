@@ -13,8 +13,8 @@ screen quick_menu():
       button style "quick_auto" action Preference("auto-forward", "toggle")
       button style "quick_skip" action Skip() alternate Skip(fast=True, confirm=True)
     hbox:
-      button style "quick_log" action ShowMenu('history')
-      button style "quick_options" action ShowMenu('preferences')
+      button style "quick_log" action ShowMenu("history")
+      button style "quick_opt" action ShowMenu("settings")
     hbox:
       button style "quick_save" action QuickSave()
       button style "quick_load" action QuickLoad()
@@ -30,27 +30,27 @@ style quick_frame:
 ## Quick menu buttons
 style quick_button:
   xysize (76, 75)
+
+## Row 1
 style quick_auto is quick_button:
-  idle_background  "gui/button/auto_quick_idle.webp"
-  hover_background "gui/button/auto_quick_hover.webp"
-  insensitive_background Transform("gui/button/auto_quick_idle.webp", alpha=0.66)
-style quick_load is quick_button:
-  idle_background  "gui/button/load_quick_idle.webp"
-  hover_background "gui/button/load_quick_hover.webp"
-  insensitive_background Transform("gui/button/load_quick_idle.webp", alpha=0.66)
-style quick_save is quick_button:
-  idle_background  "gui/button/save_quick_idle.webp"
-  hover_background "gui/button/save_quick_hover.webp"
-  insensitive_background Transform("gui/button/save_quick_idle.webp", alpha=0.66)
-style quick_log is quick_button:
-  idle_background  "gui/button/log_quick_idle.webp"
-  hover_background "gui/button/log_quick_hover.webp"
-  insensitive_background Transform("gui/button/log_quick_idle.webp", alpha=0.66)
-style quick_options is quick_button:
-  idle_background  "gui/button/options_quick_idle.webp"
-  hover_background "gui/button/options_quick_hover.webp"
-  insensitive_background Transform("gui/button/options_quick_idle.webp", alpha=0.66)
+  background "gui/buttons/quick/[prefix_]auto.webp"
+  insensitive_background Transform("gui/buttons/quick/idle_auto.webp", alpha=0.66)
 style quick_skip is quick_button:
-  idle_background  "gui/button/skip_quick_idle.webp"
-  hover_background "gui/button/skip_quick_hover.webp"
-  insensitive_background Transform("gui/button/skip_quick_idle.webp", alpha=0.66)
+  background "gui/buttons/quick/[prefix_]skip.webp"
+  insensitive_background Transform("gui/buttons/quick/idle_skip.webp", alpha=0.66)
+
+## Row 2
+style quick_log is quick_button:
+  background "gui/buttons/quick/[prefix_]log.webp"
+  insensitive_background Transform("gui/buttons/quick/idle_log.webp", alpha=0.66)
+style quick_opt is quick_button:
+  background "gui/buttons/quick/[prefix_]opt.webp"
+  insensitive_background Transform("gui/buttons/quick/idle_opt.webp", alpha=0.66)
+
+## Row 3
+style quick_save is quick_button:
+  background "gui/buttons/quick/[prefix_]save.webp"
+  insensitive_background Transform("gui/buttons/quick/idle_save.webp", alpha=0.66)
+style quick_load is quick_button:
+  background "gui/buttons/quick/[prefix_]load.webp"
+  insensitive_background Transform("gui/buttons/quick/idle_load.webp", alpha=0.66)

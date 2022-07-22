@@ -29,7 +29,7 @@ screen help():
   tag menu
   style_prefix "help"
 
-  use game_menu(_("Help"), scroll="viewport"):
+  use game_menu(_("Help")):
     vbox:
       spacing 23
       align (0.25, 0.1)

@@ -7,7 +7,7 @@
 ## this screen is intended to be used with one or more children, which are
 ## transcluded (placed) inside it.
 
-screen game_menu(title, scroll=None, yinitial=0.0):
+screen game_menu(title):
   style_prefix "gm"
   add "gui/game_menu.webp"
 
@@ -32,13 +32,8 @@ style gm_window:
 screen navigation(kind):
   style_prefix "nav"
 
-  window:
-    frame:
-      style "nav_header"
-      text kind:
-        size 96
-        color "#DB4"
-        font cardinal
+  frame:
+    label kind
 
     vbox:
       if main_menu:
@@ -54,21 +49,22 @@ screen navigation(kind):
       if not main_menu:
         textbutton _("Main Menu") action MainMenu()
 
-style nav_window:
+style nav_frame:
   xsize 425
   yfill True
 
-style nav_header:
+style nav_label:
   ysize 125
   align (0.5, 0.0)
   top_margin 90
+style nav_label_text:
+  size 96
+  color "#DB4"
+  font cardinal
 
 style nav_vbox:
   xsize 425
   align (0.5, 0.5)
   spacing 30
 
-style nav_button:
-  align  (0.5, 0.5)
-style nav_button_text:
-  bold True
+style nav_button_text bold True
