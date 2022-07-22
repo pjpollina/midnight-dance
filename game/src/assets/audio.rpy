@@ -4,6 +4,10 @@ init python in audio:
   midnight_waltz = "audio/music/midnight_waltz.ogg"
 
   ## SFX
+  into_bed     = "audio/sfx/into_bed.ogg"
+  door_open    = "audio/sfx/door_open.ogg"
+  door_shut    = "audio/sfx/door_shut.ogg"
+  knock_knock  = "audio/sfx/knock_knock.ogg"
   tap_tap_tap  = "audio/sfx/tap_tap_tap.ogg"
   curtain_open = "audio/sfx/curtain_open.ogg"
   curtain_shut = "audio/sfx/curtain_shut.ogg"

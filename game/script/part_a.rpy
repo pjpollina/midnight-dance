@@ -119,7 +119,7 @@ label .bedtime:
   show everett b frown at rflip, lefter
   with Fade(0.0, 1.0, 2.0)
 
-  # TODO: Door sfx
+  play sound [door_shut, "<silence 0.25>", curtain_shut]
   "She closed the balcony doors and pulled the curtains from either side to conceal the outside."
   "And any joy I had from gazing at the night."
 
@@ -183,6 +183,7 @@ label .goodnight:
   with Dissolve(1.5)
   $ renpy.pause(2.0, hard=True)
 
+  play sound into_bed
   "I settled on the bed as the maid blew the candles out."
   "All were blown out except for the one in her hand. The single flame illuminating her caring expression."
 
@@ -224,8 +225,7 @@ label .goodnight:
       repeat 5
   $ renpy.pause(3.5, hard=True)
 
-  # TODO: Gentle doorslam sound
-
+  play sound door_shut volume 0.5
   "Whispering her farewell,{w=0.25} she stood upright and left the room in the same hurry she came in."
   "{dots=4.5}"
   "All that remained was a still silence{dots=4.5}"
