@@ -16,4 +16,6 @@ image bg balcony lit: # TODO: REPLACE PLACEHOLDER
 
 ## CGs #########################################################################
 
-image cg balthcony = "scenes/cg_01_balthcony.webp"
+image cg balthcony = "scenes/cg_01a.webp"
+image cg balthcony dark = "scenes/cg_01b.webp"
+image cg balthcony eyes = "scenes/cg_01c.webp"
