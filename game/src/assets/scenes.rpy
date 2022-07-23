@@ -1,16 +1,16 @@
 ## BACKGROUNDS #################################################################
 
-image bg bedroom: # TODO: REPLACE PLACEHOLDER
+image bg bedroom:
   "scenes/bedroom_dark.webp"
   align (0.5, 0.5)
-image bg bedroom lit: # TODO: REPLACE PLACEHOLDER
+image bg bedroom lit:
   "scenes/bedroom_lit.webp"
   align (0.5, 0.5)
 
-image bg balcony: # TODO: REPLACE PLACEHOLDER
+image bg balcony:
   "scenes/balcony_dark.webp"
   align (0.5, 0.5)
-image bg balcony lit: # TODO: REPLACE PLACEHOLDER
+image bg balcony lit:
   "scenes/balcony_lit.webp"
   align (0.5, 0.5)
 
