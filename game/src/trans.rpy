@@ -10,6 +10,11 @@ transform lefter:
 transform righter:
   xalign 0.85
 
+transform leftest:
+  xalign 0.0
+transform rightest:
+  xalign 1.0
+
 transform walkon_right:
   xalign 1.5
   parallel:

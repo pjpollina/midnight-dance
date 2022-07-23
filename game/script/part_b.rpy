@@ -19,6 +19,8 @@ label tmd_part_b:
   "There was no response from the stranger,{w=0.25} who stood dangerously still with his chin to the ground."
 
   everett "A name would be nice too."
+  stop music fadeout 1.0
+
   balth   "..."
   everett "{dots=4.5}Stranger?"
 
@@ -54,20 +56,105 @@ label .hideaway:
 
   guarda "Where is that criminal fiend?!"
   maid   "I hope Your Highness is okay!"
-  guardb "He disappeared into the hedges near the Highnesses balcony,{w=0.25} he has to be up there!"
-
+  guardb "He disappeared into the hedges near the Prince's balcony,{w=0.25} he has to be up there!"
   "My heart leapt to my throat at the sounds of the scullery maid and some guards faintly outside."
+
+  scene bg bedroom
+  show everett b frail:
+    blur 5
+    parallel:
+      rflip
+      linear 0.25 right
+      lflip
+      linear 0.25 left
+      repeat
+    parallel:
+      easein 0.25 yoffset 20
+      easein 0.25 yoffset  0
+      repeat
+    parallel:
+      pause 0.5
+      "everett a shame"
+      pause 0.5
+      "everett b cough"
+      pause 0.5
+      "everett c shame"
+      repeat
+  with Dissolve(1.0)
+
   "How could I hide the man in such a short time?"
 
+  show everett a frown at rflipturn:
+    blur 0 xalign 0.5
   everett "Why am I... doing so much... for you?!"
-
   "Because I wanted to hear about the outside, of course."
-  "Come on! What could I do?"
-  "Think Everett, think..."
+
+  show everett c cough at lflipturn
+  everett "Come on! What could I do?"
+
+  show everett b shame at rflipturn
+  everett "Think Everett, think..."
   "Racking my head for a solution, the pillows flung beneath my blankets spawned an idea."
-  "The pillows! I'll hide him under my pillows and blankets!"
+
+  # TODO: Lightbulb [metaphorical] SFX
+  show everett a smile at lflipturn
+  everett "The pillows! I'll hide him under my pillows and blankets!"
+
+  # TODO: DRAG SFX
+  show everett b frown:
+    rotate_pad False
+    ease 0.25 ypos 0.5 rflip
+    "everett b cough"
+    pause 1.25
+    ease 0.5 ypos 0.0
+    parallel:
+      ease  0.8 xalign  0.25
+      pause 0.6
+      ease  0.8 xalign  0.00
+      pause 0.6
+      ease  0.8 xalign -0.25
+      pause 0.6
+      ease  0.8 xalign -0.50
+      pause 0.6
+      ease  0.8 xalign -0.75
+      pause 0.8
+      ease  0.4 xalign -1.00
+      pause 0.8
+    parallel:
+      linear 0.4 rotate -5
+      linear 0.4 rotate  0
+      pause  0.6
+      repeat
+  show balth a:
+    rotate_pad False rotate -5
+    xalign 0.65 ypos 1.0 matrixcolor TintMatrix("#111") blur 5 rflip
+    pause 1.5
+    ease 0.5 ypos 0.25
+    parallel:
+      ease  0.8 xalign  0.40
+      pause 0.6
+      ease  0.8 xalign  0.15
+      pause 0.6
+      ease  0.8 xalign -0.10
+      pause 0.6
+      ease  0.8 xalign -0.35
+      pause 0.6
+      ease  0.8 xalign -0.60
+      pause 0.6
+      ease  0.8 xalign -0.85
+      pause 0.6
+      ease  0.8 xalign -1.10
+    parallel:
+      linear 0.4 rotate -10
+      linear 0.4 rotate  -5
+      pause  0.6
+      repeat
+  with None
+  scene black with MultipleTransition((False, Pause(4.0), False, Dissolve(4.0), True))
+
   "I hastened my grip and dragged the man towards the side of the bed. Half leant against the bed, I pull him on top trying not to lose my breath."
   "This was the most exertion I've had in awhile. My arms shook from the effort."
+
   "When half of the man was on the bed, I pushed the rest of him up and immediately flung pillows and blankets on top trying to make it look neat."
   "Taking a deep breath, I ran my fingers through my hair and straightened up trying to rub away the hot feeling in my face."
   "Look normal, Everett."
@@ -80,46 +167,161 @@ label .guests:
 
   "They were quick!"
 
-  maid worry "Your Royal Highness! Is everything alright in there?"
-  everett "Everything... is fine, Miss! Nothing is wrong here."
-  everett "What is the matter that you have to wake me up so late?"
-  maid worry "I'm so sorry Your Royal Highness, but we must come in. There is a minor... disturbance we need to check out."
+  scene bg bedroom
+  show everett c frown at right, rflip
+  with dissolve
 
+  maid "Your Royal Highness!{w=0.25} Is everything alright in there?"
+
+  everett "Everything{dots=4.5} {nw}"
+  show everett a shame at lflipturn
+  extend "is fine,{w=0.25} Miss! {w=0.15}{nw}"
+  extend smile "Nothing is wrong here."
+  everett smile "What is the matter that you have to wake me up so late?"
+
+  maid "I'm so sorry,{w=0.25} Your Royal Highness,{w=0.25} but we must come in. There is a minor{dots=4.5} disturbance we need to check out."
+
+  show everett c frown
   "So they're keeping me in the dark about him?"
 
-  everett "If you must, come in."
+  everett b grimace "If you must,{w=0.25} come in."
+
+  play sound door_open
+  show everett c smile:
+    parallel:
+      linear 1.0 center
+    parallel:
+      easein 0.2 yoffset 12
+      easein 0.3 yoffset  0
+      repeat 2
+  show maid worry at rflip:
+    xalign -0.5
+    parallel:
+      linear 1.5 leftest
+    parallel:
+      easein 0.2 yoffset 20
+      easein 0.3 yoffset  0
+      repeat 3
+  show guard as guard_a:
+    xalign -1.0
+    parallel:
+      linear 1.0 right
+    parallel:
+      easein 0.2 yoffset 50
+      easein 0.3 yoffset  0
+      repeat 2
+  show guard as guard_b:
+    xalign -1.0
+    parallel:
+      linear 1.0 rightest
+    parallel:
+      easein 0.2 yoffset 50
+      easein 0.3 yoffset  0
+      repeat 2
 
   "The door slowly opened to the scullery maid and two guards behind her."
   "They brandished their swords clear as day as the maid quickly lit all the candles."
+  show bg lit with dissolve
   "The maid stood by the door with her candle as the guards explored the room."
+  show guard as guard_a:
+    rflipturn
+    pause 0.25
+    ease 0.8 xalign 2.0
+  show  guard as guard_b:
+    rflipturn
+    pause 0.25
+    ease 0.5 xalign 2.0
   "They mainly focused their attention on the balcony glass."
-  "Fortunately, they didn't think to check the bed."
+  "Fortunately,{w=0.25} they didn't think to check the bed."
 
-  maid "Are you sure you're alright, Your Highness? Your cheeks are flush."
-  everett "Are they now?"
+  maid "Are you sure you're alright,{w=0.25} Your Highness?{w=0.25} Your cheeks are flush."
+  everett frown @ grimace "Are they now?"
 
-  "I tried to sound surprised, but instead it comes out as sarcastic and I bite the inside of my cheek. The maid will not receive my irritation tonight."
+  "I tried to sound surprised,{w=0.25} but instead it comes out as sarcastic and I bite the inside of my cheek.{w=0.25} The maid will not receive my irritation tonight."
 
-  everett "Must be from before I retired to bed. It's awfully cold outside."
+  everett a smile "Must be from before I retired to bed.{w=0.25} It's awfully cold outside."
   maid "...truly."
 
-  "We fell into silence again as the guards finished investigating every crevice. I leaned back slightly onto the bed, just to deter them from checking there."
+  "We fell into silence again as the guards finished investigating every crevice. {w=0.25}{nw}{done}I leaned back slightly onto the bed, just to deter them from checking there."
+  show guard as guard_a:
+    lflip
+    parallel:
+      linear 1.0 right
+    parallel:
+      easein 0.2 yoffset 50
+      easein 0.3 yoffset  0
+      repeat 2
+  show guard as guard_b:
+    lflip
+    parallel:
+      linear 1.0 rightest
+    parallel:
+      easein 0.2 yoffset 50
+      easein 0.3 yoffset  0
+      repeat 2
+  "We fell into silence again as the guards finished investigating every crevice. {fast}I leaned back slightly onto the bed,{w=0.25} just to deter them from checking there."
 
   everett "I hope everything is alright."
-  maid "Oh it is! We were just checking for some... critter. It doesn't seem to be in here so no need to worry."
-  everett "Is that so? I'm glad. Thank you everyone for making me feel safe."
+  maid smile @ worry "Oh it is!{w=0.25} We were just checking for some{dots=3.0} critter.{w=0.25} It doesn't seem to be in here so no need to worry."
+  everett "Is that so?{w=0.25} I'm glad.{w=0.25} Thank you everyone for making me feel safe."
 
+  show bg:
+    matrixcolor BrightnessMatrix(0.0)
+    easein 0.5 matrixcolor BrightnessMatrix(0.05)
   "The mood in the room lightened a little as the scullery maid smiled warmly."
 
-  maid "We will be off now, get some rest."
-  everett "Goodnight, miss."
-  maid "Goodnight, to you Your Royal Highness."
+  maid "We will be off now,{w=0.25} get some rest."
+  everett "Goodnight,{w=0.25} miss."
+  maid "Goodnight to you,{w=0.25} Your Royal Highness."
 
-  "With a curtsy from her and a bow from the guards, they left as quickly as they came in."
-  "As soon as their footsteps went quiet, I let out the breath that I didn't realize I was holding back."
+  show maid:
+    rflip
+    yalign 1.0
+    easein  0.25 ypos 1.05
+    easeout 0.25 ypos 1.00
+    lflipturn
+    parallel:
+      linear 3.0 xpos -1.0
+    parallel:
+      easein 0.2 yoffset 20
+      easein 0.3 yoffset  0
+      repeat
+  show guard as guard_a:
+    pause 0.33
+    yalign 1.0
+    easein  0.2 ypos 1.1
+    easeout 0.2 ypos 1.0
+    parallel:
+      linear 3.0 xpos -1.0
+    parallel:
+      easein 0.2 yoffset 50
+      easein 0.3 yoffset  0
+      repeat
+  show guard as guard_b:
+    pause 0.66
+    yalign 1.0
+    easein  0.2 ypos 1.1
+    easeout 0.2 ypos 1.0
+    parallel:
+      linear 3.0 xpos -1.0
+    parallel:
+      easein 0.2 yoffset 50
+      easein 0.3 yoffset  0
+      repeat
+  "With a curtsy from her and a bow from the guards,{w=0.25} they left as quickly as they came in."
+  hide maid
+  hide guard_a
+  hide guard_b
+  show everett b frown:
+    yalign 1.0
+    easein  0.25 zoom 1.03
+    "everett b cough"
+    easeout 0.25 zoom 1.00
+  "As soon as their footsteps went quiet,{w=0.25} I let out the breath that I didn't realize I was holding back."
+  scene black with Dissolve(1.25)
   "I turned towards the bed and gently pulled the blankets off to see if the stranger was still there."
-  "To my irrational surprise, he was."
-  "Though now that danger wasn't looming, I realized I never got a good look at him."
+  "To my irrational surprise,{w=0.25} he was."
+  "Though now that danger wasn't looming,{w=0.25} I realized I never got a good look at him."
 
 label .bedthazar:
   $ save_name = _("Rest for the wicked...")
