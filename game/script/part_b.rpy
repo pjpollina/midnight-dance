@@ -174,9 +174,8 @@ label .post_monolog:
   everett "That should do it."
 
   # TODO: Clock sfx
-  "The clock read 11 PM, nearly midnight when the fireworks would go out."
-  "He always stayed up to watch the fireworks light up the sky."
-  "Since he was already awake, he might as well watch them while keeping an eye on the stranger."
+  "Eleven o'clock. The fireworks would light up the sky by now."
+  "There was no chance I would fall back asleep with him in my bed.  I might as well stay up and watch."
   "Speaking of him..."
   "My fingers brushed down his bare chest, the sheets beneath him stained with blood from the procedure."
 
