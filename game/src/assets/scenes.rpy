@@ -64,3 +64,5 @@ image bg balcony lit:
 image cg balthcony = "scenes/cg_01a.webp"
 image cg balthcony dark = "scenes/cg_01b.webp"
 image cg balthcony eyes = "scenes/cg_01c.webp"
+
+image cg bedthazar = "scenes/cg_02.webp"

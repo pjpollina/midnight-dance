@@ -327,27 +327,26 @@ label .bedthazar:
   $ save_name = _("Rest for the wicked...")
   "{dots=3.0}"
 
-  # scene cg bedthazar with Fade(2.0, 1.0, 3.0)
+  scene cg bedthazar with Fade(2.0, 1.0, 3.0)
 
-  "The man had long, wispy blonde locks that cascaded down from his shoulders to his chest."
-  "He was dressed in a gentleman's outfit, with a noticeable scar poking from the top of his collarbone."
-  "I felt self conscious in his presence, leaned over him like he was some sleeping beauty and I was the prince."
-  "He could probably win people from both sides, he was certainly winning me over."
-  "{dots=2.0}Why did I say that?!"
-  "My face felt hot to the touch, and it definitely wasn't from the exercise."
-  "I tenderly raised my hand to his bloody shoulder, trying to gauge the damage without waking him up."
-  "From this position, blood also stained his side."
-  "He must've been shot twice, one in the shoulder and one in the side."
+  "The man had long,{w=0.25} wispy blonde locks that cascaded down from his shoulders to his chest."
+  "He was dressed in a gentleman's outfit,{w=0.25} with a noticeable scar poking from the top of his collarbone."
+  "I felt self conscious in his presence,{w=0.25} leaned over him like he was some sleeping beauty and I was the prince."
+  "He could probably win people from both sides,{w=0.25} he was certainly winning me over."
+  "{dots=2.0}{w=0.25}Why did I say that?!"
+  "My face felt hot to the touch,{w=0.25} and it definitely wasn't from the exercise."
+  "I tenderly raised my hand to his bloody shoulder,{w=0.25} trying to gauge the damage without waking him up."
+  "From this position,{w=0.25} blood also stained his side."
+  "He must've been shot twice,{w=0.25} one in the shoulder and one in the side."
 
-  everett "No wonder you wanted to rest here..."
+  everett "No wonder you wanted to rest here{dots=4.5}"
   everett "I guess I'll have to patch you up before I get any answers."
 
-  "Thankfully Mother hired the best teachers to instruct me on medicine."
-  "Just so I can always take care of myself and cure any ailment that befalls me."
+  "Thankfully Mother hired the best teachers to instruct me on medicine. Just so I can always take care of myself and cure any ailment that befalls me."
 
-  everett "Now where had I left that first aid kit..."
-  "Beneath the bed, I pulled the cumbersome first aid kit and dropped it on the bedside rolling my sleeves up."
-  everett "I hope this works..."
+  everett "Now where had I left that first aid kit{dots=4.5}"
+  "Beneath the bed,{w=0.25} I pulled the cumbersome first aid kit and dropped it on the bedside rolling my sleeves up."
+  everett "I hope this works{dots=4.5}"
   scene black with Fade(4.0, 1.0, 0.0)
 
 label .monolog:
@@ -372,103 +371,228 @@ label .monolog:
 label .post_monolog:
   $ save_name = _("Sixty minutes from midnight...")
 
-  "Wiping away the beads of sweat, I breathed out a sigh of relief knowing the man should be okay for the night at least."
-  everett "That should do it."
+  scene bg bedroom
+  show everett c smile
+  with Dissolve(1.25)
+
+  "Wiping away the beads of sweat,{w=0.25} I breathed out a sigh of relief knowing the man should be okay for the night at least."
+  everett b shame @ a smile "That should do it."
 
   # TODO: Clock sfx
-  "Eleven o'clock. The fireworks would light up the sky by now."
-  "There was no chance I would fall back asleep with him in my bed.  I might as well stay up and watch."
-  "Speaking of him..."
-  "My fingers brushed down his bare chest, the sheets beneath him stained with blood from the procedure."
+  "Eleven o'clock.{w=0.25} The fireworks would light up the sky by now."
+  show everett c grimace
+  "There was no chance I would fall back asleep with him in my bed{dots=4.5} I might as well stay up and watch."
+  show everett shame
+  "Speaking of him{dots=3.0}"
 
-  everett "What mess did you wrap yourself in, to end up in this sorry state?"
+  "My fingers brushed down his bare chest,{w=0.25} the sheets beneath him stained with blood from the procedure."
+
+  everett frown "What mess did you wrap yourself in, to end up in this sorry state?"
+  show cg balthcony eyes:
+    alpha 0.0
+    ease 0.2 alpha 0.75
   balth "Nothing I couldn't handle, of course."
+  show everett c shame:
+    ease 0.75 right
+  hide cg
+  show balth a smirk at lefter:
+    matrixcolor TintMatrix("#000") xzoom -1.0
+  with Dissolve(0.75)
+  show balth:
+    easein 0.75 matrixcolor TintMatrix("#FFF")
+  with Dissolve(0.75)
 
   "I stifle a gasp as the mans eyes slowly open, landing on mine."
-  "He shouldn't have awakened so early... not with his injuries."
+  "He shouldn't have awakened so early{dots=4.5} not with his injuries."
   "Who exactly was he?"
 
-  everett "Are you okay? I tried to patch you up the best I could."
-  "The man blinked and checked his shoulder confused. He was surprisingly mobile for someone with bullet wounds."
+  everett a frown "Are you okay?{w=0.25} I tried to patch you up the best I could."
+  show balth c frown
+  "The man blinked and checked his shoulder confused.{w=0.25} He was surprisingly mobile for someone with bullet wounds."
 
-  balth "I'm doing better thanks to you."
-  everett "But you're so pale..."
+  balth a smile "I'm doing better thanks to you."
+  everett c frail "But you're so pale{dots=4.5}"
+  show balth frown
 
-  "I didn't want to sound rude, but it was so noticeable."
+  "I didn't want to sound rude,{w=0.25} but it was so noticeable."
   "Was he sickly like me?"
-  "It couldn't be. This man somehow found his way onto my balcony which isn't a close climb from the ground."
+  "It couldn't be.{w=0.25} This man somehow found his way onto my balcony,{w=0.25} which isn't a close climb from the ground."
 
-  balth "That's my natural complexion, nothing for you to worry about."
+  balth c smirk "That's my natural complexion,{w=0.25} nothing for you to worry about."
 
+  show balth a smile:
+    parallel:
+      ease 0.34 leftest
+      ease 0.66 righter xzoom 1.0
+    parallel:
+      pause  0.34
+      linear 0.33 blur 30
+      linear 0.33 blur  0
+  show everett c cough:
+    pause 0.5
+    parallel:
+      ease  0.5 left xzoom -1.0
+    parallel:
+      linear 0.25 blur 30
+      linear 0.25 blur  0
   everett "Be careful!"
   "The man sat up easily, showing no signs of pain or discomfort."
-  everett "...or you'll hurt yourself again."
+  everett b frown "...or you'll hurt yourself again."
 
-  balth "Impossible, thank you for taking care of me."
-  balth "I'll remember this act."
+  balth smirk "Impossible, thank you for taking care of me."
+  balth c smile "I'll remember this act."
 
   "He tossed the covers off of him and stood up. I winced at the sight, but he was already heading towards the balcony glass."
   everett "Wai-wait!"
 
-  "I scramble on the other side of the bed getting to my feet."
-  everett "Where are you going? You're still hurt!"
-  "The man's speed didn't slow down."
-
-  balth "I will be fine, trust me. This is nothing."
-  everett "Couldn't you stay a little longer? Just to make sure your injuries don't reopen{em}"
-  balth "That won't be necessary."
-  everett "No... please don't go{em}"
-
-  "My chest grew tight, straining to get a proper breath in."
-  "No... not now, not now!"
-  "My head whips around in a dizzy confusion, patting around me trying to find something."
-
 label .whiteboy_wasted:
   $ save_name = _("A breathtaking affair...")
-  # TODO - BLUR EFFECT
 
-  "What was I trying to find? Think, Everett, think!"
+  camera:
+    align (0.8, 0.25)
+    ease 1.0 zoom 30.0 blur 1000
+  scene cg balthcony with dissolve
+  camera:
+    align (0.5, 0.3)
+    ease 1.0 zoom 2.0 blur 0
+
+  "I scramble on the other side of the bed getting to my feet."
+  everett "Where are you going?{w=0.25} You're still hurt!"
+  "The man's speed didn't slow down."
+  camera:
+    align (0.5, 0.3)
+    ease 1.0 zoom 60.0 blur 1000
+  scene bg balcony
+  show everett c cough:
+    xalign -1.0 xzoom -1.0
+    linear 1.0 xalign 0.15
+  show balth a smirk at right
+  with dissolve
+  camera:
+    align (0.65, 0.15)
+    ease 1.0 zoom 1.0 blur 0
+
+  balth "I will be fine,{w=0.25} trust me.{w=0.25} This is nothing."
+  everett frown "Couldn't you stay a little longer?{w=0.25} Just to make sure your injuries don't reopen{em}"
+  balth smile "That won't be necessary."
+  everett c frail @ a frown "No{dots=3.0} please don't go{em}"
+  show everett:
+    rotate_pad False
+    parallel:
+      ease 0.75 center rotate 30 yoffset 100
+    parallel:
+      easein  0.5 zoom 1.03
+      easeout 0.7 zoom 1.00
+      repeat
+  camera:
+    matrixcolor ContrastMatrix(1.0) align (0.75, 0.5)
+    ease 1.5 blur 100 matrixcolor ContrastMatrix(-1.0) zoom 2.5
+  show balth shock:
+    ease 1.25 rightest
+  "My chest grew tight,{w=0.25} straining to get a proper breath in."
+  show balth:
+    pause 1.0
+    lflipturn
+    pause 0.2
+    rflipturn
+    pause 1.2
+    ease 0.5 xalign -1.0
+
+  "No{dots=3.0} not now, not now!"
+  "My head whips around in a dizzy confusion,{w=0.25} patting around me trying to find something."
+  camera:
+    matrixcolor ContrastMatrix() blur 300
+  with Dissolve(0.5)
+
+  "What was I trying to find?{w=0.25} Think,{w=0.25} Everett,{w=0.25} think!"
   "The lack of air made my vision go blurry."
-  "I gasp for air, feeling the air sucked out of my body doubling me over."
-  "I couldn't focus on anything, only feeling my body grow heavier and the carpet sticking to my sweaty forehead."
-  "Stop looking pathetic Everett! Keep asking him to stay{em}"
-  "Something was shoved into my hands, and I pry open one eye to see my inhaler magically there."
-  "With my hands shaking, I immediately lean my head back and inhale the medication."
-  "Slowly, but surely, the tightness in my chest went away. The blurriness dissipating as well."
-  "When my vision cleared, the man was kneeling right in front of me with an unreadable expression."
+  "I gasp for air,{w=0.25} feeling the air sucked out of my body doubling me over."
+  "I couldn't focus on anything,{w=0.25} only feeling my body grow heavier and the carpet sticking to my sweaty forehead."
+  show balth:
+    xzoom -1.0
+    ease 0.5 center
+  "Stop looking pathetic Everett!{w=0.25} Keep asking him to stay{em}"
+  "Something was shoved into my hands,{w=0.25} and I pry open one eye to see my inhaler magically there."
+  "With my hands shaking,{w=0.25} I immediately lean my head back and inhale the medication."
+  scene black
+  with fade
+  "Slowly,{w=0.25} but surely,{w=0.25} the tightness in my chest went away.{w=0.25} The blurriness dissipating as well."
+  scene bg bedroom
+  show balth a aloof:
+    align (0.25, 1.0) ypos 1.25 xzoom -1.0 rotate 5
+  show everett c cough:
+    align (0.65, 1.0) ypos 1.40 rotate -25
+  camera:
+    align (0.5, 0.75)
+    blur 2.5 zoom 2.0
+  with Dissolve(1.5)
+  "When my vision cleared,{w=0.25} the man was kneeling right in front of me with an unreadable expression."
 
-  balth "Are you okay?"
-  everett "Yea-yeah..."
+  balth shock "Are you okay?"
+  everett frown "Yea-{w=0.25}yeah{dots=4.5}"
 
-  "I didn't notice it until now, but the stranger's hand was on my back."
+  show everett shame
+  "I didn't notice it until now,{w=0.25} but the stranger's hand was on my back."
+  show everett cough:
+    ease 0.05 xoffset -2
+    ease 0.05 xoffset  0
   "A shiver ran through me."
 
-  balth "Why do you want me to stay?"
+  balth frown "Why do you want me to stay?"
 
-  "I froze, feeling the heat returning to my face as I bowed my head in shame."
-  "What was I doing? Forcing a stranger to stay in your room is kidnapping right?"
+  "I froze,{w=0.25} feeling the heat returning to my face as I bowed my head in shame."
+  show everett shame
+  "What was I doing?{w=0.25} Forcing a stranger to stay in your room is kidnapping right?"
 
-  everett "I..."
-  everett "I just wanted to hear about the outside."
-  everett "I haven't left this room since I was a little kid. My parents keep me here to prevent any over-exertion."
-  everett "As you saw, I'm not the healthiest guy out there..."
+  everett frown "I{dots=4.5}"
+  everett "I just wanted to hear about the outside{dots=4.5}"
+  everett "I haven't left this room since I was a little kid.{w=0.25} My parents keep me here to prevent any over-exertion."
+  everett grimace @ frown "As you saw,{w=0.25} I'm not the healthiest guy out there{dots=4.5}"
 
-  "I tried to chuckle, but it almost brought on a coughing fit which made my chest tighten slightly."
+  show everett:
+    pause 0.1
+    ease 0.05 xoffset -2
+    ease 0.05 xoffset  0
+    "everett c frail"
+  "I tried to chuckle,{w=0.25} but it almost brought on a coughing fit which made my chest tighten slightly."
 
-  everett "I'm sorry, I shouldn't force you to stay."
+  everett frail "I'm sorry,{w=0.25} I shouldn't force you to stay."
   everett "I just really want to hear about the sights and smells and the sort."
   everett "You know?"
 
-  balth "I think I understand now."
+  balth smirk "I think I understand now."
+  show balth:
+    rotate_pad False
+    ease 0.5 ypos 1.0 rotate 0
+    pause 0.25
+    lflipturn
+    pause 0.2
+    parallel:
+      linear 1.5 leftest
+    parallel:
+      easein  0.2 yoffset 20
+      easeout 0.3 yoffset  0
+      repeat 3
+    ease 0.2 xzoom -1.0
+  show everett shame
+  "My eyes widen as the stranger gets up,{w=0.25} walking towards the bed to lean against it."
 
-  "My eyes widen as the stranger gets up, walking towards the bed to lean against it."
+  balth "If only to repay your generosity,{w=0.25} I'll stay and share with you what you wish to hear."
 
-  balth "If only to repay your generosity, I'll stay and share with you what you wish to hear."
+  show everett smile:
+    rotate_pad False
+    pause 0.1
+    ease 0.05 xoffset -2
+    ease 0.05 xoffset  0
+    ease 0.5 ypos 0.0 yalign 1.0 yoffset 0 rotate 0
+  camera:
+    pause 0.2
+    ease 0.5 zoom 1.0 blur 0
+  "My heart skips a beat,{w=0.25} a smile growing as I eagerly stood."
 
-  "My heart skips a beat, a smile growing as I eagerly stood."
+  everett "Really?{w=0.25} You'll stay?"
 
-  everett "Really? You'll stay?"
-
-  balth "Just for a little while, you wish to hear from the outside, right?"
-  balth "Fortunately for you, I carry many stories..."
+  balth "Just for a little while,{w=0.25} you wish to hear from the outside,{w=0.25} right?"
+  balth "Fortunately for you,{w=0.25} I carry many stories{dots=4.5}"
+  scene black with Dissolve(2.0)
   return
