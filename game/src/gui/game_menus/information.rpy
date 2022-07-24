@@ -14,10 +14,16 @@ screen about():
       xsize 1100
       xalign 0.5
 
+      null height 1
       label "[config.name!t]"
       text _("Version [config.version!t]\n")
       text "[gui.about!t]\n"
       text _("Made with Ren'Py [renpy.version_only].")
+
+style about_label_text:
+  size 48
+  bold True
+  italic True
 
 ## Help screen #################################################################
 ##
