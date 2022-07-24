@@ -9,7 +9,7 @@ init python:
 
   def awt_tag(tag, arg):
     val = float(("6.0" if arg is "" else arg))
-    return[(renpy.TEXT_TAG, "cps={}".format(arg)), (renpy.TEXT_TEXT, " "), (renpy.TEXT_TAG, "/cps")]
+    return[(renpy.TEXT_TAG, "cps={}".format(val)), (renpy.TEXT_TEXT, " "), (renpy.TEXT_TAG, "/cps")]
 
   config.self_closing_custom_text_tags["dots"] = ellipse_tag
   config.self_closing_custom_text_tags["em"]   = em_tag
