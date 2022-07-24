@@ -4,34 +4,49 @@
 
 screen main_menu():
   tag menu
-  add Solid("#7F5F5F") # TODO: Get final art
+  add "bg bedroom"
 
-  use navigation("")
+  frame style "logo"
+
+  use mnav()
+  text "Ver. [config.version]" style "version_text"
+
+## Main Menu styles ############################################################
+
+style logo:
+  align (1.0, 0.0)
+  background Transform("gui/logo.webp", alpha=0.75)
+  xysize(862, 711)
+
+style version_text:
+  align (1.0, 1.0)
+  offset (-30, -20)
+  color "#000"
+
+## Main Menu navigation ########################################################
+
+screen mnav():
+  style_prefix "mnav"
+
   vbox:
-    style "main_menu_vbox"
-    text "[config.name!t]":
-      style "main_menu_title"
-    text "[config.version]":
-      style "main_menu_version"
+    textbutton _("Start")     left_padding   0 action Start()
+    textbutton _("Load")      left_padding  60 action ShowMenu("saves")
+    textbutton _("About")     left_padding 120 action ShowMenu("about")
+    textbutton _("Settings")  left_padding 180 action ShowMenu("settings")
+    textbutton _("Gallery")   left_padding 240 action NullAction() # TODO: IMPLEMENT GALLERY
+    textbutton _("Credits")   left_padding 280 action NullAction() # TODO: IMPLEMENT CREDITS
+    textbutton _("Quit")      left_padding 380 action Quit()
 
-style main_menu_frame:
-  xsize 420
-  yfill True
-  background "gui/overlay/main_menu.png"
+## Main Menu navigation styles #################################################
 
-style main_menu_vbox:
-  xalign 1.0
-  xoffset -30
-  xmaximum 1200
-  yalign 1.0
-  yoffset -30
+style mnav_vbox:
+  align (0.0, 1.0)
+  spacing 10
+  offset (30, -20)
 
-style main_menu_title:
-  align (1.0, 1.0)
+style mnav_button:
+  xsize 425
+style mnav_button_text:
+  size 72
   font cardinal
-  size 75
-  color "#000"
-style main_menu_version:
-  align (1.0, 1.0)
-  font book_antiqua
-  color "#000"
+  text_align 0.0
