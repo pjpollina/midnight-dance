@@ -1,6 +1,8 @@
 label tmd_part_d:
   $ save_name = _("When lips meet...")
 
+  scene cg yaoitime with Fade(2.0, 2.0, 2.0, "#FFF")
+
   "My hands rested on Balthazar's chest, slowly grabbing his shirt as if it would prevent him from leaving."
   "After what felt like an eternity, he pulled away and whispered softly in my ear."
 

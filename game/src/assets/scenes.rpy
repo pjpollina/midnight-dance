@@ -66,3 +66,7 @@ image cg balthcony dark = "scenes/cg_01b.webp"
 image cg balthcony eyes = "scenes/cg_01c.webp"
 
 image cg bedthazar = "scenes/cg_02.webp"
+
+image cg waltazar = "scenes/cg_03.webp"
+
+image cg yaoitime = "scenes/cg_04.webp"

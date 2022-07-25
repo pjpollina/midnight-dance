@@ -23,6 +23,9 @@ label tmd_part_c:
 label .balls_hehe:
   $ save_name = _("A dream shattered...")
 
+  play sound clock_gong
+  soundfx "GONG... {w=3.5}GONG... {w=3.5}GONG... {w=3.5}{nw}"
+
   "The clock chimed midnight, bringing me out of the conversation."
 
   balth "My most recent escapade is the ball hosted down the street, it was quite..."
@@ -83,7 +86,7 @@ label .balls_hehe:
 label .midnight_waltz:
   $ save_name = _("The midnight waltz...")
 
-  # scene cg waltazar with Fade(2.0, 1.0, 3.0)
+  scene cg waltazar with Fade(2.0, 1.0, 3.0)
 
   balth "May I have this dance?"
   everett "Wha{dots=3.0}what?"
@@ -139,7 +142,7 @@ label .midnight_waltz:
 label .fireworks:
   $ save_name = _("Fires in the sky...")
 
-  #show balcony bg fireworks
+  show bg balcony lit
 
   "The fireworks lit the dark sky with warm colors. Sprinkling down to the ground after a grand display of vivid colors."
   "Tonight, the fireworks felt brighter than ever."
