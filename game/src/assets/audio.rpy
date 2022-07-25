@@ -7,6 +7,7 @@ init python in audio:
   into_bed     = "audio/sfx/into_bed.ogg"
   door_open    = "audio/sfx/door_open.ogg"
   door_shut    = "audio/sfx/door_shut.ogg"
+  clock_gong   = "audio/sfx/clock_gong.ogg"
   knock_knock  = "audio/sfx/knock_knock.ogg"
   tap_tap_tap  = "audio/sfx/tap_tap_tap.ogg"
   curtain_open = "audio/sfx/curtain_open.ogg"

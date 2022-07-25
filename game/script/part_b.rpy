@@ -378,7 +378,14 @@ label .post_monolog:
   "Wiping away the beads of sweat,{w=0.25} I breathed out a sigh of relief knowing the man should be okay for the night at least."
   everett b shame @ a smile "That should do it."
 
-  # TODO: Clock sfx
+  play sound clock_gong
+  show everett b shame:
+    easein  0.1 yzoom 1.01
+    easeout 0.1 yzoom 1.00
+    pause 3.3
+    repeat 3
+  $ renpy.pause(11.0, hard=True)
+
   "Eleven o'clock.{w=0.25} The fireworks would light up the sky by now."
   show everett c grimace
   "There was no chance I would fall back asleep with him in my bed{dots=4.5} I might as well stay up and watch."
