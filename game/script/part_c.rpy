@@ -148,7 +148,7 @@ label .midnight_waltz:
   "When we were dancing,{w=0.25} it felt like hours passed.{w=0.25} With only the feeling of his hand in mine resonating."
 
   # TODO: FIREWORK SFX
-  soundfx "kaboom!"
+  soundfx "kaboom!{nw}"
 
   "Not wanting to break the dance,{w=0.25} I slowly took the lead and pulled him towards the balcony."
   everett "The fireworks! Let's go watch them."

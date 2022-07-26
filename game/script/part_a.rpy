@@ -375,9 +375,7 @@ label .darkness:
   "What would I say to this stranger?"
   "My breath hitched in my throat as the strangers' eyes met mine."
 
-  show cg eyes:
-    yalign 0.22 zoom 4.0
-  with Dissolve(1.0)
+  show cg eyes with Dissolve(1.0)
 
   "My blood ran cold."
   "His eyes were cold and clear on the surface. The crimson color shone strangely while the rest of him was concealed in the darkness."
@@ -410,7 +408,7 @@ label .choice:
 
       play sound ["<silence 1.5>", curtain_shut]
       pause 1.5
-      scene black with ImageDissolve("curtain.webp", 0.15)
+      scene black with ImageDissolve("masks/curtain.webp", 0.15)
       pause 2.0
 
       turmoil """

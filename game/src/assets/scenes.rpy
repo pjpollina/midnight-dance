@@ -10,16 +10,16 @@ init python:
       out.append(AlphaMask(child, mask))
     return out
 
-  bedroom_dark_stars = starframes("scenes/bedroom_dark_stars.webp")
-  bedroom_lit_stars  = starframes("scenes/bedroom_lit_stars.webp")
-  balcony_dark_stars = starframes("scenes/balcony_dark_stars.webp")
+  bedroom_dark_stars = starframes("scenes/bgs/bedroom_dark_stars.webp")
+  bedroom_lit_stars  = starframes("scenes/bgs/bedroom_lit_stars.webp")
+  balcony_dark_stars = starframes("scenes/bgs/balcony_dark_stars.webp")
 
 ## BACKGROUNDS #################################################################
 
 image bg bedroom:
   align (0.5, 0.5)
   contains:
-    "scenes/bedroom_dark.webp"
+    "scenes/bgs/bedroom_dark.webp"
   contains:
     bedroom_dark_stars[0] with Dissolve(FRAMETIME)
     pause FRAMETIME
@@ -32,7 +32,7 @@ image bg bedroom:
 image bg bedroom lit:
   align (0.5, 0.5)
   contains:
-    "scenes/bedroom_lit.webp"
+    "scenes/bgs/bedroom_lit.webp"
   contains:
     bedroom_lit_stars[0] with Dissolve(FRAMETIME)
     pause FRAMETIME
@@ -45,7 +45,7 @@ image bg bedroom lit:
 image bg balcony:
   align (0.5, 0.5)
   contains:
-    "scenes/balcony_dark.webp"
+    "scenes/bgs/balcony_dark.webp"
   contains:
     balcony_dark_stars[0] with Dissolve(FRAMETIME)
     pause FRAMETIME
@@ -56,19 +56,16 @@ image bg balcony:
     repeat
 
 image bg balcony lit:
-  "scenes/balcony_lit.webp"
+  "scenes/bgs/balcony_lit.webp"
   align (0.5, 0.5)
 
 ## CGs #########################################################################
 
-image cg balthcony = "scenes/cg_01a.webp"
-image cg balthcony dark = "scenes/cg_01b.webp"
-image cg balthcony eyes = "scenes/cg_01c.webp"
+image cg balthcony      = "scenes/cgs/01a.webp"
+image cg balthcony dark = "scenes/cgs/01b.webp"
+image cg balthcony eyes = "scenes/cgs/01c.webp"
 
-image cg bedthazar = "scenes/cg_02.webp"
-
-image cg waltazar = "scenes/cg_03.webp"
-
-image cg yaoitime = "scenes/cg_04.webp"
-
-image cg returnazar = "scenes/cg_05.webp"
+image cg bedthazar  = "scenes/cgs/02.webp"
+image cg waltazar   = "scenes/cgs/03.webp"
+image cg yaoitime   = "scenes/cgs/04.webp"
+image cg returnazar = "scenes/cgs/05.webp"
