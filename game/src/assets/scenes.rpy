@@ -69,3 +69,15 @@ image cg bedthazar  = "scenes/cgs/02.webp"
 image cg waltazar   = "scenes/cgs/03.webp"
 image cg yaoitime   = "scenes/cgs/04.webp"
 image cg returnazar = "scenes/cgs/05.webp"
+
+## B-ROLL ######################################################################
+
+image brl pro a:
+  "scenes/brl_pro_a.webp"
+  subpixel True zoom 2.0 align (0.0, 0.33)
+  linear 180.0 align (1.0, 0.66)
+
+image brl pro b:
+  "scenes/brl_pro_b.webp"
+  subpixel True zoom 1.0 align (0.5, 1.0)
+  linear 180.0 align (0.5, 0.0)

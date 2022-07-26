@@ -1,15 +1,21 @@
 label tmd_part_a:
   $ save_name = _("Prologue")
 
-  prolog """
-  Voices carried across the wind, full of excitement and apprehension.
+  prolog "Voices carried across the wind, full of excitement and apprehension."
 
+  show brl pro a with Dissolve(2.0)
+
+  prolog """
   Will they find their lover in the onslaught between suitors?
 
   Will the timid wallflower bloom into a sensation overnight?
 
   Much was left to the imagination, at least for those who waited with bated breaths to attend.
+  """
 
+  show brl pro b with Dissolve(2.0)
+
+  prolog """
   All except for the sickly prince, who from his balcony cast a longing glance towards the crowds.
 
   From where his manor was, he could gaze into the throes of well-mannered gentlemen and gorgeously
@@ -26,8 +32,6 @@ label tmd_part_a:
 
 label .post_prologue:
   $ save_name = _("The lonely prince...")
-
-  "{dots=3.0}"
 
   scene bg balcony
   show everett b smile at rflip, right
