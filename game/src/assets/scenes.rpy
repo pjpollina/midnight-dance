@@ -70,3 +70,5 @@ image cg bedthazar = "scenes/cg_02.webp"
 image cg waltazar = "scenes/cg_03.webp"
 
 image cg yaoitime = "scenes/cg_04.webp"
+
+image cg returnazar = "scenes/cg_05.webp"
