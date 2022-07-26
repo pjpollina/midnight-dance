@@ -119,6 +119,7 @@ label .bedtime:
 
   "The scullery maid took my wrist,{w=0.25} pulling me back inside despite my protests."
 
+  play music everett fadein 5.0
   scene bg bedroom lit
   show everett b frown at rflip, lefter
   with Fade(0.0, 1.0, 2.0)
@@ -199,7 +200,7 @@ label .goodnight:
       easein 0.25 yoffset  0
       repeat 2
 
-  # TODO: Blanket noises
+  play sound into_bed
   "She came to my side,{w=0.25} gently throwing the blankets over me tucking me in."
 
   everett "Thank you,{w=0.25} Miss."
@@ -230,6 +231,7 @@ label .goodnight:
   $ renpy.pause(3.5, hard=True)
 
   play sound door_shut volume 0.5
+  stop music fadeout 10.0
   "Whispering her farewell,{w=0.25} she stood upright and left the room in the same hurry she came in."
   "{dots=4.5}"
   "All that remained was a still silence{dots=4.5}"
@@ -332,6 +334,7 @@ label .tapping:
 
   "This wasn't going{dots=6.0} to work."
   "With the last bit of energy I had,{w=0.25} my legs slowly kicked over the side of the bed."
+  play sound into_bed
   "I fumbled with lighting a candle,{w=0.25} but eventually gave up and headed towards the balcony."
   "If the balcony was so insistent on keeping me awake,{w=0.25} I hope it brought me something entertaining."
   "Like a balcony size ball,{w=0.25} just for me."
@@ -379,11 +382,14 @@ label .darkness:
   "What would I say to this stranger?"
   "My breath hitched in my throat as the strangers' eyes met mine."
 
-  show cg eyes with Dissolve(1.0)
+  show cg eyes:
+    align (0.5, 0.5)
+  with Dissolve(1.0)
 
   "My blood ran cold."
   "His eyes were cold and clear on the surface. The crimson color shone strangely while the rest of him was concealed in the darkness."
   "Those red eyes... they were as red as blood."
+  # TODO: Heartbeat sfx
   "My heart skipped a beat,{w=0.25} threatening to leap out of my chest."
 
   "What... who was I staring at?"
@@ -392,6 +398,8 @@ label .darkness:
   "Maybe this was a dream."
   "But the stranger's eyes shone in recognition,{w=0.25} and he gently rapped against the balcony glass."
 
+  play sound tap_tap_tap
+  soundfx "{alpha=0.66}tink.{w=0.25}{size=+4} tink.{w=0.25}{/size}{size=+8} tink.{w=0.25}{/size}{/alpha}{nw}"
   balth "May I seek refuge here,{w=0.25} stranger?"
   balth "I've come a long way{dots=6.0} and I need rest."
   balth "Harm will not come to you if you choose this."
