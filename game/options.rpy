@@ -1,7 +1,7 @@
 ## Game Info ###################################################################
 init python:
   config.name           = _("The Midnight Dance")
-  config.version        = "0.1.8"
+  config.version        = "0.1.9"
   config.save_directory = "midnight_dance"
   config.window_icon    = "gui/window_icon.webp"
   gui.about = _p("""
@@ -17,15 +17,15 @@ init python:
 init python:
   ## Transitions
   config.enter_transition = dissolve
-  config.exit_transition = dissolve
+  config.exit_transition  = dissolve
   config.intra_transition = dissolve
   config.after_load_transition = None
-  config.end_game_transition = Fade(3.0, 3.0, 0.0, color="#FFF")
+  config.end_game_transition = Fade(3.0, 3.0, 3.0, color="#FFF")
 
   ## Window stuff
   config.window = "auto"
-  config.window_show_transition = Dissolve(.2)
-  config.window_hide_transition = Dissolve(.2)
+  config.window_show_transition = Dissolve(0.2)
+  config.window_hide_transition = Dissolve(0.2)
 
   ## Preference defaults
   preferences.text_cps = 35
@@ -39,7 +39,7 @@ init python:
   config.thumbnail_height = 270
 
   ## For me
-  config.keymap['console'] = "K_BACKQUOTE"
+  config.keymap["console"] = "K_BACKQUOTE"
 
 ## Build Stuff #################################################################
 init python:
@@ -48,16 +48,23 @@ init python:
   build.include_update = False
 
   ## Stuff to ignore in builds
-  build.classify('**~', None)
-  build.classify('**.bak', None)
-  build.classify('**/.**', None)
-  build.classify('**/#**', None)
-  build.classify('**/thumbs.db', None)
+  build.classify("**~", None)
+  build.classify("**.rpy", None)
+  build.classify("**.bak", None)
+  build.classify("**/.**", None)
+  build.classify("**/#**", None)
+  build.classify("**/thumbs.db", None)
 
   ## Stuff to pack into .rpa files
-  build.classify('game/**.png',  'archive')
-  build.classify('game/**.ttf',  'archive')
-  build.classify('game/**.webp', 'archive')
+  build.archive("script", "all")
+  build.archive("audio",  "all")
+  build.archive("gui",    "all")
+  build.archive("images", "all")
+
+  build.classify("game/**.rpyc",    "script")
+  build.classify("game/images/**",  "images")
+  build.classify("game/audio/**",    "audio")
+  build.classify("game/gui/**",        "gui")
 
   ## Platform key info
   # build.google_play_key = "..."
