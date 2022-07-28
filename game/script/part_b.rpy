@@ -1,6 +1,7 @@
 label tmd_part_b:
   $ save_name = _("A stranger in the night...")
-  play music balthazar fadein 4.0
+  play music "<silence 2.0>"
+  queue music balthazar fadein 4.0
   scene cg balthcony with Fade(2.0, 1.0, 3.0)
 
   "The man was clearly injured,{w=0.25} cradling his shoulder the way he was{dots=4.5}"
@@ -25,19 +26,12 @@ label tmd_part_b:
   everett "{dots=4.5}Stranger?"
 
   "The man still didn't reply as I came up behind him,{w=0.25} gently touching his shoulder to turn him around."
-  show black zorder -10
-  show cg:
-    yalign 0.0 matrixcolor TintMatrix("#FFF")
-    linear 0.05 xoffset -5
-    linear 0.05 xoffset  0
-    linear 0.05 xoffset  5
-    linear 0.05 xoffset  0
-    pause 1.0
-    linear 0.12 xzoom 2.5 yzoom 4.0 blur 500 matrixcolor TintMatrix("#000")
-  with None
-  $ renpy.pause(2.0, hard=True)
+  scene black with Dissolve(0.25)
 
   # TODO: Thud sfx
+  soundfx "thud.{w=0.25}{nw}"
+
+  pause 2.0
 
   "He swayed back and forth before crumpling into the ground without notice."
   "My grip on his shoulder tightened as I swung an arm beneath his armpit to make sure he didn't fall."
@@ -167,9 +161,11 @@ label .guests:
 
   "They were quick!"
 
+  play music everett fadein 2.0
+
   scene bg bedroom
   show everett c frown at right, rflip
-  with dissolve
+  with Dissolve(2.0)
 
   maid "Your Royal Highness!{w=0.25} Is everything alright in there?"
 
@@ -274,6 +270,8 @@ label .guests:
   everett "Goodnight,{w=0.25} miss."
   maid "Goodnight to you,{w=0.25} Your Royal Highness."
 
+  stop music fadeout 4.0
+
   show maid:
     rflip
     yalign 1.0
@@ -312,6 +310,8 @@ label .guests:
   hide maid
   hide guard_a
   hide guard_b
+  play sound door_shut
+  stop music
   show everett b frown:
     yalign 1.0
     easein  0.25 zoom 1.03
@@ -327,6 +327,8 @@ label .bedthazar:
   $ save_name = _("Rest for the wicked...")
   "{dots=3.0}"
 
+  play music "<silence 2.5>"
+  queue music balthazar fadein 4.0
   scene cg bedthazar with Fade(2.0, 1.0, 3.0)
 
   "The man had long,{w=0.25} wispy blonde locks that cascaded down from his shoulders to his chest."
@@ -347,7 +349,12 @@ label .bedthazar:
   everett "Now where had I left that first aid kit{dots=4.5}"
   "Beneath the bed,{w=0.25} I pulled the cumbersome first aid kit and dropped it on the bedside rolling my sleeves up."
   everett "I hope this works{dots=4.5}"
+
+  stop music fadeout 4.0
   scene black with Fade(4.0, 1.0, 0.0)
+  stop music
+
+  pause 2.0
 
 label .monolog:
   prolog """
@@ -385,6 +392,8 @@ label .post_monolog:
     pause 3.3
     repeat 3
   $ renpy.pause(11.0, hard=True)
+
+  play music everett fadein 4.0
 
   "Eleven o'clock.{w=0.25} The fireworks would light up the sky by now."
   show everett c grimace
@@ -521,9 +530,14 @@ label .whiteboy_wasted:
   "Stop looking pathetic Everett!{w=0.25} Keep asking him to stay{em}"
   "Something was shoved into my hands,{w=0.25} and I pry open one eye to see my inhaler magically there."
   "With my hands shaking,{w=0.25} I immediately lean my head back and inhale the medication."
+  stop music
   scene black
   with fade
   "Slowly,{w=0.25} but surely,{w=0.25} the tightness in my chest went away.{w=0.25} The blurriness dissipating as well."
+
+  play music "<silence 2.0>"
+  queue music balthazar fadein 4.0
+
   scene bg bedroom
   show balth a aloof:
     align (0.25, 1.0) ypos 1.25 xzoom -1.0 rotate 5
@@ -601,5 +615,8 @@ label .whiteboy_wasted:
 
   balth "Just for a little while,{w=0.25} you wish to hear from the outside,{w=0.25} right?"
   balth "Fortunately for you,{w=0.25} I carry many stories{dots=4.5}"
+
+  stop music fadeout 2.0
   scene black with Dissolve(2.0)
+  stop music
   return

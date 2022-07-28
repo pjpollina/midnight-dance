@@ -35,7 +35,7 @@ label .post_prologue:
 
   scene bg balcony
   show everett b smile at rflip, right
-  with fade
+  with Fade(2.5, 1.0, 2.5)
 
   "A feeling of profound melancholy overcame me as I watched the last of the crowds disappear into the ball."
   "The same night,{w=0.25} every night,{w=0.25} when the arching loneliness overwhelmed me at the sights."
@@ -176,6 +176,8 @@ label .bedtime:
   show maid smile at lflipturn
   maid "Of course Your Highness! Allow me to dim the lights."
 
+  stop music fadeout 4.0
+
 label .goodnight:
   $ save_name = _("A room lit only by smiles...")
 
@@ -231,7 +233,6 @@ label .goodnight:
   $ renpy.pause(3.5, hard=True)
 
   play sound door_shut volume 0.5
-  stop music fadeout 10.0
   "Whispering her farewell,{w=0.25} she stood upright and left the room in the same hurry she came in."
   "{dots=4.5}"
   "All that remained was a still silence{dots=4.5}"

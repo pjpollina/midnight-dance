@@ -23,23 +23,31 @@ label tmd_part_c:
 label .balls_hehe:
   $ save_name = _("A dream shattered...")
 
+  play music everett
+
   scene bg bedroom lit
   show everett a smile at right
-  show balth   a smile at left, rflip
+  show balth a smile at left, rflip
   with Dissolve(1.25)
 
   pause 0.75
 
+  $ renpy.music.set_volume(0.0, delay=0.2)
+
   show everett shame
-  show balth   shock
+  show balth shock
+
   play sound clock_gong
   soundfx "GONG... {w=3.5}GONG... {w=3.5}GONG... {w=3.5}{nw}"
 
   "The clock chimed midnight,{w=0.25} bringing me out of the conversation."
 
+  $ renpy.music.set_volume(1.0, delay=1.0)
+
   balth smirk "My most recent escapade is the ball hosted down the street,{w=0.25} it was quite{dots=4.5}"
   "My attention immediately honed onto him,{w=0.25} waiting for those details I eagerly wanted."
   balth frown "{dots=6.0}the bore.{w=0.25} I wish I would never go to one as long as I live."
+
   show everett frown
   "What?"
 
@@ -94,7 +102,9 @@ label .balls_hehe:
   show everett c shame
   "I was stunned into silence."
   everett "Re-really{em}?"
+
   "I was interrupted by the man standing on his feet, {nw}{done}offering a hand towards me."
+  stop music fadeout 2.0
   show balth cocky:
     ease 0.5 center
   "I was interrupted by the man standing on his feet, {fast}{w=0.25}offering a hand towards me."
@@ -103,8 +113,11 @@ label .balls_hehe:
 label .midnight_waltz:
   $ save_name = _("The midnight waltz...")
 
-  play music ["<silence 2.0>", midnight_waltz] fadein 4.0
-  scene cg waltazar with Fade(2.0, 1.0, 3.0)
+  play music "<silence 3.0>"
+  queue music midnight_waltz fadein 2.0
+
+  scene cg waltazar
+  with Fade(2.0, 1.0, 3.0)
 
   balth "{cps=*0.66}{i}May I have this dance?{/i}{/cps}"
   everett "Wha{dots=3.0}what?"
@@ -154,16 +167,21 @@ label .midnight_waltz:
   everett "The fireworks! Let's go watch them."
   balth "If you say so."
 
+  stop music fadeout 3.0
+  scene black with Dissolve(3.0)
+  stop music
+
   "I urged him towards the balcony,{w=0.25} leaning against the railing."
   "Moments later,{w=0.25} I regretted coming out without a blanket.{w=0.25} But the stranger tossed one over my shoulders and leaned against the railing next to me."
 
 label .fireworks:
   $ save_name = _("Fires in the sky...")
 
+  play music fireworks
   scene bg balcony lit
   show everett b smile at left, rflip
-  show balth   a smile at right
-  with dissolve
+  show balth a smile at right
+  with Dissolve(3.0)
 
   "The fireworks lit the dark sky with warm colors.{w=0.25} Sprinkling down to the ground after a grand display of vivid colors."
   "Tonight,{w=0.25} the fireworks felt brighter than ever."
@@ -178,6 +196,8 @@ label .fireworks:
   everett "That's{dots=4.5}"
   balth smirk @ frown "My name."
   everett smile "Everett,{w=0.25} it's nice to meet you."
+
+  $ renpy.music.set_volume(0.25, delay=3.0)
 
   show everett:
     ease 1.0 xalign 0.26
@@ -198,6 +218,7 @@ label .fireworks:
 label .interrupted:
   $ save_name = _("Imperfect timing...")
 
+  stop music
   show everett c shame:
     parallel:
       linear 0.1 yzoom 1.25
@@ -216,7 +237,12 @@ label .interrupted:
   "I whipped towards the door at the sound of the door banging.{w=0.25} The maid's voice came from the other side again."
 
   show balth a aloof:
-    easein 30.0 xalign 0.4
+    parallel:
+      easein 30.0 xalign 0.4
+    parallel:
+      easein 0.75 yoffset 10
+      easein 0.75 yoffset  0
+      repeat 20
 
   maid "Your Royal Highness?{w=0.25} Why is your room lit?{w=0.25} Is everything alright still?"
 

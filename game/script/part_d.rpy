@@ -1,6 +1,7 @@
 label tmd_part_d:
   $ save_name = _("When lips meet...")
 
+  play music balthazar fadein 8.0
   scene cg yaoitime with Fade(2.0, 2.0, 2.0, color="#FFF")
 
   "My hands rested on Balthazar's chest,{w=0.25} slowly grabbing his shirt as if it would prevent him from leaving."
@@ -46,6 +47,7 @@ label tmd_part_d:
   scene cg balthcony:
     matrixcolor SepiaMatrix()
   with Fade(3.0, 3.0, 3.0)
+  stop music fadeout 7.0
   pause 3.0
   scene black with Dissolve(6.0)
 
@@ -131,14 +133,17 @@ label .waiting:
   "My heart leapt to my throat."
   "A chill ran through my spine as I slowly turned."
   "Behind me was him."
+
+label .the_return:
+  $ save_name = _("Reunited...")
+
+  play music fireworks fadein 2.0
   scene cg returnazar
   camera:
     zoom 1.0
   with Fade(0.2, 0.0, 0.2, color="#FFF")
-  "Balthazar."
 
-label .the_return:
-  $ save_name = _("Reunited...")
+  "Balthazar."
 
   "He stood in a new set of gentleman's clothing,{w=0.25} carrying a bouquet of flowers."
 
@@ -203,5 +208,7 @@ label .the_return:
   "Balthazar nodded,{w=0.25} smiling fondly."
 
   balth "I'll tell you everything,{w=0.25} starting from the very beginning{dots=4.5}"
+  stop music fadeout 0.25
+  scene black with Dissolve(0.25)
   balth "Of when I became a vampire."
   return
