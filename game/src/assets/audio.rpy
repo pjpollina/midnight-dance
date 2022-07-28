@@ -2,6 +2,7 @@ init python in audio:
   ## Music
   everett        = "audio/music/everett.ogg"
   balthazar      = "audio/music/balthazar.ogg"
+  fireworks      = "audio/music/fireworks.ogg"
   midnight_waltz = "audio/music/midnight_waltz.ogg"
 
   ## SFX
