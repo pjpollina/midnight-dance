@@ -29,7 +29,7 @@ screen mnav():
   style_prefix "mnav"
 
   vbox:
-    textbutton _("Start")     left_padding   0 action Start()
+    textbutton _("Start")     left_padding   0 action [Stop("music", fadeout=3.0), Hide("main_menu", transition=Dissolve(3.0)), Jump("newgame")]
     textbutton _("Load")      left_padding  60 action ShowMenu("saves")
     textbutton _("About")     left_padding 120 action ShowMenu("about")
     textbutton _("Settings")  left_padding 180 action ShowMenu("settings")
@@ -50,3 +50,15 @@ style mnav_button_text:
   size 72
   font cardinal
   text_align 0.0
+
+## Control Labels ##############################################################
+
+label before_main_menu:
+  play music main_menu fadein 3.0
+  $ renpy.transition(Dissolve(3.0))
+  return
+
+label newgame:
+  $ renpy.pause(3.0, hard=True)
+  $ renpy.jump_out_of_context("start")
+  return

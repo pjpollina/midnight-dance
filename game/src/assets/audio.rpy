@@ -1,5 +1,6 @@
 init python in audio:
   ## Music
+  main_menu      = "audio/music/main_menu.ogg"
   everett        = "audio/music/everett.ogg"
   balthazar      = "audio/music/balthazar.ogg"
   fireworks      = "audio/music/fireworks.ogg"
