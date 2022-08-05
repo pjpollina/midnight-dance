@@ -2,6 +2,7 @@ label tmd_part_a:
   label .prolog:
     $ save_name = _("Prologue")
 
+    play music nearby_party fadein 4.0
     prolog "Voices carried across the wind, full of excitement and apprehension."
 
     show brl pro a with Dissolve(2.0)
@@ -34,6 +35,8 @@ label tmd_part_a:
   label .post_prologue:
     $ save_name = _("The lonely prince...")
 
+    stop  music fadeout 3.0
+    queue music distant_party fadein 3.0
     scene bg balcony
     show everett b smile at rflip, right
     with Fade(2.5, 1.0, 2.5)
@@ -113,6 +116,7 @@ label tmd_part_a:
         easein 0.2 yoffset 20
         easein 0.3 yoffset  0
         repeat 5
+    stop music fadeout 2.5
     show black with Dissolve(2.5)
 
   label .bedtime:
@@ -120,10 +124,10 @@ label tmd_part_a:
 
     "The scullery maid took my wrist,{w=0.25} pulling me back inside despite my protests."
 
-    play music everett fadein 5.0
     scene bg bedroom lit
     show everett b frown at rflip, lefter
     with Fade(0.0, 1.0, 2.0)
+    play music everett fadein 5.0
 
     play sound [door_shut, "<silence 0.25>", curtain_shut]
     "She closed the balcony doors and pulled the curtains from either side to conceal the outside."
@@ -234,11 +238,15 @@ label tmd_part_a:
     $ renpy.pause(3.5, hard=True)
 
     play sound door_shut volume 0.5
+    play music hollow_wind volume 0.25 fadein 4.0
+
     "Whispering her farewell,{w=0.25} she stood upright and left the room in the same hurry she came in."
     "{dots=4.5}"
     "All that remained was a still silence{dots=4.5}"
     "The sort that feels{dots=3.0} suffocating,{w=0.25} despite nothing being there."
     "Even as I closed my eyes{dots=4.5} it made no difference."
+
+    stop music fadeout 4.0
 
     camera:
       easein 0.15 matrixcolor TintMatrix("#999")
@@ -288,6 +296,7 @@ label tmd_part_a:
 
     everett "Nmh..."
 
+    play music hollow_wind volume 0.25 fadein 3.0
     scene bg bedroom:
       matrixcolor TintMatrix("#333")
     with Fade(0.0, 1.0, 2.0)

@@ -5,6 +5,9 @@ init python in audio:
   balthazar      = "audio/music/balthazar.ogg"
   fireworks      = "audio/music/fireworks.ogg"
   midnight_waltz = "audio/music/midnight_waltz.ogg"
+  hollow_wind    = "audio/music/hollow_wind.ogg"
+  nearby_party   = "audio/music/nearby_party.ogg"
+  distant_party  = "audio/music/distant_party.ogg"
 
   ## SFX
   into_bed     = "audio/sfx/into_bed.ogg"
