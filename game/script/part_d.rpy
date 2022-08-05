@@ -8,7 +8,9 @@ label tmd_part_d:
     "My hands rested on Balthazar's chest,{w=0.25} slowly grabbing his shirt as if it would prevent him from leaving."
     "After what felt like an eternity,{w=0.25} he pulled away and whispered softly in my ear."
 
+    #voice "audio/voices/balth/d46.ogg" TODO
     balth "Wait for me,{w=0.25} Your Royal Highness."
+
     everett "Balthazar{dots=4.5}"
 
     camera:
@@ -19,7 +21,10 @@ label tmd_part_d:
       align (0.5, 0.3)
       ease 1.0 zoom 2.0 blur 0
     pause 1.0
+
+    #voice "audio/voices/balth/d47.ogg" TODO
     turmoil "{b}{i}{cps=*0.5}Wait for me.{/cps}{/i}{/b}"
+
     scene black with ImageDissolve("cg yaoitime", 1.5)
     camera:
       zoom 1.0 align (0.5, 0.5)
@@ -129,6 +134,8 @@ label tmd_part_d:
       matrixcolor TintMatrix("#000") alpha 0.0
       easein 5.0 alpha 1.0
     $ renpy.pause(5.0, hard=True)
+
+    voice "audio/voices/balth/d48.ogg"
     balth "So you've waited for me,{w=0.25} Your Royal Highness."
 
     show everett a shame at rflip:
@@ -151,6 +158,7 @@ label tmd_part_d:
 
     "He stood in a new set of gentleman's clothing,{w=0.25} carrying a bouquet of flowers."
 
+    voice "audio/voices/balth/d49.ogg"
     balth "You've done well."
 
     "Tears welled in my eyes,{w=0.25} and I didn't try to wipe them away."
@@ -160,7 +168,9 @@ label tmd_part_d:
 
     "It was hard to talk through the sniffling as I restrained myself from leaping towards him."
 
+    #voice "audio/voices/balth/d50.ogg"
     balth "The guards have increased since I last left you.{w=0.25} It was difficult even for me to find my way back here."
+    #voice "audio/voices/balth/d51.ogg"
     balth "But knowing you were waiting for me{dots=4.5} I couldn't stop until I found a way back to you."
 
     "I rubbed my blurry vision,{w=0.25} a sob trapped in my chest.{w=0.25} I should've asked him why the guards were so persistent to catch him.{w=0.25} But the overwhelming relief of him being here was distracting."
@@ -178,8 +188,12 @@ label tmd_part_d:
 
     "His eyes flashed with an unrecognizable emotion,{w=0.25} but he didn't deny the accusation."
 
+    #voice "audio/voices/balth/d52.ogg"
     balth "It's been a long life before I met you,{w=0.25} Everett.{w=0.25} One that I shouldn't tell you fully."
+
     everett "Why not?"
+
+    #voice "audio/voices/balth/d53.ogg"
     balth "It will entangle you in it,{w=0.25} and I wouldn't wish to harm you."
 
     "My hand drops from his shoulder to his hand,{w=0.25} squeezing it."
@@ -189,31 +203,45 @@ label tmd_part_d:
     everett "I don't know anything about you,{w=0.25} but I can judge you from the way you acted with me."
     everett "And you don't seem to be some scoundrel like the guards say."
 
+    #voice "audio/voices/balth/d54.ogg"
     balth "They talk of me like a scoundrel?"
+
     everett "{dots=4.5}among other names that aren't nice."
 
     "Wanting to make him laugh,{w=0.25} I instead succeeded in a deep frown plaguing his features."
 
     everett "Listen.{w=0.25} I want to help you however I can.{w=0.25} You rescued me from my prison,{w=0.25} at least let me help you get out of yours."
     everett "I'm weak,{w=0.25} but I'm not so weak as to steal a night with you and not help you in return."
+
+    voice "audio/voices/balth/d55.ogg"
     balth "Everett{dots=4.5}"
 
     "His eyes were wide in shock,{w=0.25} as if he had never heard those words."
+
+    voice "audio/voices/balth/d56.ogg"
     "Then he chuckled,{w=0.25} bursting out into laughter that seemed unfitting for the situation."
 
     everett "What's so funny?"
+
+    voice "audio/voices/balth/d57.ogg"
     balth "You surprise me,{w=0.25} human."
 
     "Human?"
 
+    voice "audio/voices/balth/d58.ogg"
     balth "If I must trudge down that weary road again,{w=0.25} at least I'd like to do it with a companion."
+
     everett "So you'll tell me?"
 
     "Balthazar nodded,{w=0.25} smiling fondly."
 
+    voice "audio/voices/balth/d59.ogg"
     balth "I'll tell you everything,{w=0.25} starting from the very beginning{dots=4.5}"
+
     stop music fadeout 0.25
     scene black with Dissolve(0.25)
+
+    voice "audio/voices/balth/d60.ogg"
     balth "Of when I became a vampire."
 
   return
