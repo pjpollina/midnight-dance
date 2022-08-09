@@ -13,6 +13,7 @@ label tmd_part_b:
     voice audio.balth("b04")
     balth "I'm surprised you actually invited me in, just who are you?"
 
+    voice audio.everett("b01")
     everett "We will have plenty to talk about once you're out of the cold."
 
     voice audio.balth("b05")
@@ -20,16 +21,19 @@ label tmd_part_b:
 
     "The stranger stepped forward out of the harsh elements as I closed the balcony glass behind him."
 
+    voice audio.everett("b02")
     everett "Make yourself at home I guess..."
 
     "There was no response from the stranger,{w=0.25} who stood dangerously still with his chin to the ground."
 
+    voice audio.everett("b03")
     everett "A name would be nice too."
     stop music fadeout 1.0
 
     voice audio.balth("b06")
     balth "{cps=0}.{w=3.5}.{w=3.5}.{w=4.0}{nw}{/cps}" (advance=False)
 
+    voice audio.everett("b04")
     everett "{dots=4.5}Stranger?"
 
     "The man still didn't reply as I came up behind him,{w=0.25} gently touching his shoulder to turn him around."
@@ -44,9 +48,11 @@ label tmd_part_b:
     "My grip on his shoulder tightened as I swung an arm beneath his armpit to make sure he didn't fall."
 
     "Slowly, I lowered him to the ground on his knees. He was too heavy for me to keep on his feet."
+    voice audio.everett("b05")
     everett "This shoulder injury must be worse than I thought..."
     "Even unconscious,{w=0.25} the man concealed his wound,{w=0.25} though nobody could miss the crimson soaking through his clothes."
 
+    voice audio.everett("b06")
     everett "I guess we'll have to fix this before I get any answers..."
     "I looped both of my arms beneath his armpits and started dragging him towards my bed."
 
@@ -90,18 +96,22 @@ label tmd_part_b:
 
     show everett a frown at rflipturn:
       blur 0 xalign 0.5
+    voice audio.everett("b07")
     everett "Why am I... doing so much... for you?!"
     "Because I wanted to hear about the outside, of course."
 
     show everett c cough at lflipturn
+    voice audio.everett("b08")
     everett "Come on! What could I do?"
 
     show everett b shame at rflipturn
+    voice audio.everett("b09")
     everett "Think Everett, think..."
     "Racking my head for a solution, the pillows flung beneath my blankets spawned an idea."
 
     # TODO: Lightbulb [metaphorical] SFX
     show everett a smile at lflipturn
+    voice audio.everett("b10")
     everett "The pillows! I'll hide him under my pillows and blankets!"
 
     # TODO: DRAG SFX
@@ -180,10 +190,12 @@ label tmd_part_b:
     voice audio.maid("b02")
     maid "Your Royal Highness!{w=0.25} Is everything alright in there?"
 
+    voice audio.everett("b11")
     everett "Everything{dots=4.5} {nw}"
     show everett a shame at lflipturn
     extend "is fine,{w=0.25} Miss! {w=0.15}{nw}"
     extend smile "Nothing is wrong here."
+    voice audio.everett("b12")
     everett smile "What is the matter that you have to wake me up so late?"
 
     voice audio.maid("b03")
@@ -192,6 +204,7 @@ label tmd_part_b:
     show everett c frown
     "So they're keeping me in the dark about him?"
 
+    voice audio.everett("b13")
     everett b grimace "If you must,{w=0.25} come in."
 
     play sound door_open
@@ -245,10 +258,12 @@ label tmd_part_b:
     voice audio.maid("b04")
     maid "Are you sure you're alright,{w=0.25} Your Highness?{w=0.25} Your cheeks are flush."
 
+    voice audio.everett("b14")
     everett frown @ grimace "Are they now?"
 
     "I tried to sound surprised,{w=0.25} but instead it comes out as sarcastic and I bite the inside of my cheek.{w=0.25} The maid will not receive my irritation tonight."
 
+    voice audio.everett("b15")
     everett a smile "Must be from before I retired to bed.{w=0.25} It's awfully cold outside."
 
     voice audio.maid("b05")
@@ -273,11 +288,13 @@ label tmd_part_b:
         repeat 2
     "We fell into silence again as the guards finished investigating every crevice. {fast}I leaned back slightly onto the bed,{w=0.25} just to deter them from checking there."
 
+    voice audio.everett("b16")
     everett "I hope everything is alright."
 
     voice audio.maid("b06")
     maid smile @ worry "Oh it is!{w=0.25} We were just checking for some{dots=3.0} critter.{w=0.25} It doesn't seem to be in here so no need to worry."
 
+    voice audio.everett("b17")
     everett "Is that so?{w=0.25} I'm glad.{w=0.25} Thank you everyone for making me feel safe."
 
     show bg:
@@ -287,6 +304,7 @@ label tmd_part_b:
 
     voice audio.maid("b07")
     maid "We will be off now,{w=0.25} get some rest."
+    voice audio.everett("b18")
     everett "Goodnight,{w=0.25} miss."
 
     voice audio.maid("b08")
@@ -363,13 +381,17 @@ label tmd_part_b:
     "From this position,{w=0.25} blood also stained his side."
     "He must've been shot twice,{w=0.25} one in the shoulder and one in the side."
 
+    voice audio.everett("b19")
     everett "No wonder you wanted to rest here{dots=4.5}"
+    voice audio.everett("b20")
     everett "I guess I'll have to patch you up before I get any answers."
 
     "Thankfully Mother hired the best teachers to instruct me on medicine. Just so I can always take care of myself and cure any ailment that befalls me."
 
+    voice audio.everett("b21")
     everett "Now where had I left that first aid kit{dots=4.5}"
     "Beneath the bed,{w=0.25} I pulled the cumbersome first aid kit and dropped it on the bedside rolling my sleeves up."
+    voice audio.everett("b22")
     everett "I hope this works{dots=4.5}"
 
     stop music fadeout 4.0
@@ -405,6 +427,7 @@ label tmd_part_b:
     with Dissolve(1.25)
 
     "Wiping away the beads of sweat,{w=0.25} I breathed out a sigh of relief knowing the man should be okay for the night at least."
+    voice audio.everett("b23")
     everett b shame @ a smile "That should do it."
 
     play sound clock_gong
@@ -425,6 +448,7 @@ label tmd_part_b:
 
     "My fingers brushed down his bare chest,{w=0.25} the sheets beneath him stained with blood from the procedure."
 
+    voice audio.everett("b24")
     everett frown "What mess did you wrap yourself in, to end up in this sorry state?"
     show cg balthcony eyes:
       alpha 0.0
@@ -447,12 +471,14 @@ label tmd_part_b:
     "He shouldn't have awakened so early{dots=4.5} not with his injuries."
     "Who exactly was he?"
 
+    voice audio.everett("b25")
     everett a frown "Are you okay?{w=0.25} I tried to patch you up the best I could."
     show balth c frown
     "The man blinked and checked his shoulder confused.{w=0.25} He was surprisingly mobile for someone with bullet wounds."
 
     voice audio.balth("b08")
     balth a smile "I'm doing better thanks to you."
+    voice audio.everett("b26")
     everett c frail "But you're so pale{dots=4.5}"
     show balth frown
 
@@ -478,8 +504,10 @@ label tmd_part_b:
       parallel:
         linear 0.25 blur 30
         linear 0.25 blur  0
+    voice audio.everett("b27")
     everett "Be careful!"
     "The man sat up easily, showing no signs of pain or discomfort."
+    voice audio.everett("b28")
     everett b frown "...or you'll hurt yourself again."
 
     voice audio.balth("b10")
@@ -488,6 +516,7 @@ label tmd_part_b:
     balth c smile "I'll remember this act."
 
     "He tossed the covers off of him and stood up. I winced at the sight, but he was already heading towards the balcony glass."
+    voice audio.everett("b29")
     everett "Wai-wait!"
 
   label .whiteboy_wasted:
@@ -502,6 +531,7 @@ label tmd_part_b:
       ease 1.0 zoom 2.0 blur 0
 
     "I scramble on the other side of the bed getting to my feet."
+    voice audio.everett("b30")
     everett "Where are you going?{w=0.25} You're still hurt!"
     "The man's speed didn't slow down."
     camera:
@@ -520,11 +550,13 @@ label tmd_part_b:
     voice audio.balth("b12")
     balth "I will be fine,{w=0.25} trust me.{w=0.25} This is nothing."
 
+    voice audio.everett("b31")
     everett frown "Couldn't you stay a little longer?{w=0.25} Just to make sure your injuries don't reopen{em}"
 
     voice audio.balth("b13")
     balth smile "That won't be necessary."
 
+    voice audio.everett("b32")
     everett c frail @ a frown "No{dots=3.0} please don't go{em}"
     show everett:
       rotate_pad False
@@ -585,6 +617,7 @@ label tmd_part_b:
 
     voice audio.balth("b14")
     balth shock "Are you okay?"
+    voice audio.everett("b33")
     everett frown "Yea-{w=0.25}yeah{dots=4.5}"
 
     show everett shame
@@ -601,9 +634,13 @@ label tmd_part_b:
     show everett shame
     "What was I doing?{w=0.25} Forcing a stranger to stay in your room is kidnapping right?"
 
+    voice audio.everett("b34")
     everett frown "I{dots=4.5}"
+    voice audio.everett("b35")
     everett "I just wanted to hear about the outside{dots=4.5}"
+    voice audio.everett("b36")
     everett "I haven't left this room since I was a little kid.{w=0.25} My parents keep me here to prevent any over-exertion."
+    voice audio.everett("b37")
     everett grimace @ frown "As you saw,{w=0.25} I'm not the healthiest guy out there{dots=4.5}"
 
     show everett:
@@ -613,8 +650,11 @@ label tmd_part_b:
       "everett c frail"
     "I tried to chuckle,{w=0.25} but it almost brought on a coughing fit which made my chest tighten slightly."
 
+    voice audio.everett("b38")
     everett frail "I'm sorry,{w=0.25} I shouldn't force you to stay."
+    voice audio.everett("b39")
     everett "I just really want to hear about the sights and smells and the sort."
+    voice audio.everett("b40")
     everett "You know?"
 
     voice audio.balth("b16")
@@ -650,6 +690,7 @@ label tmd_part_b:
       ease 0.5 zoom 1.0 blur 0
     "My heart skips a beat,{w=0.25} a smile growing as I eagerly stood."
 
+    voice audio.everett("b41")
     everett "Really?{w=0.25} You'll stay?"
 
     voice audio.balth("b18")

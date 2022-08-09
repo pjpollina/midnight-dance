@@ -20,11 +20,22 @@ init python in audio:
   curtain_shut = "audio/sfx/curtain_shut.ogg"
 
   ## VA
+  def everett(line):
+    clip = "audio/voices/everett/{}.ogg".format(line)
+    if renpy.exists(clip):
+      return clip
+    else:
+      return "<silence 0.5>"
+
   def balth(line):
     return "audio/voices/balth/{}.ogg".format(line)
 
   def maid(line):
-    return "audio/voices/maid/{}.ogg".format(line)
+    clip = "audio/voices/maid/{}.ogg".format(line)
+    if renpy.exists(clip):
+      return clip
+    else:
+      return "<silence 0.5>"
 
 init python:
   config.has_sound = True  ## These three variables control, among other things, which mixers are shown

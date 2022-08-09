@@ -60,6 +60,7 @@ label tmd_part_c:
     show everett frown
     "What?"
 
+    voice audio.everett("c01")
     everett "No way{dots=4.0}"
     "My stomach churns at the thought of my dream being considered a bore.{w=0.25} Was everything I thought of just fantastical?"
     "The man seemed to notice my dampened mood,{w=0.25} as he immediately changed the subject to something way worse."
@@ -67,6 +68,7 @@ label tmd_part_c:
     voice audio.balth("c22")
     balth c "What prevents you from sneaking out and exploring the town?"
 
+    voice audio.everett("c02")
     everett c frail "Me?{w=0.25} Sneak out?"
 
     "It wasn't a new idea."
@@ -74,8 +76,10 @@ label tmd_part_c:
     "But every time I tried a guard captured me,{w=0.25} or I became so sickly I ran back home in fear."
     "Even now,{w=0.25} the thought of escaping once again made a familiar dread wash over me."
 
+    voice audio.everett("c03")
     everett frown "I{dots=4.0} can't.{w=0.25} This will just have to do, I guess."
     "I mustered the most realistic smile I could,{w=0.25} trying to find something else to talk about."
+    voice audio.everett("c04")
     everett b grimace "But it isn't all that bad,{w=0.25} I like to imagine that I'm attending the ball with everyone else.{w=0.25} Watching them have fun from afar is enough for me{dots=4.5}"
     "{dots=4.5}nothing but a lie!"
 
@@ -84,18 +88,21 @@ label tmd_part_c:
     voice audio.balth("c24")
     balth cocky "I apologize for ruining your vision of it."
 
+    voice audio.everett("c05")
     everett smile @ shame "Oh,{w=0.25} no no,{w=0.25} it's okay!{w=0.25} Maybe it wasn't anything too special anyway.{w=0.25} Dancing with someone in a beautiful ballroom,{w=0.25} someone who is special to you{dots=4.0}"
     "I lost track,{w=0.25} smiling distantly until the stranger broke the silence."
 
     voice audio.balth("c25")
     balth a smile "I hope you get the opportunity to dance with someone you admire."
 
+    voice audio.everett("c06")
     everett grimace "Yeah{dots=4.5} I do as well."
 
     "The silence between us was comfortable every time we fell into it."
     "I didn't feel the need to talk anymore,{w=0.25} just enjoy the man's presence."
     "Though it would only be temporary."
 
+    voice audio.everett("c07")
     everett a frown "Why haven't you left yet?{w=0.25} It's midnight and you've shared your stories.{w=0.25} I can't keep you here."
 
     voice audio.balth("c26")
@@ -104,6 +111,7 @@ label tmd_part_c:
     show everett b shame
     "I felt the world come to a screeching halt,{w=0.25} heat blossoming around my cheeks."
 
+    voice audio.everett("c08")
     everett "What?"
 
     voice audio.balth("c27")
@@ -125,6 +133,7 @@ label tmd_part_c:
 
     show everett c shame
     "I was stunned into silence."
+    voice audio.everett("c09")
     everett "Re-really{em}?"
 
     "I was interrupted by the man standing on his feet, {nw}{done}offering a hand towards me."
@@ -146,6 +155,7 @@ label tmd_part_c:
     voice audio.balth("c33")
     balth "{cps=*0.66}{i}May I have this dance?{/i}{/cps}"
 
+    voice audio.everett("c10")
     everett "Wha{dots=3.0}what?"
     "What?!{w=0.25} {i}{b}WHAT?!{/b}{/i}"
 
@@ -154,11 +164,13 @@ label tmd_part_c:
     voice audio.balth("c35")
     balth "And from the way your eyes never left my chest during the procedure,{w=0.25} you admire me just enough to make this fine for you."
 
+    voice audio.everett("c11")
     everett "You saw that?!"
 
     "The man stifled a chuckle that escaped.{w=0.25} For the first time in the night,{w=0.25} I saw a genuine smile."
     "It warmed me just a little{dots=4.5} But not long enough to delude me."
 
+    voice audio.everett("c12")
     everett "But I'm{dots=4.5} I'm weak."
 
     voice audio.balth("c36")
@@ -168,6 +180,7 @@ label tmd_part_c:
 
     "My chest tightened,{w=0.25} but with this situation far too good to pass up,{w=0.25} I hesitantly took his hand."
 
+    voice audio.everett("c13")
     everett "I don't really know how to dance."
 
     voice audio.balth("c38")
@@ -182,6 +195,7 @@ label tmd_part_c:
     "Before long,{w=0.25} we were dancing as if we've been dancing all our lives."
     "I couldn't hide the big smile on my face,{w=0.25} growing too excited that I nearly stumbled into his chest."
 
+    voice audio.everett("c14")
     everett "You're a good teacher."
 
     voice audio.balth("c39")
@@ -200,6 +214,7 @@ label tmd_part_c:
     #soundfx "kaboom!{nw}"
 
     "Not wanting to break the dance,{w=0.25} I slowly took the lead and pulled him towards the balcony."
+    voice audio.everett("c15")
     everett "The fireworks! Let's go watch them."
 
     voice audio.balth("c40")
@@ -232,11 +247,13 @@ label tmd_part_c:
 
     show everett a shame
     "I turned to look at him in shock,{w=0.25} wondering if that was what I thought it was."
+    voice audio.everett("c16")
     everett "That's{dots=4.5}"
 
     voice audio.balth("c42")
     balth smirk @ frown "My name."
 
+    voice audio.everett("c17")
     everett smile "Everett,{w=0.25} it's nice to meet you."
 
     $ renpy.music.set_volume(0.25, delay=3.0)
@@ -299,6 +316,7 @@ label tmd_part_c:
     voice audio.maid("c03")
     maid "Everett,{w=0.25} are you okay in there?{w=0.25} Why are you awake?"
 
+    voice audio.everett("c18")
     everett c shame "Shit{dots=4.5}"
     "I covered my mouth in shock,{w=0.25} watching Balthazar's smile drop into that restrained expression he had coming in."
 
@@ -306,10 +324,12 @@ label tmd_part_c:
     balth frown "Everett{dots=4.5}"
 
     show everett frown at rflipturn
+    voice audio.everett("c19")
     everett frown "I have to hide you again! We can try my closet this time,{w=0.25} or maybe beneath my bed-"
 
     voice audio.balth("c44")
     balth aloof "...Everett{dots=3.0}"
+    voice audio.everett("c20")
     everett frail "No we can do this! I can hide you somewhere until they leave,{w=0.25} and then we can{em}"
 
     "I hadn't noticed him closing the distance between us,{w=0.25} his hands grazing the sides of my face."
@@ -347,6 +367,7 @@ label tmd_part_c:
     voice sustain
     extend "and you will wait for me, right?"
 
+    voice audio.everett("c21")
     everett frown "But{em}"
 
     camera:

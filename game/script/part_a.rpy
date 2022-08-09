@@ -46,9 +46,12 @@ label tmd_part_a:
     "The sights of people dressing up and dedicating a night to sway and dance."
     "Oh,{w=0.25} how the looks of excitement made me tap my fingers against the iced railing."
 
+    voice audio.everett("a01")
     everett c "Are the lights as bright as I've come to hear? Do they blind you? Bathe you in their warmth as your blood pumps with adrenaline?"
+    voice audio.everett("a02")
     everett "Are the floors smooth enough to take in every stride,{w=0.25} every waltz step that we've trained to do since little?"
     everett frown "{dots=6.0}"
+    voice audio.everett("a03")
     everett "Will I ever see that light? Those floors? The dancers in their ball gowns and suits?"
 
     "I grit my chattering teeth,{w=0.25} trying to tune into the live music playing indoors."
@@ -56,8 +59,11 @@ label tmd_part_a:
     "I don't want to think of it,{w=0.25} yet I do."
     "Every night,{w=0.25} the same thought in my mind."
 
+    voice audio.everett("a04")
     everett shame "Is the food good?"
+    voice audio.everett("a05")
     everett smirk "The maids often talk of dancing on an empty stomach."
+    voice audio.everett("a06")
     everett "No lady,{w=0.25} especially on her debutante,{w=0.25} would want to look bloated in their tight corsets."
 
     "The high stakes! How exciting it was to imagine all the preparation for the night to start."
@@ -68,6 +74,7 @@ label tmd_part_a:
   label .maid_intro:
     $ save_name = _("A maid's plight...")
 
+    voice audio.everett("a07")
     everett shame @ frown "Maybe{em}"
 
     voice audio.maid("a01")
@@ -84,6 +91,7 @@ label tmd_part_a:
     show everett b frown at lflipturn
     "I sigh once more, {fast}turning to face her with a frown."
 
+    voice audio.everett("a08")
     everett frail "Couldn't I enjoy the sights longer? It is the only good entertainment I get from this prison{em}"
 
     voice audio.maid("a03")
@@ -91,6 +99,7 @@ label tmd_part_a:
     voice audio.maid("a04")
     maid "There are others less fortunate to live in such chambers as yours."
 
+    voice audio.everett("a09")
     everett smirk "Well at least they are given the freedom to leave if they dislike it."
 
   label .maid_drag:
@@ -148,7 +157,9 @@ label tmd_part_a:
     voice audio.maid("a05")
     maid "Why are you out of bed again? If Your Majesty knew of this she would remove me for my incompetence."
 
+    voice audio.everett("a10")
     everett a "You know why,{w=0.25} I want to be out there. There is nothing in this room I haven't seen ever since I was born."
+    voice audio.everett("a11")
     everett c "I'm not even allowed to explore the manor as often as the commoners who visit."
 
     voice audio.maid("a06")
@@ -156,12 +167,14 @@ label tmd_part_a:
     voice audio.maid("a07")
     maid "You aren't a healthy person,{w=0.25} Your Highness{em}"
 
+    voice audio.everett("a12")
     everett smirk "And you think I'm foolish enough to not realize that?! I didn't ask for the opinion of a servant that leaves every morning!"
     show everett b cough
     show maid:
       ease 0.05 rflip matrixcolor SaturationMatrix(0.75)
 
     "I couldn't take back the words as they slipped out. But my heart dropped at the sight of the maid whose shoulders fell."
+    voice audio.everett("a13")
     everett "I just want to leave,{w=0.25} I'm terribly sorry for my attitude. I've grown crazy about these same walls."
     show everett at lflipturn
 
@@ -194,6 +207,7 @@ label tmd_part_a:
     "That was as good as it was going to get with Mother. Though I respected the scullery maids' boldness in asking the Queen to reframe her decision."
     "I couldn't send the frenzied maid away with more worries.  With every reluctance clinging to my body,{w=0.25} I turned towards my bed to hide my irritation."
 
+    voice audio.everett("a14")
     everett frown "I concede,{w=0.25} please retire for the night Miss."
     "The sound of clapping reassured me that her feelings weren't hurt anymore,{w=0.25} now that she had won."
 
@@ -230,6 +244,7 @@ label tmd_part_a:
     play sound into_bed
     "She came to my side,{w=0.25} gently throwing the blankets over me tucking me in."
 
+    voice audio.everett("a15")
     everett "Thank you,{w=0.25} Miss."
 
     voice audio.maid("a16")
@@ -244,6 +259,7 @@ label tmd_part_a:
     voice audio.maid("a17")
     maid "Goodnight."
 
+    voice audio.everett("a16")
     everett "Goodnight."
 
     show bg:
@@ -318,6 +334,7 @@ label tmd_part_a:
     play sound tap_tap_tap
     soundfx "tink.{w=0.25} tink.{w=0.25} tink.{w=0.25}{nw}"
 
+    voice audio.everett("a17")
     everett "Nmh..."
 
     play music hollow_wind volume 0.25 fadein 3.0
@@ -336,6 +353,7 @@ label tmd_part_a:
     "Despite my many protests the night before,{w=0.25} I was comfortable in bed and didn't want to leave."
     "The blankets were warm and fuzzy against my skin,{w=0.25} and it felt like clouds between my heavy limbs."
 
+    voice audio.everett("a18")
     everett "Maybe I should ring for her{dots=6.0}"
 
     "She wouldn't want me getting out of bed during these later hours."
@@ -383,7 +401,9 @@ label tmd_part_a:
     "It was hard to see already in the darkness,{w=0.25} but not a single scratching sound or sight to behold."
     "I tried to hide my resentment towards the situation,{w=0.25} but it inevitably showed on my face most likely."
 
+    voice audio.everett("a19")
     everett "Is that all,{w=0.25} World?{w=0.75} Willing to throw me a bone but not meat on it?"
+    voice audio.everett("a20")
     everett "If only I could show you."
 
     play sound curtain_shut
@@ -411,6 +431,8 @@ label tmd_part_a:
     "Instead a bird,{w=0.25} animal,{w=0.25} or even a stray twig brushing against the glass{dots=6.0}"
     "A tall man was there,{w=0.25} nursing his right shoulder with his back turned towards me."
     "I couldn't see much,{w=0.25} but the man seemed to be hunched forward,{w=0.25} slightly panting{dots=6.0}"
+
+    voice audio.everett("a21")
     everett "He{dots=3.0}"
 
     "A greeting slips past me and disappears at the tip of my tongue."
