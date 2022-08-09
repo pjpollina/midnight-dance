@@ -10,12 +10,12 @@ label tmd_part_b:
     "Hesitantly,{w=0.25} I approached the balcony glass and pulled it aside."
     "The strong chilly breeze hit me like a brick,{w=0.25} nearly knocking me back as the stranger stared in a mix of amusement and shock."
 
-    voice "audio/voices/balth/b04.ogg"
+    voice audio.balth("b04")
     balth "I'm surprised you actually invited me in, just who are you?"
 
     everett "We will have plenty to talk about once you're out of the cold."
 
-    voice "audio/voices/balth/b05.ogg"
+    voice audio.balth("b05")
     balth "Plenty to talk about?"
 
     "The stranger stepped forward out of the harsh elements as I closed the balcony glass behind him."
@@ -27,7 +27,7 @@ label tmd_part_b:
     everett "A name would be nice too."
     stop music fadeout 1.0
 
-    voice "audio/voices/balth/b06.ogg"
+    voice audio.balth("b06")
     balth "{cps=0}.{w=3.5}.{w=3.5}.{w=4.0}{nw}{/cps}" (advance=False)
 
     everett "{dots=4.5}Stranger?"
@@ -415,7 +415,7 @@ label tmd_part_b:
       alpha 0.0
       ease 0.2 alpha 0.75
 
-    voice "audio/voices/balth/b07.ogg"
+    voice audio.balth("b07")
     balth "Nothing I couldn't handle, of course."
 
     show everett c shame:
@@ -436,7 +436,7 @@ label tmd_part_b:
     show balth c frown
     "The man blinked and checked his shoulder confused.{w=0.25} He was surprisingly mobile for someone with bullet wounds."
 
-    voice "audio/voices/balth/b08.ogg"
+    voice audio.balth("b08")
     balth a smile "I'm doing better thanks to you."
     everett c frail "But you're so pale{dots=4.5}"
     show balth frown
@@ -445,7 +445,7 @@ label tmd_part_b:
     "Was he sickly like me?"
     "It couldn't be.{w=0.25} This man somehow found his way onto my balcony,{w=0.25} which isn't a close climb from the ground."
 
-    voice "audio/voices/balth/b09.ogg"
+    voice audio.balth("b09")
     balth c smirk "That's my natural complexion,{w=0.25} nothing for you to worry about."
 
     show balth a smile:
@@ -467,9 +467,9 @@ label tmd_part_b:
     "The man sat up easily, showing no signs of pain or discomfort."
     everett b frown "...or you'll hurt yourself again."
 
-    voice "audio/voices/balth/b10.ogg"
+    voice audio.balth("b10")
     balth smirk "Impossible, thank you for taking care of me."
-    voice "audio/voices/balth/b11.ogg"
+    voice audio.balth("b11")
     balth c smile "I'll remember this act."
 
     "He tossed the covers off of him and stood up. I winced at the sight, but he was already heading towards the balcony glass."
@@ -502,12 +502,12 @@ label tmd_part_b:
       align (0.65, 0.15)
       ease 1.0 zoom 1.0 blur 0
 
-    voice "audio/voices/balth/b12.ogg"
+    voice audio.balth("b12")
     balth "I will be fine,{w=0.25} trust me.{w=0.25} This is nothing."
 
     everett frown "Couldn't you stay a little longer?{w=0.25} Just to make sure your injuries don't reopen{em}"
 
-    voice "audio/voices/balth/b13.ogg"
+    voice audio.balth("b13")
     balth smile "That won't be necessary."
 
     everett c frail @ a frown "No{dots=3.0} please don't go{em}"
@@ -568,7 +568,7 @@ label tmd_part_b:
     with Dissolve(1.5)
     "When my vision cleared,{w=0.25} the man was kneeling right in front of me with an unreadable expression."
 
-    voice "audio/voices/balth/b14.ogg"
+    voice audio.balth("b14")
     balth shock "Are you okay?"
     everett frown "Yea-{w=0.25}yeah{dots=4.5}"
 
@@ -579,7 +579,7 @@ label tmd_part_b:
       ease 0.05 xoffset  0
     "A shiver ran through me."
 
-    voice "audio/voices/balth/b15.ogg"
+    voice audio.balth("b15")
     balth frown "Why do you want me to stay?"
 
     "I froze,{w=0.25} feeling the heat returning to my face as I bowed my head in shame."
@@ -602,7 +602,7 @@ label tmd_part_b:
     everett "I just really want to hear about the sights and smells and the sort."
     everett "You know?"
 
-    voice "audio/voices/balth/b16.ogg"
+    voice audio.balth("b16")
     balth smirk "Hehe, I think I understand now."
 
     show balth:
@@ -621,7 +621,7 @@ label tmd_part_b:
     show everett shame
     "My eyes widen as the stranger gets up,{w=0.25} walking towards the bed to lean against it."
 
-    voice "audio/voices/balth/b17.ogg"
+    voice audio.balth("b17")
     balth "If only to repay your generosity,{w=0.25} I'll stay and share with you what you wish to hear."
 
     show everett smile:
@@ -637,9 +637,9 @@ label tmd_part_b:
 
     everett "Really?{w=0.25} You'll stay?"
 
-    voice "audio/voices/balth/b18.ogg"
+    voice audio.balth("b18")
     balth "Just for a little while,{w=0.25} you wish to hear from the outside,{w=0.25} right?"
-    voice "audio/voices/balth/b19.ogg"
+    voice audio.balth("b19")
     balth "Fortunately for you,{w=0.25} I carry many stories{dots=4.5}"
 
     stop music fadeout 2.0

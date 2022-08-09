@@ -49,12 +49,12 @@ label tmd_part_c:
 
     $ renpy.music.set_volume(1.0, delay=1.0)
 
-    voice "audio/voices/balth/c20.ogg"
+    voice audio.balth("c20")
     balth smirk "My most recent escapade is the ball hosted down the street,{w=0.25} it was quite{dots=4.5}"
 
     "My attention immediately honed onto him,{w=0.25} waiting for those details I eagerly wanted."
 
-    voice "audio/voices/balth/c21.ogg"
+    voice audio.balth("c21")
     balth frown "{dots=6.0}the bore.{w=0.25} I wish I would never go to one as long as I live."
 
     show everett frown
@@ -64,7 +64,7 @@ label tmd_part_c:
     "My stomach churns at the thought of my dream being considered a bore.{w=0.25} Was everything I thought of just fantastical?"
     "The man seemed to notice my dampened mood,{w=0.25} as he immediately changed the subject to something way worse."
 
-    voice "audio/voices/balth/c22.ogg"
+    voice audio.balth("c22")
     balth c "What prevents you from sneaking out and exploring the town?"
 
     everett c frail "Me?{w=0.25} Sneak out?"
@@ -79,15 +79,15 @@ label tmd_part_c:
     everett b grimace "But it isn't all that bad,{w=0.25} I like to imagine that I'm attending the ball with everyone else.{w=0.25} Watching them have fun from afar is enough for me{dots=4.5}"
     "{dots=4.5}nothing but a lie!"
 
-    voice "audio/voices/balth/c23.ogg"
+    voice audio.balth("c23")
     balth smirk "Oh?{w=0.25} You enjoy the balls?"
-    voice "audio/voices/balth/c24.ogg"
+    voice audio.balth("c24")
     balth cocky "I apologize for ruining your vision of it."
 
     everett smile @ shame "Oh,{w=0.25} no no,{w=0.25} it's okay!{w=0.25} Maybe it wasn't anything too special anyway.{w=0.25} Dancing with someone in a beautiful ballroom,{w=0.25} someone who is special to you{dots=4.0}"
     "I lost track,{w=0.25} smiling distantly until the stranger broke the silence."
 
-    voice "audio/voices/balth/c25.ogg"
+    voice audio.balth("c25")
     balth a smile "I hope you get the opportunity to dance with someone you admire."
 
     everett grimace "Yeah{dots=4.5} I do as well."
@@ -98,7 +98,7 @@ label tmd_part_c:
 
     everett a frown "Why haven't you left yet?{w=0.25} It's midnight and you've shared your stories.{w=0.25} I can't keep you here."
 
-    voice "audio/voices/balth/c26.ogg"
+    voice audio.balth("c26")
     balth c cocky "To be honest with you{dots=4.5} you're too interesting to leave."
 
     show everett b shame
@@ -106,21 +106,21 @@ label tmd_part_c:
 
     everett "What?"
 
-    voice "audio/voices/balth/c27.ogg"
+    voice audio.balth("c27")
     balth frown "All my life I've been surrounded by people who mask themselves and act well-bred."
-    voice "audio/voices/balth/c28.ogg"
+    voice audio.balth("c28")
     balth aloof "No one was true to themselves,{w=0.25} or to how they felt about me."
-    voice "audio/voices/balth/c29.ogg"
+    voice audio.balth("c29")
     balth smile "But you{dots=3.5} you nearly died to keep me here.{w=0.25} And that was no act."
 
     show everett smile
     "I chuckled,{w=0.25} rubbing my arm looking away."
 
-    voice "audio/voices/balth/c30.ogg"
+    voice audio.balth("c30")
     balth "You not only asked me to stay,{w=0.25} but you look sad around me."
-    voice "audio/voices/balth/c31.ogg"
+    voice audio.balth("c31")
     balth "I have never seen someone look so downtrodden in my presence.{w=0.25} They usually say I make it all better."
-    voice "audio/voices/balth/c32.ogg"
+    voice audio.balth("c32")
     balth "You show your true self to me{dots=4.5} and I think that's worth staying longer for."
 
     show everett c shame
@@ -143,15 +143,15 @@ label tmd_part_c:
     scene cg waltazar
     with Fade(2.0, 1.0, 3.0)
 
-    voice "audio/voices/balth/c33.ogg"
+    voice audio.balth("c33")
     balth "{cps=*0.66}{i}May I have this dance?{/i}{/cps}"
 
     everett "Wha{dots=3.0}what?"
     "What?!{w=0.25} {i}{b}WHAT?!{/b}{/i}"
 
-    voice "audio/voices/balth/c34.ogg"
+    voice audio.balth("c34")
     balth "You wanted a dance with someone,{w=0.25} right?"
-    voice "audio/voices/balth/c35.ogg"
+    voice audio.balth("c35")
     balth "And from the way your eyes never left my chest during the procedure,{w=0.25} you admire me just enough to make this fine for you."
 
     everett "You saw that?!"
@@ -161,16 +161,16 @@ label tmd_part_c:
 
     everett "But I'm{dots=4.5} I'm weak."
 
-    voice "audio/voices/balth/c36.ogg"
+    voice audio.balth("c36")
     balth "Then I'll go slow,{w=0.25} don't worry."
-    voice "audio/voices/balth/c37.ogg"
+    voice audio.balth("c37")
     balth "I have you."
 
     "My chest tightened,{w=0.25} but with this situation far too good to pass up,{w=0.25} I hesitantly took his hand."
 
     everett "I don't really know how to dance."
 
-    voice "audio/voices/balth/c38.ogg"
+    voice audio.balth("c38")
     balth "But I do,{w=0.25} I'll lead the way.{w=0.25} Just follow my steps."
 
     "He suddenly grabbed my hand firmly as we began the slow waltz."
@@ -184,7 +184,7 @@ label tmd_part_c:
 
     everett "You're a good teacher."
 
-    voice "audio/voices/balth/c39.ogg"
+    voice audio.balth("c39")
     balth "You're not half bad to teach,{w=0.25} I thought you would be way worse."
 
     "He chuckled beneath his breath as we danced."
@@ -202,7 +202,7 @@ label tmd_part_c:
     "Not wanting to break the dance,{w=0.25} I slowly took the lead and pulled him towards the balcony."
     everett "The fireworks! Let's go watch them."
 
-    voice "audio/voices/balth/c40.ogg"
+    voice audio.balth("c40")
     balth "If you say so."
 
     stop music fadeout 3.0
@@ -226,7 +226,7 @@ label tmd_part_c:
     "As I watched the fireworks go by,{w=0.25} I felt the stranger's gaze on me and turned red."
     "What was he looking at?{w=0.25} What was more pretty than the fireworks in front of him?"
 
-    voice "audio/voices/balth/c41.ogg"
+    voice audio.balth("c41")
     balth c aloof "Balthazar."
     $ is_stranger = False
 
@@ -234,7 +234,7 @@ label tmd_part_c:
     "I turned to look at him in shock,{w=0.25} wondering if that was what I thought it was."
     everett "That's{dots=4.5}"
 
-    voice "audio/voices/balth/c42.ogg"
+    voice audio.balth("c42")
     balth smirk @ frown "My name."
 
     everett smile "Everett,{w=0.25} it's nice to meet you."
@@ -299,13 +299,13 @@ label tmd_part_c:
     everett c shame "Shit{dots=4.5}"
     "I covered my mouth in shock,{w=0.25} watching Balthazar's smile drop into that restrained expression he had coming in."
 
-    voice "audio/voices/balth/c43.ogg"
+    voice audio.balth("c43")
     balth frown "Everett{dots=4.5}"
 
     show everett frown at rflipturn
     everett frown "I have to hide you again! We can try my closet this time,{w=0.25} or maybe beneath my bed-"
 
-    voice "audio/voices/balth/c44.ogg"
+    voice audio.balth("c44")
     balth aloof "...Everett{dots=3.0}"
     everett frail "No we can do this! I can hide you somewhere until they leave,{w=0.25} and then we can{em}"
 
@@ -333,7 +333,7 @@ label tmd_part_c:
     show balth smirk:
       ease 0.4 rotate -7.5
 
-    voice "audio/voices/balth/c45.ogg"
+    voice audio.balth("c45")
     balth "I will return,{w=0.25} {nw}"
 
     show everett shame:

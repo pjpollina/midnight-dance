@@ -19,6 +19,10 @@ init python in audio:
   curtain_open = "audio/sfx/curtain_open.ogg"
   curtain_shut = "audio/sfx/curtain_shut.ogg"
 
+  ## VA
+  def balth(line):
+    return "audio/voices/balth/{}.ogg".format(line)
+
 init python:
   config.has_sound = True  ## These three variables control, among other things, which mixers are shown
   config.has_music = True  ## to the player by default. Setting one of these to False will hide the

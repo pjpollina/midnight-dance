@@ -412,11 +412,11 @@ label tmd_part_a:
     play sound tap_tap_tap
     soundfx "{alpha=0.66}tink.{w=0.25}{size=+4} tink.{w=0.25}{/size}{size=+8} tink.{w=0.25}{/size}{/alpha}{nw}"
 
-    voice "audio/voices/balth/a01.ogg"
+    voice audio.balth("a01")
     balth "May I seek refuge here,{w=0.25} stranger?"
-    voice "audio/voices/balth/a02.ogg"
+    voice audio.balth("a02")
     balth "I've come a long way{dots=3.0} and I need rest."
-    voice "audio/voices/balth/a03.ogg"
+    voice audio.balth("a03")
     balth "Harm will not come to you if you choose this."
 
     "{dots=6.0}What?"
