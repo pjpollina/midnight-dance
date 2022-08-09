@@ -56,7 +56,10 @@ label tmd_part_b:
     # TODO: Footstep scramble sfx
 
     guarda "Where is that criminal fiend?!"
-    maid   "I hope Your Highness is okay!"
+
+    voice audio.maid("b01")
+    maid "I hope Your Highness is okay!"
+
     guardb "He disappeared into the hedges near the Prince's balcony,{w=0.25} he has to be up there!"
     "My heart leapt to my throat at the sounds of the scullery maid and some guards faintly outside."
 
@@ -174,6 +177,7 @@ label tmd_part_b:
     show everett c frown at right, rflip
     with Dissolve(2.0)
 
+    voice audio.maid("b02")
     maid "Your Royal Highness!{w=0.25} Is everything alright in there?"
 
     everett "Everything{dots=4.5} {nw}"
@@ -182,6 +186,7 @@ label tmd_part_b:
     extend smile "Nothing is wrong here."
     everett smile "What is the matter that you have to wake me up so late?"
 
+    voice audio.maid("b03")
     maid "I'm so sorry,{w=0.25} Your Royal Highness,{w=0.25} but we must come in. There is a minor{dots=4.5} disturbance we need to check out."
 
     show everett c frown
@@ -237,12 +242,16 @@ label tmd_part_b:
     "They mainly focused their attention on the balcony glass."
     "Fortunately,{w=0.25} they didn't think to check the bed."
 
+    voice audio.maid("b04")
     maid "Are you sure you're alright,{w=0.25} Your Highness?{w=0.25} Your cheeks are flush."
+
     everett frown @ grimace "Are they now?"
 
     "I tried to sound surprised,{w=0.25} but instead it comes out as sarcastic and I bite the inside of my cheek.{w=0.25} The maid will not receive my irritation tonight."
 
     everett a smile "Must be from before I retired to bed.{w=0.25} It's awfully cold outside."
+
+    voice audio.maid("b05")
     maid "...truly."
 
     "We fell into silence again as the guards finished investigating every crevice. {w=0.25}{nw}{done}I leaned back slightly onto the bed, just to deter them from checking there."
@@ -265,7 +274,10 @@ label tmd_part_b:
     "We fell into silence again as the guards finished investigating every crevice. {fast}I leaned back slightly onto the bed,{w=0.25} just to deter them from checking there."
 
     everett "I hope everything is alright."
+
+    voice audio.maid("b06")
     maid smile @ worry "Oh it is!{w=0.25} We were just checking for some{dots=3.0} critter.{w=0.25} It doesn't seem to be in here so no need to worry."
+
     everett "Is that so?{w=0.25} I'm glad.{w=0.25} Thank you everyone for making me feel safe."
 
     show bg:
@@ -273,8 +285,11 @@ label tmd_part_b:
       easein 0.5 matrixcolor BrightnessMatrix(0.05)
     "The mood in the room lightened a little as the scullery maid smiled warmly."
 
+    voice audio.maid("b07")
     maid "We will be off now,{w=0.25} get some rest."
     everett "Goodnight,{w=0.25} miss."
+
+    voice audio.maid("b08")
     maid "Goodnight to you,{w=0.25} Your Royal Highness."
 
     stop music fadeout 4.0

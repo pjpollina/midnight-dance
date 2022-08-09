@@ -23,6 +23,9 @@ init python in audio:
   def balth(line):
     return "audio/voices/balth/{}.ogg".format(line)
 
+  def maid(line):
+    return "audio/voices/maid/{}.ogg".format(line)
+
 init python:
   config.has_sound = True  ## These three variables control, among other things, which mixers are shown
   config.has_music = True  ## to the player by default. Setting one of these to False will hide the

@@ -69,20 +69,28 @@ label tmd_part_a:
     $ save_name = _("A maid's plight...")
 
     everett shame @ frown "Maybe{em}"
+
+    voice audio.maid("a01")
     maid "{size=+8}Your Royal Highness!{/size}"
 
     show maid worry at rflip, runon_lefter
     "A concerned voice breaks me out of my train of thought."
     show maid worry at rflip, lefter
 
+    voice audio.maid("a02")
     maid "You cannot be out here! It is far too chilly for your fragile body. Allow me to accompany you back inside."
+
     "I sigh once more,{w=0.25} {nw}{done}turning to face her with a frown."
     show everett b frown at lflipturn
     "I sigh once more, {fast}turning to face her with a frown."
 
     everett frail "Couldn't I enjoy the sights longer? It is the only good entertainment I get from this prison{em}"
+
+    voice audio.maid("a03")
     maid "This is far from a prison,{w=0.25} Your Royal Highness! It was decorated with your interests in mind."
+    voice audio.maid("a04")
     maid "There are others less fortunate to live in such chambers as yours."
+
     everett smirk "Well at least they are given the freedom to leave if they dislike it."
 
   label .maid_drag:
@@ -137,11 +145,15 @@ label tmd_part_a:
     pause 1.5
     show maid at right
 
+    voice audio.maid("a05")
     maid "Why are you out of bed again? If Your Majesty knew of this she would remove me for my incompetence."
+
     everett a "You know why,{w=0.25} I want to be out there. There is nothing in this room I haven't seen ever since I was born."
     everett c "I'm not even allowed to explore the manor as often as the commoners who visit."
 
+    voice audio.maid("a06")
     maid "It's for your own safety,{w=0.25} you know how frail you are. You'd fall over flushed if you stayed out there in the cold."
+    voice audio.maid("a07")
     maid "You aren't a healthy person,{w=0.25} Your Highness{em}"
 
     everett smirk "And you think I'm foolish enough to not realize that?! I didn't ask for the opinion of a servant that leaves every morning!"
@@ -156,20 +168,27 @@ label tmd_part_a:
     "In my hushed tone,{w=0.25} I look away from her and towards the wall. The shadows flicked alongside it from the candlelight."
     "They were{dots=4.5} almost dancing."
 
+    voice audio.maid("a08")
     maid "I'm{dots=4.5} I'm sorry Your Highness,{w=0.25} I can't fathom how difficult it is to be in your position."
 
     "I glanced towards her to see her crestfallen expression,{w=0.25} still gathering her thoughts in her balled up hands."
     "She was picking her words wisely. This wasn't another monologue sent from mother."
 
+    voice audio.maid("a09")
     maid "Me and the others would love to see you outdoors... but Your Majesty asks we keep an eye on you. To keep you safe,{w=0.25} that is."
+    voice audio.maid("a10")
     maid "The most I can do is ask her to change her mind. But we are just following her decree."
+    voice audio.maid("a11")
     maid "Maybe if we assign an attendant to you then she will lift some of the rules."
 
     "I didn't know how to reply to that. That was the same idea I proposed months ago."
     "Mother still said no to it,{w=0.25} saying that it was safer if I stayed here."
 
+    voice audio.maid("a12")
     maid "{dots=4.5}I will try my hardest,{w=0.25} Your Highness."
+    voice audio.maid("a13")
     maid "But please,{w=0.25} do get some rest. You really worry us sometimes."
+    voice audio.maid("a14")
     maid "If just for one more night,{w=0.25} please get a good rest so I may bring up the topic tomorrow with Your Majesty."
 
     "That was as good as it was going to get with Mother. Though I respected the scullery maids' boldness in asking the Queen to reframe her decision."
@@ -179,6 +198,7 @@ label tmd_part_a:
     "The sound of clapping reassured me that her feelings weren't hurt anymore,{w=0.25} now that she had won."
 
     show maid smile at lflipturn
+    voice audio.maid("a15")
     maid "Of course Your Highness! Allow me to dim the lights."
 
     stop music fadeout 4.0
@@ -211,6 +231,8 @@ label tmd_part_a:
     "She came to my side,{w=0.25} gently throwing the blankets over me tucking me in."
 
     everett "Thank you,{w=0.25} Miss."
+
+    voice audio.maid("a16")
     maid "Anything for you,{w=0.25} Your Highness."
 
     show maid:
@@ -219,7 +241,9 @@ label tmd_part_a:
       lflipturn
     $ renpy.pause(2.2, hard=True)
 
+    voice audio.maid("a17")
     maid "Goodnight."
+
     everett "Goodnight."
 
     show bg:
