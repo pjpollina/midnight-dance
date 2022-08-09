@@ -8,7 +8,7 @@ label tmd_part_d:
     "My hands rested on Balthazar's chest,{w=0.25} slowly grabbing his shirt as if it would prevent him from leaving."
     "After what felt like an eternity,{w=0.25} he pulled away and whispered softly in my ear."
 
-    voice audio.balth("d46")
+    voice audio.balth("d01")
     balth "Wait for me,{w=0.25} Your Royal Highness."
 
     voice audio.everett("d01")
@@ -23,7 +23,7 @@ label tmd_part_d:
       ease 1.0 zoom 2.0 blur 0
     pause 1.0
 
-    voice audio.balth("d47")
+    voice audio.balth("d02")
     turmoil "{b}{i}{cps=*0.5}Wait for me.{/cps}{/i}{/b}"
 
     scene black with ImageDissolve("cg yaoitime", 1.5)
@@ -144,7 +144,7 @@ label tmd_part_d:
       easein 5.0 alpha 1.0
     $ renpy.pause(5.0, hard=True)
 
-    voice audio.balth("d48")
+    voice audio.balth("d03")
     balth "So you've waited for me,{w=0.25} Your Royal Highness."
 
     show everett a shame at rflip:
@@ -167,7 +167,7 @@ label tmd_part_d:
 
     "He stood in a new set of gentleman's clothing,{w=0.25} carrying a bouquet of flowers."
 
-    voice audio.balth("d49")
+    voice audio.balth("d04")
     balth "You've done well."
 
     "Tears welled in my eyes,{w=0.25} and I didn't try to wipe them away."
@@ -178,9 +178,9 @@ label tmd_part_d:
 
     "It was hard to talk through the sniffling as I restrained myself from leaping towards him."
 
-    voice audio.balth("d50")
+    voice audio.balth("d05")
     balth "The guards have increased since I last left you.{w=0.25} It was difficult even for me to find my way back here."
-    voice audio.balth("d51")
+    voice audio.balth("d06")
     balth "But knowing you were waiting for me{dots=4.5} I couldn't stop until I found a way back to you."
 
     "I rubbed my blurry vision,{w=0.25} a sob trapped in my chest.{w=0.25} I should've asked him why the guards were so persistent to catch him.{w=0.25} But the overwhelming relief of him being here was distracting."
@@ -202,13 +202,13 @@ label tmd_part_d:
 
     "His eyes flashed with an unrecognizable emotion,{w=0.25} but he didn't deny the accusation."
 
-    voice audio.balth("d52")
+    voice audio.balth("d07")
     balth "It's been a long life before I met you,{w=0.25} Everett.{w=0.25} One that I shouldn't tell you fully."
 
     voice audio.everett("d13")
     everett "Why not?"
 
-    voice audio.balth("d53")
+    voice audio.balth("d08")
     balth "It will entangle you in it,{w=0.25} and I wouldn't wish to harm you."
 
     "My hand drops from his shoulder to his hand,{w=0.25} squeezing it."
@@ -222,7 +222,7 @@ label tmd_part_d:
     voice audio.everett("d17")
     everett "And you don't seem to be some scoundrel like the guards say."
 
-    voice audio.balth("d54")
+    voice audio.balth("d09")
     balth "They talk of me like a scoundrel?"
 
     voice audio.everett("d18")
@@ -235,23 +235,23 @@ label tmd_part_d:
     voice audio.everett("d20")
     everett "I'm weak,{w=0.25} but I'm not so weak as to steal a night with you and not help you in return."
 
-    voice audio.balth("d55")
+    voice audio.balth("d10")
     balth "Everett{dots=4.5}"
 
     "His eyes were wide in shock,{w=0.25} as if he had never heard those words."
 
-    voice audio.balth("d56")
+    voice audio.balth("d11")
     "Then he chuckled,{w=0.25} bursting out into laughter that seemed unfitting for the situation."
 
     voice audio.everett("d21")
     everett "What's so funny?"
 
-    voice audio.balth("d57")
+    voice audio.balth("d12")
     balth "You surprise me,{w=0.25} human."
 
     "Human?"
 
-    voice audio.balth("d58")
+    voice audio.balth("d13")
     balth "If I must trudge down that weary road again,{w=0.25} at least I'd like to do it with a companion."
 
     voice audio.everett("d22")
@@ -259,13 +259,13 @@ label tmd_part_d:
 
     "Balthazar nodded,{w=0.25} smiling fondly."
 
-    voice audio.balth("d59")
+    voice audio.balth("d14")
     balth "I'll tell you everything,{w=0.25} starting from the very beginning{dots=4.5}"
 
     stop music fadeout 0.25
     scene black with Dissolve(0.25)
 
-    voice audio.balth("d60")
+    voice audio.balth("d15")
     balth "Of when I became a vampire."
 
   return
