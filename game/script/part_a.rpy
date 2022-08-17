@@ -201,7 +201,7 @@ label tmd_part_a:
     maid "{dots=4.5}I will try my hardest,{w=0.25} Your Highness."
     voice audio.maid("a13")
     maid "But please,{w=0.25} do get some rest. You really worry us sometimes."
-    voice audio.maid("a14")
+    voice audio.maid("a14") # NOTE: NO VA
     maid "If just for one more night,{w=0.25} please get a good rest so I may bring up the topic tomorrow with Your Majesty."
 
     "That was as good as it was going to get with Mother. Though I respected the scullery maids' boldness in asking the Queen to reframe her decision."

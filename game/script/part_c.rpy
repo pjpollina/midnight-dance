@@ -303,7 +303,7 @@ label tmd_part_c:
         easein 0.75 yoffset  0
         repeat 20
 
-    voice audio.maid("c01")
+    voice audio.maid("c01") # NOTE: NO VA
     maid "Your Royal Highness?{w=0.25} Why is your room lit?{w=0.25} Is everything alright still?"
 
     guarda "It must be that scoundrel in his room,{w=0.25} why else would he be awake at this time?"
@@ -313,7 +313,7 @@ label tmd_part_c:
     maid "You will do no such thing!"
 
     show everett c shame
-    voice audio.maid("c03")
+    voice audio.maid("c03") # NOTE: NO VA
     maid "Everett,{w=0.25} are you okay in there?{w=0.25} Why are you awake?"
 
     voice audio.everett("c18")

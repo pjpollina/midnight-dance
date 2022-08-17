@@ -35,7 +35,7 @@ label tmd_part_d:
     "I raised a hand to touch my cheek."
     "The maid had a hand on my back,{w=0.25} coaxing me back in the bedroom as the guards searched the balcony."
 
-    voice audio.maid("d01")
+    voice audio.maid("d01") # NOTE: NO VA
     maid "Look at him,{w=0.25} he's in a state of shock! What came to you,{w=0.25} Your Royal Highness?"
 
     voice audio.everett("d02")
@@ -49,7 +49,7 @@ label tmd_part_d:
     "The maid relaxed after hearing it was a squirrel,{w=0.25} but from her angry expression it looked as if I wouldn't hear the end of it by tomorrow."
     "Though surprisingly,{w=0.25} she sighed."
 
-    voice audio.maid("d02")
+    voice audio.maid("d02") # NOTE: NO VA
     maid "Get some rest,{w=0.25} Your Highness.{w=0.25} You look terribly out of it."
 
     "Was it because of him?"
