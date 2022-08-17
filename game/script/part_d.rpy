@@ -38,11 +38,10 @@ label tmd_part_d:
     voice audio.maid("d01") # NOTE: NO VA
     maid "Look at him,{w=0.25} he's in a state of shock! What came to you,{w=0.25} Your Royal Highness?"
 
-    voice audio.everett("d02")
     everett "{dots=4.5}"
-    voice audio.everett("d03")
+    voice audio.everett("d02")
     everett "I saw an adorable squirrel outside,{w=0.25} but when I went to approach it{dots=4.5} it ran away."
-    voice audio.everett("d04")
+    voice audio.everett("d03")
     everett "I think the critter had returned."
 
     "The lies rolled so easily out off my tongue that I feared Balthazar had rubbed off on me."
@@ -96,11 +95,11 @@ label tmd_part_d:
     "My feet still traced the steps in our slow waltz,{w=0.25} memorizing every movement."
     "Except he was gone,{w=0.25} and even though he promised he would return,{w=0.25} he didn't."
 
-    voice audio.everett("d05")
+    voice audio.everett("d04")
     everett "It was silly to expect that."
-    voice audio.everett("d06")
+    voice audio.everett("d05")
     everett "I'm pretty foolish,{w=0.25} aren't I?"
-    voice audio.everett("d07")
+    voice audio.everett("d06")
     everett "I don't even know why I bother to stand out here."
 
     "The balcony was now a place of insurmountable sadness rather than joy."
@@ -173,7 +172,7 @@ label tmd_part_d:
     "Tears welled in my eyes,{w=0.25} and I didn't try to wipe them away."
     "He was finally here{dots=4.5}"
 
-    voice audio.everett("d08")
+    voice audio.everett("d07")
     everett "What kept you{dots=4.5} so long?"
 
     "It was hard to talk through the sniffling as I restrained myself from leaping towards him."
@@ -187,17 +186,17 @@ label tmd_part_d:
     "I felt the warm embrace of his jacket around my shoulders,{w=0.25} the smell of his cologne tickling my nose."
     "Pulling it closer around me,{w=0.25} he leaned against the railing just like before."
 
-    voice audio.everett("d09")
+    voice audio.everett("d08")
     everett "Those guards must hate you if they'd still be looking after weeks."
     "The words immediately put a dampen on the mood,{w=0.25} as he lowered his chin and looked away from me in sadness."
-    voice audio.everett("d10")
+    voice audio.everett("d09")
     everett "Balthazar{dots=4.5}?"
 
     "I reached towards him and he didn't move away."
 
-    voice audio.everett("d11")
+    voice audio.everett("d10")
     everett "Why are you running away from the guards?{w=0.25} Did you{dots=4.5}"
-    voice audio.everett("d12")
+    voice audio.everett("d11")
     everett "Harm someone?"
 
     "His eyes flashed with an unrecognizable emotion,{w=0.25} but he didn't deny the accusation."
@@ -205,7 +204,7 @@ label tmd_part_d:
     voice audio.balth("d07")
     balth "It's been a long life before I met you,{w=0.25} Everett.{w=0.25} One that I shouldn't tell you fully."
 
-    voice audio.everett("d13")
+    voice audio.everett("d12")
     everett "Why not?"
 
     voice audio.balth("d08")
@@ -213,26 +212,26 @@ label tmd_part_d:
 
     "My hand drops from his shoulder to his hand,{w=0.25} squeezing it."
 
-    voice audio.everett("d14")
+    voice audio.everett("d13")
     everett "Balthazar{dots=4.5}"
-    voice audio.everett("d15")
+    voice audio.everett("d14")
     everett "My life has been entangled in yours the moment you appeared on my balcony."
-    voice audio.everett("d16")
+    voice audio.everett("d15")
     everett "I don't know anything about you,{w=0.25} but I can judge you from the way you acted with me."
-    voice audio.everett("d17")
+    voice audio.everett("d16")
     everett "And you don't seem to be some scoundrel like the guards say."
 
     voice audio.balth("d09")
     balth "They talk of me like a scoundrel?"
 
-    voice audio.everett("d18")
+    voice audio.everett("d17")
     everett "{dots=4.5}among other names that aren't nice."
 
     "Wanting to make him laugh,{w=0.25} I instead succeeded in a deep frown plaguing his features."
 
-    voice audio.everett("d19")
+    voice audio.everett("d18")
     everett "Listen.{w=0.25} I want to help you however I can.{w=0.25} You rescued me from my prison,{w=0.25} at least let me help you get out of yours."
-    voice audio.everett("d20")
+    voice audio.everett("d19")
     everett "I'm weak,{w=0.25} but I'm not so weak as to steal a night with you and not help you in return."
 
     voice audio.balth("d10")
@@ -243,7 +242,7 @@ label tmd_part_d:
     voice audio.balth("d11")
     "Then he chuckled,{w=0.25} bursting out into laughter that seemed unfitting for the situation."
 
-    voice audio.everett("d21")
+    voice audio.everett("d20")
     everett "What's so funny?"
 
     voice audio.balth("d12")
@@ -254,7 +253,7 @@ label tmd_part_d:
     voice audio.balth("d13")
     balth "If I must trudge down that weary road again,{w=0.25} at least I'd like to do it with a companion."
 
-    voice audio.everett("d22")
+    voice audio.everett("d21")
     everett "So you'll tell me?"
 
     "Balthazar nodded,{w=0.25} smiling fondly."
