@@ -198,8 +198,10 @@ label tmd_part_b:
     voice audio.everett("b12")
     everett smile "What is the matter that you have to wake me up so late?"
 
-    voice audio.maid("b03") # NOTE: NO VA
-    maid "I'm so sorry,{w=0.25} Your Royal Highness,{w=0.25} but we must come in. There is a minor{dots=4.5} disturbance we need to check out."
+    #voice audio.maid("b03") # NOTE: NO VA
+    #maid "I'm so sorry,{w=0.25} Your Royal Highness,{w=0.25} but we must come in. There is a minor{dots=4.5} disturbance we need to check out."
+    guarda "Forgive the intrusion, Your Royal Highness, but we must come in!" # VA Fix
+    guardb "There is a minor but urgent matter we must attend to at once!"    # VA Fix
 
     show everett c frown
     "So they're keeping me in the dark about him?"
@@ -258,6 +260,8 @@ label tmd_part_b:
     voice audio.maid("b04")
     maid "Are you sure you're alright?"
 
+    guardb "Your Royal Higness's cheeks are red as rubies! I can see it from here!" # VA Fix
+
     voice audio.everett("b14")
     everett frown @ grimace "Are they now?"
     "I tried to sound surprised,{w=0.25} but instead it comes out as sarcastic and I bite the inside of my cheek.{w=0.25} The maid will not receive my irritation tonight."
@@ -265,8 +269,8 @@ label tmd_part_b:
     voice audio.everett("b15")
     everett a smile "Must be from before I retired to bed.{w=0.25} It's awfully cold outside."
 
-    voice audio.maid("b05") # NOTE: NO VA
-    maid "...truly."
+    #voice audio.maid("b05") # NOTE: NO VA
+    #maid "...truly."
 
     "We fell into silence again as the guards finished investigating every crevice. {w=0.25}{nw}{done}I leaned back slightly onto the bed, just to deter them from checking there."
     show guard as guard_a:
@@ -290,8 +294,10 @@ label tmd_part_b:
     voice audio.everett("b16")
     everett "I hope everything is alright."
 
-    voice audio.maid("b06") # NOTE: NO VA
-    maid smile @ worry "Oh it is!{w=0.25} We were just checking for some{dots=3.0} critter.{w=0.25} It doesn't seem to be in here so no need to worry."
+    #voice audio.maid("b06") # NOTE: NO VA
+    #maid smile @ worry "Oh it is!{w=0.25} We were just checking for some{dots=3.0} critter.{w=0.25} It doesn't seem to be in here so no need to worry."
+    guarda "No need to worry,{w=0.25} My Liege.{w=0.25} We were just searching for,{w=0.25} er{em}"                             # VA Fix
+    guardb "A critter!{w=0.25} A nastly little beast that snuck past the gate while the guests were coming in!" # VA Fix
 
     voice audio.everett("b17")
     everett "Is that so?{w=0.25} I'm glad.{w=0.25} Thank you everyone for making me feel safe."
@@ -301,13 +307,18 @@ label tmd_part_b:
       easein 0.5 matrixcolor BrightnessMatrix(0.05)
     "The mood in the room lightened a little as the scullery maid smiled warmly."
 
-    voice audio.maid("b07") # NOTE: NO VA
-    maid "We will be off now,{w=0.25} get some rest."
+    #voice audio.maid("b07") # NOTE: NO VA
+    #maid "We will be off now,{w=0.25} get some rest."
+    guarda "We shall be off now, Your Royal Highness!"      # VA Fix
+    guardb "Be sure to get some rest, Your Royal Highness!" # VA Fix
+
     voice audio.everett("b18")
     everett "Goodnight,{w=0.25} miss."
 
-    voice audio.maid("b08") # NOTE: NO VA
-    maid "Goodnight to you,{w=0.25} Your Royal Highness."
+    voice audio.maid("b08")
+    maid "Goodnight."
+
+    "Guards" "Goodnight!"
 
     stop music fadeout 4.0
 
