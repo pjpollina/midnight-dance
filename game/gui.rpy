@@ -34,9 +34,9 @@ style button_text:
 style radio_button:
   xysize (300, 42)
   left_padding 45
-  idle_background           "gui/buttons/pip/idle.webp"
-  hover_background          "gui/buttons/pip/hover.webp"
-  selected_background       "gui/buttons/pip/selected.webp"
+  idle_background     "gui/buttons/pip/idle.webp"
+  hover_background    "gui/buttons/pip/hover.webp"
+  selected_background "gui/buttons/pip/selected.webp"
 style radio_button_text:
   yalign 0.5
   hover_color          "#FFFF9C"

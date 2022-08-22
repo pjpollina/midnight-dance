@@ -21,21 +21,13 @@ init python in audio:
 
   ## VA
   def everett(line):
-    clip = "audio/voices/everett/{}.ogg".format(line)
-    if renpy.exists(clip):
-      return clip
-    else:
-      return "<silence 0.5>"
+    return "audio/voices/everett/{}.ogg".format(line)
 
   def balth(line):
     return "audio/voices/balth/{}.ogg".format(line)
 
   def maid(line):
-    clip = "audio/voices/maid/{}.ogg".format(line)
-    if renpy.exists(clip):
-      return clip
-    else:
-      return "<silence 0.5>"
+    return "audio/voices/maid/{}.ogg".format(line)
 
 init python:
   config.has_sound = True  ## These three variables control, among other things, which mixers are shown
