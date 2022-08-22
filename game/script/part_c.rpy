@@ -28,7 +28,7 @@ label tmd_part_c:
   label .balls_hehe:
     $ save_name = _("A dream shattered...")
 
-    play music everett
+    play music prince
 
     scene bg bedroom lit
     show everett a smile at right
@@ -303,19 +303,19 @@ label tmd_part_c:
         easein 0.75 yoffset  0
         repeat 20
 
-    #voice audio.maid("c01") # NOTE: NO VA
-    #maid "Your Royal Highness?{w=0.25} Why is your room lit?{w=0.25} Is everything alright still?"
-    guarda "You see?!{w=0.25} His Royal Highness's room is lit!" # VA Fix
+    voice audio.guard_a("c01")
+    guarda "You see?!{w=0.25} His Royal Highness's room is lit!"
+    voice audio.guard_a("c02")
     guarda "It must be that scoundrel in his room,{w=0.25} why else would he be awake at this time?"
+    voice audio.guard_b("c01")
     guardb "We need to break the door down!"
 
     voice audio.maid("c02")
     maid "You will do no such thing!"
 
     show everett c shame
-    #voice audio.maid("c03") # NOTE: NO VA
-    #maid "Everett,{w=0.25} are you okay in there?{w=0.25} Why are you awake?"
-    guardb "Your Royal Highness, are you alright in there?! Is that beast holding you captive?!" # VA Fix
+    voice audio.guard_b("c02")
+    guardb "Your Royal Highness, are you alright in there?! Is that beast holding you captive?!"
 
     voice audio.everett("c18")
     everett c shame "Shit{dots=4.5}"

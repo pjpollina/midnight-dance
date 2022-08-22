@@ -1,7 +1,7 @@
 init python in audio:
   ## Music
   main_menu      = "audio/music/main_menu.ogg"
-  everett        = "audio/music/everett.ogg"
+  prince         = "audio/music/everett.ogg"
   balthazar      = "audio/music/balthazar.ogg"
   fireworks      = "audio/music/fireworks.ogg"
   midnight_waltz = "audio/music/midnight_waltz.ogg"
@@ -28,6 +28,12 @@ init python in audio:
 
   def maid(line):
     return "audio/voices/maid/{}.ogg".format(line)
+
+  def guard_a(line):
+    return "audio/voices/guard_a/{}.ogg".format(line)
+
+  def guard_b(line):
+    return "audio/voices/guard_b/{}.ogg".format(line)
 
 init python:
   config.has_sound = True  ## These three variables control, among other things, which mixers are shown

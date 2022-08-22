@@ -61,12 +61,15 @@ label tmd_part_b:
   label .hideaway:
     # TODO: Footstep scramble sfx
 
+    voice audio.guard_a("b01")
     guarda "Where is that criminal fiend?!"
 
     voice audio.maid("b01")
     maid "I hope Your Highness is okay!"
 
+    voice audio.guard_b("b01")
     guardb "He disappeared into the hedges near the Prince's balcony,{w=0.25} he has to be up there!"
+
     "My heart leapt to my throat at the sounds of the scullery maid and some guards faintly outside."
 
     scene bg bedroom
@@ -181,7 +184,7 @@ label tmd_part_b:
 
     "They were quick!"
 
-    play music everett fadein 2.0
+    play music prince fadein 2.0
 
     scene bg bedroom
     show everett c frown at right, rflip
@@ -198,10 +201,10 @@ label tmd_part_b:
     voice audio.everett("b12")
     everett smile "What is the matter that you have to wake me up so late?"
 
-    #voice audio.maid("b03") # NOTE: NO VA
-    #maid "I'm so sorry,{w=0.25} Your Royal Highness,{w=0.25} but we must come in. There is a minor{dots=4.5} disturbance we need to check out."
-    guarda "Forgive the intrusion, Your Royal Highness, but we must come in!" # VA Fix
-    guardb "There is a minor but urgent matter we must attend to at once!"    # VA Fix
+    voice audio.guard_a("b02")
+    guarda "Forgive the intrusion, Your Royal Highness, but we must come in!"
+    voice audio.guard_b("b02")
+    guardb "There is a minor but urgent matter we must attend to at once!"
 
     show everett c frown
     "So they're keeping me in the dark about him?"
@@ -260,7 +263,8 @@ label tmd_part_b:
     voice audio.maid("b04")
     maid "Are you sure you're alright?"
 
-    guardb "Your Royal Higness's cheeks are red as rubies! I can see it from here!" # VA Fix
+    voice audio.guard_b("b03")
+    guardb "Your Royal Higness's cheeks are red as rubies! I can see it from here!"
 
     voice audio.everett("b14")
     everett frown @ grimace "Are they now?"
@@ -268,9 +272,6 @@ label tmd_part_b:
 
     voice audio.everett("b15")
     everett a smile "Must be from before I retired to bed.{w=0.25} It's awfully cold outside."
-
-    #voice audio.maid("b05") # NOTE: NO VA
-    #maid "...truly."
 
     "We fell into silence again as the guards finished investigating every crevice. {w=0.25}{nw}{done}I leaned back slightly onto the bed, just to deter them from checking there."
     show guard as guard_a:
@@ -294,10 +295,10 @@ label tmd_part_b:
     voice audio.everett("b16")
     everett "I hope everything is alright."
 
-    #voice audio.maid("b06") # NOTE: NO VA
-    #maid smile @ worry "Oh it is!{w=0.25} We were just checking for some{dots=3.0} critter.{w=0.25} It doesn't seem to be in here so no need to worry."
-    guarda "No need to worry,{w=0.25} My Liege.{w=0.25} We were just searching for,{w=0.25} er{em}"                             # VA Fix
-    guardb "A critter!{w=0.25} A nastly little beast that snuck past the gate while the guests were coming in!" # VA Fix
+    voice audio.guard_a("b03")
+    guarda "No need to worry,{w=0.25} My Liege.{w=0.25} We were just searching for,{w=0.25} er{em}"
+    voice audio.guard_b("b04")
+    guardb "A critter!{w=0.25} A nastly little beast that snuck past the gate while the guests were coming in!"
 
     voice audio.everett("b17")
     everett "Is that so?{w=0.25} I'm glad.{w=0.25} Thank you everyone for making me feel safe."
@@ -307,10 +308,10 @@ label tmd_part_b:
       easein 0.5 matrixcolor BrightnessMatrix(0.05)
     "The mood in the room lightened a little as the scullery maid smiled warmly."
 
-    #voice audio.maid("b07") # NOTE: NO VA
-    #maid "We will be off now,{w=0.25} get some rest."
-    guarda "We shall be off now, Your Royal Highness!"      # VA Fix
-    guardb "Be sure to get some rest, Your Royal Highness!" # VA Fix
+    voice audio.guard_a("b04")
+    guarda "We shall be off now, Your Royal Highness!"
+    voice audio.guard_b("b05")
+    guardb "Be sure to get some rest, Your Royal Highness!"
 
     voice audio.everett("b18")
     everett "Goodnight,{w=0.25} miss."
@@ -318,6 +319,7 @@ label tmd_part_b:
     voice audio.maid("b08")
     maid "Goodnight."
 
+    voice "audio/voices/goodnight.ogg"
     "Guards" "Goodnight!"
 
     stop music fadeout 4.0
@@ -448,7 +450,7 @@ label tmd_part_b:
       repeat 3
     $ renpy.pause(11.0, hard=True)
 
-    play music everett fadein 4.0
+    play music prince fadein 4.0
 
     "Eleven o'clock.{w=0.25} The fireworks would light up the sky by now."
     show everett c grimace

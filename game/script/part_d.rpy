@@ -35,9 +35,8 @@ label tmd_part_d:
     "I raised a hand to touch my cheek."
     "The maid had a hand on my back,{w=0.25} coaxing me back in the bedroom as the guards searched the balcony."
 
-    #voice audio.maid("d01") # NOTE: NO VA
-    #maid "Look at him,{w=0.25} he's in a state of shock! What came to you,{w=0.25} Your Royal Highness?"
-    guarda "Look at him,{w=0.25} he's in a state of shock! What came to you,{w=0.25} Your Royal Highness?!" # VA Fix
+    voice audio.guard_a("d01")
+    guarda "Look at him,{w=0.25} he's in a state of shock! What came to you,{w=0.25} Your Royal Highness?!"
 
     everett "{dots=4.5}"
     voice audio.everett("d02")
@@ -49,9 +48,7 @@ label tmd_part_d:
     "The maid relaxed after hearing it was a squirrel,{w=0.25} but from her angry expression it looked as if I wouldn't hear the end of it by tomorrow."
     "Though surprisingly,{w=0.25} she sighed."
 
-    #voice audio.maid("d02") # NOTE: NO VA
-    #maid "Get some rest,{w=0.25} Your Highness.{w=0.25} You look terribly out of it."
-    "She said nothing, but her look alone spoke volumes of the state I was in." # VA Fix
+    "She said nothing, but her look alone spoke volumes of the state I was in."
 
     "Was it because of him?"
     "My face grew redder thinking of how he stole a kiss from me so easily.{w=0.25} My first kiss{dots=4.5}"

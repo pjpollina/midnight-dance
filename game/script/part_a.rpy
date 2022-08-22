@@ -144,7 +144,7 @@ label tmd_part_a:
     scene bg bedroom lit
     show everett b frown at rflip, lefter
     with Fade(0.0, 1.0, 2.0)
-    play music everett fadein 5.0
+    play music prince fadein 5.0
 
     play sound [door_shut, "<silence 0.25>", curtain_shut]
     "She closed the balcony doors and pulled the curtains from either side to conceal the outside."
