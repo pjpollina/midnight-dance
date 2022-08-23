@@ -33,7 +33,7 @@ screen mnav():
     textbutton _("Load")      left_padding  60 action ShowMenu("saves")
     textbutton _("About")     left_padding 120 action ShowMenu("about")
     textbutton _("Settings")  left_padding 180 action ShowMenu("settings")
-    textbutton _("Gallery")   left_padding 240 action NullAction() # TODO: IMPLEMENT GALLERY
+    textbutton _("Gallery")   left_padding 240 action ShowMenu("gallery")
     textbutton _("Credits")   left_padding 280 action NullAction() # TODO: IMPLEMENT CREDITS
     textbutton _("Quit")      left_padding 380 action Quit()
 
