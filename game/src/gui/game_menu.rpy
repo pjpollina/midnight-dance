@@ -32,8 +32,9 @@ style gm_window:
 screen navigation(kind):
   style_prefix "nav"
 
-  frame:
-    label kind
+  window:
+    frame:
+      background Image("gui/headers/{}.webp".format(kind), align=(0.5, 0.5))
 
     vbox:
       if main_menu:
@@ -49,22 +50,18 @@ screen navigation(kind):
       if not main_menu:
         textbutton _("Main Menu") action MainMenu()
 
-style nav_frame:
+style nav_window:
   xsize 425
   yfill True
 
-style nav_label:
-  ysize 125
-  align (0.5, 0.0)
-  top_margin 90
-style nav_label_text:
-  size 96
-  color "#DB4"
-  font cardinal
+style nav_frame:
+  align  (0.5, 0.0)
+  xysize (425, 295)
 
 style nav_vbox:
   xsize 425
-  align (0.5, 0.5)
   spacing 30
+  align (0.5, 0.5)
 
-style nav_button_text bold True
+style nav_button_text:
+  bold True
