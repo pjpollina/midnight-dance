@@ -4,6 +4,9 @@ init python:
   gui.init(1920, 1080)
   gui.language = "unicode"
 
+  ## Mouse
+  config.mouse = dict(default = [("gui/mouse.webp", 0, 0)])
+
   ## Fonts
   book_antiqua = "gui/fonts/BookAntiqua/Regular.ttf"
   config.font_replacement_map[book_antiqua, False, True] = ("gui/fonts/BookAntiqua/Italic.ttf", False, False)
@@ -39,8 +42,8 @@ style radio_button:
   selected_background "gui/buttons/pip/selected.webp"
 style radio_button_text:
   yalign 0.5
-  hover_color          "#FFFF9C"
-  selected_color       "#FFFF9C"
+  hover_color       "#FFFF9C"
+  selected_color    "#FFFF9C"
   outlines          [(1, "#FFF0",     0, 0)]
   hover_outlines    [(1, "#D06BF75A", 0, 0)]
   selected_outlines [(1, "#FFF0",     0, 0)]
