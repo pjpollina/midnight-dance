@@ -33,8 +33,10 @@ screen navigation(kind):
   style_prefix "nav"
 
   window:
-    frame:
-      background Image("gui/headers/{}.webp".format(kind), align=(0.5, 0.5))
+    button style "nav_header":
+      alt kind
+      action NullAction()
+      background nav_header(kind)
 
     vbox:
       if main_menu:
@@ -54,7 +56,7 @@ style nav_window:
   xsize 425
   yfill True
 
-style nav_frame:
+style nav_header:
   align  (0.5, 0.0)
   xysize (425, 295)
 

@@ -16,6 +16,11 @@ init python:
   cardinal = "gui/fonts/Cardinal/Regular.ttf"
   config.font_replacement_map[cardinal, False, True] = ("gui/fonts/Cardinal/Alternate.ttf", False, False)
 
+  dejavu_serif = "gui/fonts/DejaVuSerif/Regular.ttf"
+  config.font_replacement_map[dejavu_serif, False, True] = ("gui/fonts/DejaVuSerif/Italic.ttf", False, False)
+  config.font_replacement_map[dejavu_serif, True, False] = ("gui/fonts/DejaVuSerif/Bold.ttf", False, False)
+  config.font_replacement_map[dejavu_serif, True,  True] = ("gui/fonts/DejaVuSerif/BoldItalic.ttf", False, False)
+
 ## General styles ##############################################################
 
 style default:
