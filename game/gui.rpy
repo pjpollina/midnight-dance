@@ -59,7 +59,7 @@ style check_button_text is radio_button_text:
   selected_hover_color "#FFFF9CAA"
   selected_hover_outlines [(1, "#D06BF75A", 0, 0)]
 
-## Slider styles ################################################################
+## Slider styles ###############################################################
 
 style slider:
   xysize    (350, 40)
@@ -69,3 +69,11 @@ style slider:
   hover_right_bar "gui/slider/empty_hover.webp"
   thumb     None
   xalign    0.5
+
+## Hyperlink style #############################################################
+
+style hyperlink is text:
+  hover_color "#09A"
+  hover_underline True
+
+define config.hyperlink_styler = lambda _: style.hyperlink
