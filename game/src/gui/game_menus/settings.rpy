@@ -34,6 +34,7 @@ screen settings():
             idle_foreground  "gui/buttons/access_idle.webp"
             hover_foreground "gui/buttons/access_hover.webp"
             action ShowMenu("access")
+            alt "Access"
 
       frame:
         has vbox

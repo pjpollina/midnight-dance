@@ -13,8 +13,8 @@ python early:
 
   def access_header(name, path, size=60):
     if persistent.noheader:
-      return Text(name, size=size, align=(0.0, 0.0), offset=(-2, -10))
-    return Image("gui/headers/access/{}{}.webp".format(path, ("_dyx" if ft_dyx() else "")), align=(0.0, 0.0), color="#DB4")
+      return Text(name, size=size, align=(0.0, 0.0), offset=(-2, -10), color="#DB4")
+    return Image("gui/headers/access/{}{}.webp".format(path, ("_dyx" if ft_dyx() else "")), align=(0.0, 0.0))
 
   ft_suffix = lambda: ("_dyx" if ft_dyx() else ("_dvs" if ft_dvs() else ""))
   ft_hdsize = lambda: (80 if ft_dyx() else (72 if ft_dvs() else 96))

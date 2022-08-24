@@ -41,16 +41,18 @@ screen navigation(kind):
     vbox:
       if main_menu:
         textbutton _("Start")   action Start()
-        textbutton _("Load")    action ShowMenu("saves")
       else:
-        textbutton _("History")   action ShowMenu("history")
-        textbutton _("Save/Load") action ShowMenu("saves")
+        textbutton _("History") action ShowMenu("history")
 
+      textbutton _("Saves")     action ShowMenu("saves")
       textbutton _("Settings")  action ShowMenu("settings")
       textbutton _("About")     action ShowMenu("about")
       textbutton _("Help")      action ShowMenu("help")
+
       if not main_menu:
         textbutton _("Main Menu") action MainMenu()
+
+      textbutton _("Return") action Return()
 
 style nav_window:
   xsize 425
