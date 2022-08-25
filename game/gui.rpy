@@ -38,6 +38,7 @@ style button:
 style button_text:
   hover_color "#DB4"
   selected_color "#FFF6"
+  insensitive_color "#FFF6"
 
 style radio_button:
   xysize (300, 42)
