@@ -10,22 +10,22 @@ screen sprites():
   hbox spacing 30 align (0.5, 0.5):
     button:
       action Show("dressup", dissolve, char="everett")
-      idle_foreground  "everett b frown"
-      hover_foreground "everett c smile"
+      idle_foreground  "gui/gallery/sprites/everett_idle.webp"
+      hover_foreground "gui/gallery/sprites/everett_hover.webp"
 
     button:
-      idle_foreground  "balth b aloof"
-      hover_foreground "balth c smirk"
+      idle_foreground  "gui/gallery/sprites/balth_idle.webp"
+      hover_foreground "gui/gallery/sprites/balth_hover.webp"
       action Show("dressup", dissolve, char="balth")
 
     button:
-      idle_foreground  "maid worry"
-      hover_foreground "maid smile"
+      idle_foreground  "gui/gallery/sprites/maid_idle.webp"
+      hover_foreground "gui/gallery/sprites/maid_hover.webp"
       action Show("dressup", dissolve, char="maid")
 
     button:
-      idle_foreground  "guard"
-      hover_foreground "guard"
+      idle_foreground  "gui/gallery/sprites/guard_idle.webp"
+      hover_foreground "gui/gallery/sprites/guard_hover.webp"
       action Show("dressup", dissolve, char="guard")
 
 style sprite_button:
