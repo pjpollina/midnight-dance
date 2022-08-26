@@ -10,26 +10,28 @@ screen sprites():
   hbox spacing 30 align (0.5, 0.5):
     button:
       action Show("dressup", dissolve, char="everett")
-      idle_foreground  "gui/gallery/sprites/everett_idle.webp"
-      hover_foreground "gui/gallery/sprites/everett_hover.webp"
+      style style.sprite_button["everett"]
 
     button:
-      idle_foreground  "gui/gallery/sprites/balth_idle.webp"
-      hover_foreground "gui/gallery/sprites/balth_hover.webp"
       action Show("dressup", dissolve, char="balth")
+      style style.sprite_button["balth"]
 
     button:
-      idle_foreground  "gui/gallery/sprites/maid_idle.webp"
-      hover_foreground "gui/gallery/sprites/maid_hover.webp"
       action Show("dressup", dissolve, char="maid")
+      style style.sprite_button["maid"]
 
     button:
-      idle_foreground  "gui/gallery/sprites/guard_idle.webp"
-      hover_foreground "gui/gallery/sprites/guard_hover.webp"
       action Show("dressup", dissolve, char="guard")
+      style style.sprite_button["guard"]
 
 style sprite_button:
-  xysize (324, 600)
+  xysize (334, 610)
+  foreground "gui/gallery/portraits/[prefix_]frame.webp"
+
+init python:
+  for guy in ["everett", "balth", "maid", "guard"]:
+    style.sprite_button[guy].idle_background = Transform("gui/gallery/portraits/{}.webp".format(guy), matrixcolor=SepiaMatrix())
+    style.sprite_button[guy].hover_background = "gui/gallery/portraits/{}.webp".format(guy)
 
 ## Dressup Screen ##############################################################
 
