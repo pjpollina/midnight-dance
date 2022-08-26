@@ -14,44 +14,52 @@ screen scenes():
     text _("CGs by {a=https://kyleechii.carrd.co/}Kyleechii/Moonkipp{/a}")
 
     hbox:
-      button action Show("scene_viewer", dissolve, displayable="cg balthcony"):
-        background "gui/gallery/slots/cg_[prefix_]01a.webp"
+      button style style.scene_button["cg_01a"]:
+        action Show("scene_viewer", dissolve, displayable="cg balthcony")
         alt "The CG of Balthazar on the balcony"
-      button action Show("scene_viewer", dissolve, displayable="cg balthcony dark"):
-        background "gui/gallery/slots/cg_[prefix_]01b.webp"
+
+      button style style.scene_button["cg_01b"]:
+        action Show("scene_viewer", dissolve, displayable="cg balthcony dark")
         alt "The CG of Balthazar on the balcony, cloaked in shadow, his red eye glowing"
-      button action Show("scene_viewer", dissolve, displayable="cg balthcony eyes"):
-        background "gui/gallery/slots/cg_[prefix_]01c.webp"
+
+      button style style.scene_button["cg_01c"]:
+        action Show("scene_viewer", dissolve, displayable="cg balthcony eyes")
         alt "The CG of Balthazar on the balcony, zoomed in on his face, in shadow"
-      button action Show("scene_viewer", dissolve, displayable="cg bedthazar"):
-        background "gui/gallery/slots/cg_[prefix_]02.webp"
+
+      button style style.scene_button["cg_02"]:
+        action Show("scene_viewer", dissolve, displayable="cg bedthazar")
         alt "The CG of Balthazar asleep in Everett's bed"
 
     hbox:
-      button action Show("scene_viewer", dissolve, displayable="cg waltazar"):
-        background "gui/gallery/slots/cg_[prefix_]03.webp"
+      button style style.scene_button["cg_03"]:
+        action Show("scene_viewer", dissolve, displayable="cg waltazar")
         alt "The CG of Everett and Balthazar dancing"
-      button action Show("scene_viewer", dissolve, displayable="cg yaoitime"):
-        background "gui/gallery/slots/cg_[prefix_]04.webp"
+
+      button style style.scene_button["cg_04"]:
+        action Show("scene_viewer", dissolve, displayable="cg yaoitime")
         alt "The CG of Everett and Balthazar kissing"
-      button action Show("scene_viewer", dissolve, displayable="cg returnazar"):
-        background "gui/gallery/slots/cg_[prefix_]05.webp"
+
+      button style style.scene_button["cg_05"]:
+        action Show("scene_viewer", dissolve, displayable="cg returnazar")
         alt "The CG of Balthazar, flowers in hand, smiling"
 
     text _("Backgrounds by {a=https://ko-fi.com/luciam_artstudio}Luciam Art Studio{/a}")
 
     hbox:
-      button action Show("scene_viewer", dissolve, displayable="bg balcony"):
-        background "gui/gallery/slots/bg_[prefix_]01.webp"
+      button style style.scene_button["bg_01"]:
+        action Show("scene_viewer", dissolve, displayable="bg balcony")
         alt "The background of the balcony"
-      button action Show("scene_viewer", dissolve, displayable="bg balcony lit"):
-        background "gui/gallery/slots/bg_[prefix_]02.webp"
+
+      button style style.scene_button["bg_02"]:
+        action Show("scene_viewer", dissolve, displayable="bg balcony lit")
         alt "The background of the balcony, with fireworks"
-      button action Show("scene_viewer", dissolve, displayable="bg bedroom"):
-        background "gui/gallery/slots/bg_[prefix_]03.webp"
+
+      button style style.scene_button["bg_03"]:
+        action Show("scene_viewer", dissolve, displayable="bg bedroom")
         alt "The background of Everett's bedroom, dark"
-      button action Show("scene_viewer", dissolve, displayable="bg bedroom lit"):
-        background "gui/gallery/slots/bg_[prefix_]04.webp"
+
+      button style style.scene_button["bg_04"]:
+        action Show("scene_viewer", dissolve, displayable="bg bedroom lit")
         alt "The background of Everett's bedroom, dark"
 
 screen scene_viewer(displayable):
@@ -63,9 +71,13 @@ screen scene_viewer(displayable):
 ## Styles ######################################################################
 
 style scene_button:
-  xysize (320, 180)
-  idle_foreground  Solid("#0007")
-  hover_foreground None
+  xysize (330, 190)
+  foreground "gui/gallery/scenes/[prefix_]frame.webp"
+
+init python:
+  for pic in ["bg_01", "bg_02", "bg_03", "bg_04", "cg_01a", "cg_01b", "cg_01c", "cg_02", "cg_03", "cg_04", "cg_05"]:
+    style.scene_button[pic].idle_background = Transform("gui/gallery/scenes/{}.webp".format(pic), matrixcolor=SepiaMatrix())
+    style.scene_button[pic].hover_background = "gui/gallery/scenes/{}.webp".format(pic)
 
 style scene_hbox:
   spacing 30
