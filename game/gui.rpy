@@ -78,3 +78,4 @@ style hyperlink is text:
   hover_underline True
 
 define config.hyperlink_styler = lambda _: style.hyperlink
+define config.hyperlink_callback = hyperlink_function

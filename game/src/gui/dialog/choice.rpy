@@ -17,12 +17,11 @@ screen choice(items):
 style choice_button:
   align (0.5, 0.5)
   xysize (600, 100)
-  background (Solid("#F00A") if config.developer else None)
 style choice_button_text:
   font cardinal
   align (0.5, 0.5)
 
   idle_size  40
   hover_size 44
-  idle_color  "#000"
+  idle_color  "#FFFA"
   hover_color "#FFF"
