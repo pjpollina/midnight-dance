@@ -34,7 +34,7 @@ screen mnav():
     textbutton _("About")     left_padding 120 action ShowMenu("about")
     textbutton _("Settings")  left_padding 180 action ShowMenu("settings")
     textbutton _("Gallery")   left_padding 240 action ShowMenu("gallery")
-    textbutton _("Credits")   left_padding 280 action NullAction() # TODO: IMPLEMENT CREDITS
+    textbutton _("Credits")   left_padding 280 action [Stop("music", fadeout=3.0), Hide("main_menu", transition=Dissolve(3.0)), Jump("credits_warp")]
     textbutton _("Quit")      left_padding 380 action Quit()
 
 ## Main Menu navigation styles #################################################
@@ -62,3 +62,7 @@ label newgame:
   $ renpy.pause(3.0, hard=True)
   $ renpy.jump_out_of_context("start")
   return
+
+label credits_warp:
+  $ renpy.pause(3.0, hard=True)
+  $ renpy.jump_out_of_context("credits")

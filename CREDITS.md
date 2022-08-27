@@ -6,7 +6,6 @@
 of meeting. I could not have asked for a better person to work for, especially
 for my first real collaborative project.
 
-
 ## Artists
  - ### Sprites by [Social Demonz](https://twitter.com/SocialDemonz)
 
@@ -40,7 +39,7 @@ for my first real collaborative project.
 
 <br>
 
-### Programmed in Ren'Py 8.0.1 by PJ Pollina (aeugchad)
+### Programmed in Ren'Py 8.0.2 by PJ Pollina (aeugchad)
 <br>
 
 ## Developed in two months for [Yaoi Game Jam 2022](https://itch.io/jam/yaoi-jam-game-2022)
