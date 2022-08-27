@@ -63,11 +63,11 @@ style check_button_text is radio_button_text:
 ## Slider styles ###############################################################
 
 style slider:
-  xysize    (350, 40)
-  left_bar  "gui/slider/full.webp"
-  right_bar "gui/slider/empty.webp"
-  hover_left_bar  "gui/slider/full_hover.webp"
-  hover_right_bar "gui/slider/empty_hover.webp"
+  xysize          (300, 40)
+  left_bar        Transform("gui/slider/full.webp", fit="contain")
+  right_bar       Transform("gui/slider/empty.webp", fit="contain")
+  hover_left_bar  Transform("gui/slider/full_hover.webp", fit="contain")
+  hover_right_bar Transform("gui/slider/empty_hover.webp", fit="contain")
   thumb     None
   xalign    0.5
 

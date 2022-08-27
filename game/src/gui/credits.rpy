@@ -1,11 +1,10 @@
-
 label credits:
-  scene bg bedroom with Dissolve(3.0)
+  scene bg bedroom
+  show image Solid("#0007")
+  with Dissolve(3.0)
   play music midnight_waltz fadein 3.0
 
-  show text Text("The Midnight Dance", style="credits_title") with dissolve
-  $ renpy.pause(3.5, hard=True)
-  hide text with dissolve
+  $ _game_menu_screen = None
 
   show credit oishii with dissolve
   $ renpy.pause(3.5, hard=True)
@@ -24,6 +23,10 @@ label credits:
   hide credit with dissolve
 
   show credit nsaid with dissolve
+  $ renpy.pause(3.5, hard=True)
+  hide credit with dissolve
+
+  show credit pj ui with dissolve
   $ renpy.pause(3.5, hard=True)
   hide credit with dissolve
 
@@ -70,6 +73,8 @@ label credits:
   stop music fadeout 4.0
   scene black with Dissolve(4.0)
 
+  $ _game_menu_screen = "saves"
+
   return
 
 style credits_title:
@@ -96,7 +101,12 @@ style credits_text_c is credits_text_a:
   align (0.55, 0.55)
   size 72
 
-image credit oishii = Text(_("Created, Directed, and Written by OishiiWrites"), style="credits_text_a")
+image credit oishii:
+  contains:
+    Text("The Midnight Dance", style="credits_title", yalign=0.45)
+  contains:
+    Text(_("Created, Directed, and Written by OishiiWrites"), style="credits_text_a", yalign=0.55)
+
 image credit acey:
   contains:
     Text(_("Sprite Artist"), style="credits_text_b")
@@ -113,13 +123,19 @@ image credit kyle:
   contains:
     Text(_("CG Artist"), style="credits_text_b")
   contains:
-    Text("Kyleechii", style="credits_text_c")
+    Text("Moonkipp", style="credits_text_c")
 
 image credit nsaid:
   contains:
     Text(_("UI Designer"), style="credits_text_b")
   contains:
     Text("NSAID", style="credits_text_c")
+
+image credit pj ui:
+  contains:
+    Text(_("Gallery/Accessibility Designer"), style="credits_text_b")
+  contains:
+    Text("PJ Pollina", style="credits_text_c")
 
 image credit gelby:
   contains:
@@ -129,7 +145,7 @@ image credit gelby:
 
 image credit pj sfx:
   contains:
-    Text(_("SFX"), style="credits_text_b")
+    Text(_("Sound Effects"), style="credits_text_b")
   contains:
     Text("PJ Pollina", style="credits_text_c")
 

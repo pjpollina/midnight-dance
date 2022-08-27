@@ -1,7 +1,7 @@
 ## Game Info ###################################################################
 init python:
   config.name           = _("The Midnight Dance")
-  config.version        = "0.2.5"
+  config.version        = "0.3.0"
   config.save_directory = "midnight_dance"
   config.window_icon    = "gui/window_icon.webp"
   gui.about = _p("""
@@ -45,6 +45,7 @@ init python:
 init python:
   ## Info
   build.name = "midnight_dance"
+  build.directory_name = "{}-v{}".format(build.name, config.version)
   build.include_update = False
 
   ## Stuff to ignore in builds
@@ -66,6 +67,8 @@ init python:
   build.classify("game/audio/**",    "audio")
   build.classify("game/gui/**",        "gui")
 
-  ## Platform key info
-  # build.google_play_key = "..."
-  # build.itch_project = "renpytom/test-project"
+  ## Build location
+  if renpy.windows:
+    build.destination = "P:/RenPy-Builds/"
+  if renpy.linux:
+    build.destination = "/mnt/p/RenPy-Builds/"

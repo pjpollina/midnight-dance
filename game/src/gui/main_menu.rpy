@@ -2,9 +2,11 @@
 ##
 ## Used to display the main menu when Ren'Py starts.
 
+default persistent.game_clear = False
+
 screen main_menu():
   tag menu
-  add "bg bedroom"
+  add ("bg bedroom lit" if persistent.game_clear else "bg bedroom")
 
   frame style "logo"
 
@@ -28,14 +30,14 @@ style version_text:
 screen mnav():
   style_prefix "mnav"
 
-  vbox:
-    textbutton _("Start")     left_padding   0 action [Stop("music", fadeout=3.0), Hide("main_menu", transition=Dissolve(3.0)), Jump("newgame")]
-    textbutton _("Load")      left_padding  60 action ShowMenu("saves")
-    textbutton _("About")     left_padding 120 action ShowMenu("about")
-    textbutton _("Settings")  left_padding 180 action ShowMenu("settings")
-    textbutton _("Gallery")   left_padding 240 action ShowMenu("gallery")
-    textbutton _("Credits")   left_padding 280 action [Stop("music", fadeout=3.0), Hide("main_menu", transition=Dissolve(3.0)), Jump("credits_warp")]
-    textbutton _("Quit")      left_padding 380 action Quit()
+  vbox xoffset -30:
+    textbutton _("Start")    xoffset   0 action [Stop("music", fadeout=3.0), Hide("main_menu", transition=Dissolve(3.0)), Jump("newgame")]
+    textbutton _("Load")     xoffset  60 action ShowMenu("saves")
+    textbutton _("About")    xoffset 120 action ShowMenu("about")
+    textbutton _("Settings") xoffset 180 action ShowMenu("settings")
+    textbutton _("Gallery")  xoffset 240 action If(persistent.game_clear, Show("gallery", dissolve), Notify(_("Finish the game first!")))
+    textbutton _("Credits")  xoffset 280 action [Stop("music", fadeout=3.0), Hide("main_menu", transition=Dissolve(3.0)), Jump("credits_warp")]
+    textbutton _("Quit")     xoffset 380 action Quit()
 
 ## Main Menu navigation styles #################################################
 
@@ -45,11 +47,14 @@ style mnav_vbox:
   offset (30, -20)
 
 style mnav_button:
-  xsize 425
+  xsize 300
+  left_padding 50
 style mnav_button_text:
   size 72
   font cardinal
   text_align 0.0
+  outlines [(3, "#000", 1, 1)]
+  outline_scaling "step"
 
 ## Control Labels ##############################################################
 
