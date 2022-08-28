@@ -1,19 +1,6 @@
 default persistent.game_clear = False
 
-init python:
-  def label_callback(name, abnormal):
-    store.current_label = name
-
-  config.label_callback = label_callback
-
-## A developer-mode screen to indicate what scene is active in-game
-screen _dev_label():
-  zorder 100
-  text "[current_label!tq]" color "#F006" xalign 1.0
-
 label start:
-  if config.developer:
-    show screen _dev_label()
   call tmd_part_a
   call tmd_part_b
   call tmd_part_c
@@ -21,7 +8,9 @@ label start:
   $ persistent.game_clear = True
   call credits
   show the_end
-  pause 3.0
+  $ renpy.pause(3.0, hard=True)
+  scene black with config.end_game_transition
+  turmoil "The gallery is now unlocked."
   return
 
 image the_end:

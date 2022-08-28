@@ -45,6 +45,12 @@ screen saves_file(index, name):
       text FileTime(index, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("{#Empty file slot}No data")) style "default"
       text FileSaveName(index, empty="")
 
+      hbox:
+        style_prefix ""
+        textbutton _("Save")   style "saves_button"  action FileSave(index)   sensitive (not main_menu)
+        textbutton _("Load")   style "saves_button"  action FileLoad(index)   sensitive FileLoadable(index)
+        textbutton _("Delete") style "delete_button" action FileDelete(index) sensitive FileLoadable(index)
+
 ## Save slot styles ############################################################
 
 style saves_file_frame:
@@ -62,3 +68,18 @@ style saves_file_text:
   size 28
   italic True
   color "#FFFA"
+
+style saves_button:
+  xysize (120, 60)
+style saves_button_text:
+  size 36
+  selected_color "#FFF"
+  selected_hover_color "#DB4"
+  align (0.5, 0.5)
+  bold True
+
+style delete_button is saves_button
+style delete_button_text is saves_button_text:
+  idle_color "#800"
+  hover_color "#F00"
+  insensitive_color "#600A"

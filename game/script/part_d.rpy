@@ -2,8 +2,8 @@ label tmd_part_d:
   label .yaoikiss:
     $ save_name = _("When lips meet...")
 
-    play music balthazar fadein 8.0
     scene cg yaoitime with Fade(2.0, 2.0, 2.0, color="#FFF")
+    play music balthazar
 
     "My hands rested on Balthazar's chest,{w=0.25} slowly grabbing his shirt as if it would prevent him from leaving."
     "After what felt like an eternity,{w=0.25} he pulled away and whispered softly in my ear."
@@ -14,6 +14,7 @@ label tmd_part_d:
     voice audio.everett("d01")
     everett "Balthazar{dots=4.5}"
 
+    play sound woosh
     camera:
       align (0.5, 0.25)
       ease 1.0 zoom 30.0 blur 1000
@@ -26,9 +27,12 @@ label tmd_part_d:
     voice audio.balth("d02")
     turmoil "{b}{i}{cps=*0.5}Wait for me.{/cps}{/i}{/b}"
 
-    scene black with ImageDissolve("cg yaoitime", 1.5)
     camera:
       zoom 1.0 align (0.5, 0.5)
+    show cg yaoitime:
+      matrixcolor SepiaMatrix()
+    with Fade(0.15, 0.0, 0.15, color="#FFF")
+    scene black with Fade(0.15, 0.0, 0.15, color="#FFF")
 
     "He backed away from me as I closed my eyes.{w=0.25} I couldn't hear the sounds of his footsteps nor the door opening without my command."
     "When my eyes opened again,{w=0.25} he was gone."
@@ -36,7 +40,7 @@ label tmd_part_d:
     "The maid had a hand on my back,{w=0.25} coaxing me back in the bedroom as the guards searched the balcony."
 
     voice audio.guard_a("d01")
-    guarda "Look at him,{w=0.25} he's in a state of shock! What came to you,{w=0.25} Your Royal Highness?!"
+    guarda "Look at him,{w=0.25} he's in a state of shock!{w=0.5} What came to you,{w=0.25} Your Royal Highness?!"
 
     everett "{dots=4.5}"
     voice audio.everett("d02")
@@ -51,6 +55,10 @@ label tmd_part_d:
     "She said nothing, but her look alone spoke volumes of the state I was in."
 
     "Was it because of him?"
+    show cg yaoitime:
+      matrixcolor SepiaMatrix()
+    with Fade(0.15, 0.0, 0.15, color="#FFF")
+    scene black with Fade(0.15, 0.0, 0.15, color="#FFF")
     "My face grew redder thinking of how he stole a kiss from me so easily.{w=0.25} My first kiss{dots=4.5}"
     "I didn't think I would be able to fall back asleep anytime soon."
 
@@ -84,9 +92,11 @@ label tmd_part_d:
     Waiting...
     """
 
+    play music hollow_wind
     scene bg balcony
-    show everett b frown at rflip, right
-    with ImageDissolve("cg yaoitime", 2.0)
+    show everett b frown at right:
+      xzoom -1.0
+    with ImageDissolve("cg yaoitime", 0.5)
 
     "The night was just as cold as that night.{w=0.25} It felt harsher today,{w=0.25} as if the world was mocking me for my decision."
     "I didn't want to think about him anymore."
@@ -137,15 +147,16 @@ label tmd_part_d:
     show everett frail
     "Another day{dots=3.0}"
 
-    show balth a cocky behind everett at center, rflip:
-      matrixcolor TintMatrix("#000") alpha 0.0
+    show balth a cocky behind everett at center:
+      matrixcolor TintMatrix("#000") alpha 0.0 xzoom -1.0
       easein 5.0 alpha 1.0
     $ renpy.pause(5.0, hard=True)
 
     voice audio.balth("d03")
     balth "So you've waited for me,{w=0.25} Your Royal Highness."
 
-    show everett a shame at rflip:
+    show everett a shame:
+      xzoom -1.0
       linear 0.05 yoffset -60
       linear 0.05 yoffset   0
     "My heart leapt to my throat."
@@ -159,7 +170,7 @@ label tmd_part_d:
     scene cg returnazar
     camera:
       zoom 1.0
-    with Fade(0.2, 0.0, 0.2, color="#FFF")
+    with Fade(0.5, 0.5, 1.0, color="#FFF")
 
     "Balthazar."
 
@@ -179,7 +190,7 @@ label tmd_part_d:
     voice audio.balth("d05")
     balth "The guards have increased since I last left you.{w=0.25} It was difficult even for me to find my way back here."
     voice audio.balth("d06")
-    balth "But knowing you were waiting for me{dots=4.5} I couldn't stop until I found a way back to you."
+    balth "But knowing you were waiting for me{dots=4.5} I couldn't stop until I found my way back to you."
 
     "I rubbed my blurry vision,{w=0.25} a sob trapped in my chest.{w=0.25} I should've asked him why the guards were so persistent to catch him.{w=0.25} But the overwhelming relief of him being here was distracting."
     "I felt the warm embrace of his jacket around my shoulders,{w=0.25} the smell of his cologne tickling my nose."
@@ -265,5 +276,7 @@ label tmd_part_d:
 
     voice audio.balth("d15")
     balth "Of when I became a vampire."
+
+    $ renpy.pause(2.5, hard=True)
 
   return
