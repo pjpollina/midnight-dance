@@ -42,7 +42,7 @@ style say_dialogue is default:
   font book_antiqua
 
 style say_thought is say_dialogue:
-  size 33
+  size 36
   align (0.5, 0.5)
   text_align 0.5
   outlines [(absolute(2), "#111", absolute(1), absolute(1))]

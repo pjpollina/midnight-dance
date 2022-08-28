@@ -38,7 +38,8 @@ label tmd_part_a:
     stop  music fadeout 3.0
     queue music distant_party fadein 3.0
     scene bg balcony
-    show everett b smile at rflip, right
+    show everett b smile at right:
+      xzoom -1.0
     with Fade(2.5, 1.0, 2.5)
 
     "A feeling of profound melancholy overcame me as I watched the last of the crowds disappear into the ball."
@@ -75,20 +76,33 @@ label tmd_part_a:
     $ save_name = _("A maid's plight...")
 
     voice audio.everett("a07")
-    everett shame @ frown "Maybe{em}"
+    everett frown "Maybe{em}"
 
+    show everett shame:
+      linear 0.05 yoffset -25 blur 5
+      linear 0.05 yoffset   0 blur 0
     voice audio.maid("a01")
     maid "{size=+8}Your Royal Highness!{/size}"
 
-    show maid worry at rflip, runon_lefter
+    show maid worry:
+      xzoom -1.0 xalign -1.0 blur 10
+      parallel:
+        linear 1.0 lefter blur 0
+      parallel:
+        easein 0.2 yoffset 50
+        easein 0.3 yoffset  0
+        repeat 2
     "A concerned voice breaks me out of my train of thought."
-    show maid worry at rflip, lefter
+    show maid worry at lefter:
+      xzoom -1.0 blur 0
 
     voice audio.maid("a02")
     maid "You cannot be out here! It is far too chilly for your fragile body. Allow me to accompany you back inside."
 
     "I sigh once more,{w=0.25} {nw}{done}turning to face her with a frown."
-    show everett b frown at lflipturn
+    show everett b frown:
+      blur 5
+      ease 0.2 xzoom 1.0 blur 0
     "I sigh once more, {fast}turning to face her with a frown."
 
     voice audio.everett("a08")
@@ -97,16 +111,17 @@ label tmd_part_a:
     voice audio.maid("a03")
     maid "This is far from a prison,{w=0.25} Your Royal Highness! It was decorated with your interests in mind."
     voice audio.maid("a04")
-    maid "There are others less fortunate to live in such chambers as yours."
+    maid "There are others less fortunate unable to live in such... decoris chambers as yours."
 
     voice audio.everett("a09")
-    everett smirk "Well at least they are given the freedom to leave if they dislike it."
+    everett smirk "Well at least they are given the freedom to leave their slums if they dislike it."
 
   label .maid_drag:
     ## Setup
     show everett shame
     show maid:
-      easein 0.2 center
+      blur 5
+      easein 0.2 xzoom 1.0 center blur 0
     pause  0.5
 
     ## Execution
@@ -142,15 +157,23 @@ label tmd_part_a:
     "The scullery maid took my wrist,{w=0.25} pulling me back inside despite my protests."
 
     scene bg bedroom lit
-    show everett b frown at rflip, lefter
+    show everett b frown at lefter:
+      xzoom -1.0
     with Fade(0.0, 1.0, 2.0)
-    play music prince fadein 5.0
+    play music prince
 
     play sound [door_shut, "<silence 0.25>", curtain_shut]
     "She closed the balcony doors and pulled the curtains from either side to conceal the outside."
     "And any joy I had from gazing at the night."
 
-    show maid worry at walkon_right
+    show maid worry:
+      xalign 1.5
+      parallel:
+        linear 1.5 right
+      parallel:
+        easein 0.2 yoffset 20
+        easein 0.3 yoffset  0
+        repeat 3
     pause 1.5
     show maid at right
 
@@ -168,27 +191,35 @@ label tmd_part_a:
     maid "You aren't a healthy person,{w=0.25} Your Highness{em}"
 
     voice audio.everett("a12")
-    everett smirk "And you think I'm foolish enough to not realize that?! I didn't ask for the opinion of a servant that leaves every morning!"
+    everett smirk "And you think I'm foolish enough to not realize that?!{w=0.5} I didn't ask for the opinion of a servant that leaves every morning!"
     show everett b cough
     show maid:
-      ease 0.05 rflip matrixcolor SaturationMatrix(0.75)
+      blur 5
+      ease 0.05 xzoom -1.0 matrixcolor SaturationMatrix(0.75) blur 0
 
-    "I couldn't take back the words as they slipped out. But my heart dropped at the sight of the maid whose shoulders fell."
+    "I couldn't take back the words as they slipped out.{w=0.25} But my heart dropped at the sight of the maid whose shoulders fell."
     voice audio.everett("a13")
-    everett "I just want to leave,{w=0.25} I'm terribly sorry for my attitude. I've grown crazy about these same walls."
-    show everett at lflipturn
+    everett "I just want to leave,{w=0.25} I'm terribly sorry for my attitude.{w=0.25} I've grown crazy about these same walls."
+    show everett:
+      blur 5
+      ease 0.2 xzoom 1.0 blur 0
 
-    "In my hushed tone,{w=0.25} I look away from her and towards the wall. The shadows flicked alongside it from the candlelight."
+    "In my hushed tone,{w=0.25} I look away from her and towards the wall.{w=0.25} The shadows flicked alongside it from the candlelight."
     "They were{dots=4.5} almost dancing."
 
     voice audio.maid("a08")
-    maid "I'm{dots=4.5} I'm sorry Your Highness,{w=0.25} I can't fathom how difficult it is to be in your position."
+    maid "I{em}{w=0.1}I'm{dots=4.5} sorry Your Highness,{w=0.25} I can't fathom how difficult it is to be in your position."
 
+    show everett:
+      blur 5
+      easein 0.2 xzoom -1.0 blur 0
     "I glanced towards her to see her crestfallen expression,{w=0.25} still gathering her thoughts in her balled up hands."
-    "She was picking her words wisely. This wasn't another monologue sent from mother."
+    "She was picking her words wisely.{w=0.25} This wasn't another monologue sent from mother."
 
+    show maid:
+      ease 0.2 xzoom 1.0
     voice audio.maid("a09")
-    maid "Me and the others would love to see you outdoors... but Your Majesty asks we keep an eye on you. To keep you safe,{w=0.25} that is."
+    maid "Me and the others would love to see you outdoors{dots=2.0} but,{w=0.25} Your Majesty asks we keep an eye on you. To keep you{dots=4.5} safe,{w=0.25} that is."
     voice audio.maid("a10")
     maid "The most I can do is ask her to change her mind. But we are just following her decree."
     voice audio.maid("a11")
@@ -198,11 +229,9 @@ label tmd_part_a:
     "Mother still said no to it,{w=0.25} saying that it was safer if I stayed here."
 
     voice audio.maid("a12")
-    maid "{dots=4.5}I will try my hardest,{w=0.25} Your Highness."
+    maid "I{dots=4.5}I will try my hardest,{w=0.25} Your Highness."
     voice audio.maid("a13")
     maid "But please,{w=0.25} do get some rest. You really worry us sometimes."
-    #voice audio.maid("a14") # NOTE: NO VA
-    #maid "If just for one more night,{w=0.25} please get a good rest so I may bring up the topic tomorrow with Your Majesty."
 
     "That was as good as it was going to get with Mother. Though I respected the scullery maids' boldness in asking the Queen to reframe her decision."
     "I couldn't send the frenzied maid away with more worries.  With every reluctance clinging to my body,{w=0.25} I turned towards my bed to hide my irritation."
@@ -211,9 +240,8 @@ label tmd_part_a:
     everett frown "I concede,{w=0.25} please retire for the night Miss."
     "The sound of clapping reassured me that her feelings weren't hurt anymore,{w=0.25} now that she had won."
 
-    show maid smile at lflipturn
     voice audio.maid("a15")
-    maid "Of course Your Highness! Allow me to dim the lights."
+    maid smile "Of course Your Highness! Allow me to dim the lights."
 
     stop music fadeout 4.0
 
@@ -241,8 +269,12 @@ label tmd_part_a:
         easein 0.25 yoffset  0
         repeat 2
 
-    play sound into_bed
-    "She came to my side,{w=0.25} gently throwing the blankets over me tucking me in."
+    "She came to my side,{w=0.25} {nw}{done}gently throwing the blankets over me, tucking me in."
+    show maid:
+      easein 0.2 yoffset 30
+      easein 0.1 yoffset 0
+    play sound blanket
+    "She came to my side,{fast} gently throwing the blankets over me,{w=0.25} tucking me in."
 
     voice audio.everett("a15")
     everett "Thank you,{w=0.25} Miss."
@@ -251,9 +283,11 @@ label tmd_part_a:
     maid "Anything for you,{w=0.25} Your Highness."
 
     show maid:
-      rflipturn
-      pause  1.6
-      lflipturn
+      blur 5
+      ease 0.2 xzoom -1.0 blur 0
+      pause 1.6
+      blur 5
+      ease 0.2 xzoom 1.0 blur 0
     $ renpy.pause(2.2, hard=True)
 
     voice audio.maid("a17")
@@ -265,7 +299,8 @@ label tmd_part_a:
     show bg:
       easeout 6.0 matrixcolor TintMatrix("#342948")
     show maid:
-      rflipturn
+      blur 5
+      ease 0.2 xzoom -1.0 blur 0
       pause 0.75
       parallel:
         easeout 6.0 matrixcolor TintMatrix("#342948")
@@ -278,7 +313,7 @@ label tmd_part_a:
     $ renpy.pause(3.5, hard=True)
 
     play sound door_shut volume 0.5
-    play music hollow_wind volume 0.25 fadein 4.0
+    play music hollow_wind
 
     "Whispering her farewell,{w=0.25} she stood upright and left the room in the same hurry she came in."
     "{dots=4.5}"
@@ -297,6 +332,8 @@ label tmd_part_a:
     $ renpy.pause(2.2, hard=True)
     scene black with Dissolve(2.0)
     $ renpy.pause(2.2, hard=True)
+    camera:
+      matrixcolor TintMatrix("#FFF")
 
   label .nosleep:
     $ save_name = _("A restless heart...")
@@ -337,7 +374,7 @@ label tmd_part_a:
     voice audio.everett("a17")
     everett "Nmh..."
 
-    play music hollow_wind volume 0.25 fadein 3.0
+    play music hollow_wind
     scene bg bedroom:
       matrixcolor TintMatrix("#333")
     with Fade(0.0, 1.0, 2.0)
@@ -387,7 +424,7 @@ label tmd_part_a:
 
     "This wasn't going{dots=6.0} to work."
     "With the last bit of energy I had,{w=0.25} my legs slowly kicked over the side of the bed."
-    play sound into_bed
+    play sound [blanket, into_bed]
     "I fumbled with lighting a candle,{w=0.25} but eventually gave up and headed towards the balcony."
     "If the balcony was so insistent on keeping me awake,{w=0.25} I hope it brought me something entertaining."
     "Like a balcony size ball,{w=0.25} just for me."
@@ -402,9 +439,9 @@ label tmd_part_a:
     "I tried to hide my resentment towards the situation,{w=0.25} but it inevitably showed on my face most likely."
 
     voice audio.everett("a19")
-    everett "Is that all,{w=0.25} World?{w=0.75} Willing to throw me a bone but not meat on it?"
+    everett "Is that all,{w=0.25} World?{w=0.75} Willing to throw me a bone but not the meat on it?!"
     voice audio.everett("a20")
-    everett "If only I could show you."
+    everett "If only I could show you!"
 
     play sound curtain_shut
     show bg:
@@ -446,10 +483,15 @@ label tmd_part_a:
     "My blood ran cold."
     "His eyes were cold and clear on the surface. The crimson color shone strangely while the rest of him was concealed in the darkness."
     "Those red eyes... they were as red as blood."
-    # TODO: Heartbeat sfx
+    play sound heartbeat
+    show cg balthcony eyes:
+      align (0.5, 0.5)
+      linear 0.05 zoom 1.0 blur 10
+      linear 0.05 zoom 2.5 blur  0
+    with dissolve
     "My heart skipped a beat,{w=0.25} threatening to leap out of my chest."
 
-    "What... who was I staring at?"
+    "What{dots=3.0} who,{w=0.25} was I staring at?"
     "Unable to control the fear seizing my legs,{w=0.25} I stepped backwards slowly."
     "Maybe he couldn't see me through the glass,{w=0.25} maybe this was just a coincidence."
     "Maybe this was a dream."
@@ -479,8 +521,8 @@ label tmd_part_a:
       "Leave the man outside.":
         $ save_name = _("A chance squandered...")
 
-        play sound ["<silence 1.5>", curtain_shut]
         pause 1.5
+        play sound curtain_shut
         scene black with ImageDissolve("masks/curtain.webp", 0.15)
         pause 2.0
 
@@ -503,15 +545,19 @@ label tmd_part_a:
         """
 
         show bad_end
-        pause
-        $ renpy.full_restart(config.end_game_transition)
+        play sound bad_end
+        $ renpy.pause(3.0, hard=True)
+        scene black with Fade(1.0, 1.0, 1.0, color="#600")
+        $ renpy.full_restart()
       "Invite the man in":
         return
 
   return
 
 image bad_end:
-  Text("Bad End...", size=72, font="gui/fonts/BookAntiqua/BoldItalic.ttf", color="#FFF")
+  Text("Bad End...", size=72, font=book_antiqua, bold=True, italic=True, color="#600", outlines=[(3, "#000", 1, 1)])
   align (0.95, 0.95)
   alpha 0.0 xoffset 50
   easein 1.5 alpha 1.0 xoffset 0
+  pause 1.5
+  easein 3.0 alpha 0.0 xoffset 0

@@ -16,11 +16,11 @@ init python:
 ## In-Game Stuff ###############################################################
 init python:
   ## Transitions
-  config.enter_transition = dissolve
-  config.exit_transition  = dissolve
-  config.intra_transition = dissolve
-  config.after_load_transition = None
-  config.end_game_transition = Fade(3.0, 3.0, 3.0, color="#FFF")
+  config.enter_transition      = dissolve
+  config.exit_transition       = dissolve
+  config.intra_transition      = dissolve
+  config.after_load_transition = dissolve
+  config.end_game_transition   = Fade(3.0, 3.0, 3.0, color="#FFF")
 
   ## Window stuff
   config.window = "auto"

@@ -11,7 +11,7 @@ layeredimage balth:
 layeredimage maid:
   always "maid_base"
   group face auto
-  fit "contain"
+  fit "contain" yoffset 60
 
 image guard:
   "sprites/guard.webp"

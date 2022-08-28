@@ -10,7 +10,10 @@ init python in audio:
   distant_party  = "audio/music/distant_party.ogg"
 
   ## SFX
+  bad_end      = "audio/sfx/bad_end.ogg"
+  blanket      = "audio/sfx/blanket.ogg"
   into_bed     = "audio/sfx/into_bed.ogg"
+  heartbeat    = "audio/sfx/heartbeat.ogg"
   door_open    = "audio/sfx/door_open.ogg"
   door_shut    = "audio/sfx/door_shut.ogg"
   clock_gong   = "audio/sfx/clock_gong.ogg"
