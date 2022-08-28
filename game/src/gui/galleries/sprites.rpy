@@ -101,7 +101,7 @@ screen dressup(char):
 
     window:
       if char == "guard":
-        add "guard"
+        add "guard_{}".format(pose)
       elif char == "maid":
         add "maid {}".format(face)
       else:
@@ -110,7 +110,7 @@ screen dressup(char):
     null width 75
 
     if char == "guard":
-      $ char = "guard {}".format(pose)
+      $ char = "guard_{}".format(pose)
     use profile(char)
 
 style dressup_label:
@@ -186,12 +186,31 @@ init python:
       his mother's rules. Though she's a little harried when it comes to situations, she cares for Everett.
     """),
 
-    "guard a": _p("""
-      Guard A Bio
+    "guard_a": _p("""
+      Born in a small village outside the city, he's worked hard from a young age to become the pillar
+      of strength he is today. It's paid off in the end, as he rose through the ranks to become an elite
+      royal guard faster than anyone on record. Fiercely loyal to his duty, he would not hesitate to lay
+      down his life to protect the royal family or their subjects.
+
+      Despite his tough exterior, he's actually quite gentle and caring, and very good with children, in
+      no small part due to him growing up the eldest of twelve siblings. His fraternal attitude towards
+      both his fellow guards and the other people of the castle have made him quite popular.
+
+      In his off time, he builds model ships in bottles with his boyfriend, Guard B.
     """),
 
-    "guard b": _p("""
-      Guard B Bio
+    "guard_b": _p("""
+      The second son of a noble family, he was blessed from a young age with a cushy life and
+      little-to-no responsibilities. Rather than just accept this easy existence, however, Guard B used
+      his status to help the common people, often volunteering anywhere people needed help. This attitude
+      is what helped him earn his position as an elite royal guard, a duty he takes incredibly seriously.
+
+      While not as outwardly fierce as his partner and boyfriend, Guard A, he's still a capable warrior in
+      his own right, often training with the former for hours. This has made the two an unimaginably strong
+      pair both physically and tactically, known by the other guards as being capable of stopping "any
+      man alive". Lucky for them, their only loss was to Balthazar, so this title still stands.
+
+      He and Guard A often stop by at the local orphanage after work to read stories to the children.
     """),
   }
 

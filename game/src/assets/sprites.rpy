@@ -13,6 +13,10 @@ layeredimage maid:
   group face auto
   fit "contain" yoffset 60
 
-image guard:
-  "sprites/guard.webp"
+image guard_a:
+  "sprites/guard_a.webp"
+  fit "contain"
+
+image guard_b:
+  "sprites/guard_b.webp"
   fit "contain"

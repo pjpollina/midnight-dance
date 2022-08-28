@@ -5,11 +5,11 @@ define prolog   = Character(None, kind=narrator, what_slow_cps=0, show_flair=Tru
 define soundfx  = Character(None, kind=narrator, what_slow_cps=0, what_size=24, what_italic=True, advance=False)
 define turmoil  = Character(None, kind=narrator, show_flair=True)
 
-define everett  = Character("Everett",   ctc="ctc", image="everett", who_text_color="#3B3065", who_top_padding=12, who_text_size=72)
-define balth    = Character(balth_name,  ctc="ctc", image="balth",   who_text_color="#580617", dynamic=True)
-define maid     = Character("Maid",      ctc="ctc", image="maid",    who_text_color="#8F6A96")
-define guarda   = Character("Guard #1",  ctc="ctc", image="guard",   who_text_color="#5D3B42")
-define guardb   = Character("Guard #2",  ctc="ctc", image="guard",   who_text_color="#5D3B54")
+define everett  = Character("Everett",  ctc="ctc", image="everett", who_text_color="#3B3065", who_top_padding=12, who_text_size=72)
+define balth    = Character(balth_name, ctc="ctc", image="balth",   who_text_color="#580617", dynamic=True)
+define maid     = Character("Maid",     ctc="ctc", image="maid",    who_text_color="#8F6A96")
+define guarda   = Character("Guard A",  ctc="ctc", image="guard_a", who_text_color="#5D3B42")
+define guardb   = Character("Guard B",  ctc="ctc", image="guard_b", who_text_color="#232F4B")
 
 ## Balth name function #########################################################
 

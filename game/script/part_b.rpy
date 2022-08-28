@@ -228,7 +228,7 @@ label tmd_part_b:
         easein 0.2 yoffset 20
         easein 0.3 yoffset  0
         repeat 3
-    show guard as guard_a:
+    show guard_a:
       xalign -1.0
       parallel:
         linear 1.0 right
@@ -236,7 +236,7 @@ label tmd_part_b:
         easein 0.2 yoffset 50
         easein 0.3 yoffset  0
         repeat 2
-    show guard as guard_b:
+    show guard_b:
       xalign -1.0
       parallel:
         linear 1.0 rightest
@@ -249,8 +249,9 @@ label tmd_part_b:
     "They brandished their swords clear as day as the maid quickly lit all the candles."
     show bg lit with dissolve
     "The maid stood by the door with her candle as the guards explored the room."
-    show guard as guard_a:
-      rflipturn
+    show guard_a:
+      xzoom 1.0
+      ease 0.2 xzoom -1.0
       pause 0.25
       ease 0.8 xalign 2.0
     show  guard as guard_b:
