@@ -15,6 +15,7 @@ init python in audio:
   blanket      = "audio/sfx/blanket.ogg"
   collapse     = "audio/sfx/collapse.ogg"
   into_bed     = "audio/sfx/into_bed.ogg"
+  firework     = "audio/sfx/firework.ogg"
   clamoring    = "audio/sfx/clamoring.ogg"
   heartbeat    = "audio/sfx/heartbeat.ogg"
   door_open    = "audio/sfx/door_open.ogg"

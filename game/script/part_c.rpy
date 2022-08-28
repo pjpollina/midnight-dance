@@ -4,6 +4,8 @@ label tmd_part_c:
   label .storytime:
     $ save_name = _("A stranger's tales...")
 
+    play music nearby_party
+
     prolog """
     And just like that, the sickly prince and his knight in tattered clothes shared stories.
     One of the outdoors and what it offers, and the other of his home life.
@@ -28,16 +30,13 @@ label tmd_part_c:
   label .balls_hehe:
     $ save_name = _("A dream shattered...")
 
-    play music prince
-
     scene bg bedroom lit
     show everett a smile at right
-    show balth a smile at left, rflip
+    show balth a smile at left:
+      xzoom -1.0
     with Dissolve(1.25)
 
     pause 0.75
-
-    $ renpy.music.set_volume(0.0, delay=0.2)
 
     show everett shame
     show balth shock
@@ -46,8 +45,6 @@ label tmd_part_c:
     soundfx "GONG... {w=3.5}GONG... {w=3.5}GONG... {w=3.5}{nw}"
 
     "The clock chimed midnight,{w=0.25} bringing me out of the conversation."
-
-    $ renpy.music.set_volume(1.0, delay=1.0)
 
     voice audio.balth("c01")
     balth smirk "My most recent escapade is the ball hosted down the street,{w=0.25} it was quite{dots=4.5}"
@@ -89,7 +86,7 @@ label tmd_part_c:
     balth cocky "I apologize for ruining your vision of it."
 
     voice audio.everett("c05")
-    everett smile @ shame "Oh,{w=0.25} no no,{w=0.25} it's okay!{w=0.25} Maybe it wasn't anything too special anyway.{w=0.25} Dancing with someone in a beautiful ballroom,{w=0.25} someone who is special to you{dots=4.0}"
+    everett smile @ shame "Oh,{w=0.25} no no,{w=0.25} it's okay!{w=0.25} Maybe it wasn't anything too special anyway.{w=0.25} Dancing with someone in a beautiful ballroom{dots=4.5} someone who is special to you{dots=4.0}"
     "I lost track,{w=0.25} smiling distantly until the stranger broke the silence."
 
     voice audio.balth("c06")
@@ -108,7 +105,9 @@ label tmd_part_c:
     voice audio.balth("c07")
     balth c cocky "To be honest with you{dots=4.5} you're too interesting to leave."
 
-    show everett b shame
+    show everett b shame:
+      linear 0.05 xoffset -5
+      linear 0.05 xoffset  0
     "I felt the world come to a screeching halt,{w=0.25} heat blossoming around my cheeks."
 
     voice audio.everett("c08")
@@ -131,13 +130,16 @@ label tmd_part_c:
     voice audio.balth("c13")
     balth "You show your true self to me{dots=4.5} and I think that's worth staying longer for."
 
-    show everett c shame
+    show everett c shame:
+      linear 0.05 xoffset -5
+      linear 0.05 xoffset  0
     "I was stunned into silence."
     voice audio.everett("c09")
     everett "Re-really{em}?"
 
     "I was interrupted by the man standing on his feet, {nw}{done}offering a hand towards me."
     stop music fadeout 2.0
+    play sound woosh
     show balth cocky:
       ease 0.5 center
     "I was interrupted by the man standing on his feet, {fast}{w=0.25}offering a hand towards me."
@@ -147,7 +149,7 @@ label tmd_part_c:
     $ save_name = _("The midnight waltz...")
 
     play music "<silence 3.0>"
-    queue music midnight_waltz fadein 2.0
+    queue music midnight_waltz volume 0.25 fadein 2.0
 
     scene cg waltazar
     with Fade(2.0, 1.0, 3.0)
@@ -210,8 +212,8 @@ label tmd_part_c:
     "The light from the candles had never felt more warm and fuzzy."
     "When we were dancing,{w=0.25} it felt like hours passed.{w=0.25} With only the feeling of his hand in mine resonating."
 
-    # TODO: FIREWORK SFX
-    #soundfx "kaboom!{nw}"
+    play sound firework
+    soundfx "whistle{em}{w=2.0}kaboom!{w=4.0}{nw}"
 
     "Not wanting to break the dance,{w=0.25} I slowly took the lead and pulled him towards the balcony."
     voice audio.everett("c15")
@@ -230,9 +232,10 @@ label tmd_part_c:
   label .fireworks:
     $ save_name = _("Fires in the sky...")
 
-    play music fireworks
+    play music fireworks volume 0.25
     scene bg balcony lit
-    show everett b smile at left, rflip
+    show everett b smile at left:
+      xzoom -1.0
     show balth a smile at right
     with Dissolve(3.0)
 
@@ -255,8 +258,6 @@ label tmd_part_c:
 
     voice audio.everett("c17")
     everett smile "Everett,{w=0.25} it's nice to meet you."
-
-    $ renpy.music.set_volume(0.25, delay=3.0)
 
     show everett:
       ease 1.0 xalign 0.26
@@ -283,7 +284,7 @@ label tmd_part_c:
         linear 0.1 yzoom 1.25
         linear 0.1 yzoom 1.00
       parallel:
-        lflipturn
+        ease 0.2 xzoom 1.0
       parallel:
         ease 0.2 xalign 0.15
     show balth a shock:
@@ -311,7 +312,7 @@ label tmd_part_c:
     guardb "We need to break the door down!"
 
     voice audio.maid("c02")
-    maid "You will do no such thing!"
+    maid "You will not do such a thing!"
 
     show everett c shame
     voice audio.guard_b("c02")
@@ -324,7 +325,9 @@ label tmd_part_c:
     voice audio.balth("c24")
     balth frown "Everett{dots=4.5}"
 
-    show everett frown at rflipturn
+    show everett frown:
+      xzoom 1.0
+      ease 0.2 xzoom -1.0
     voice audio.everett("c19")
     everett frown "I have to hide you again! We can try my closet this time,{w=0.25} or maybe beneath my bed-"
 
@@ -336,6 +339,7 @@ label tmd_part_c:
     "I hadn't noticed him closing the distance between us,{w=0.25} his hands grazing the sides of my face."
 
     "Before I had time to retaliate,{done} he lowered one arm around my waist and pulled me closer to him."
+    play sound woosh
     show everett b shame:
       rotate_pad False
       parallel:
@@ -357,6 +361,13 @@ label tmd_part_c:
     show balth smirk:
       ease 0.4 rotate -7.5
 
+    play sound heartbeat
+    camera:
+      align (0.5, 0.5)
+      linear 0.05 blur 10
+      linear 0.05 blur  0
+    with dissolve
+
     voice audio.balth("c26")
     balth "I will return,{w=0.25} {nw}"
 
@@ -371,6 +382,8 @@ label tmd_part_c:
     voice audio.everett("c21")
     everett frown "But{em}"
 
+    play sound heartbeat
+    play audio ["<silence 0.25>", heartbeat]
     camera:
       parallel:
         align (0.25, 0.25) matrixcolor TintMatrix("#FFF")
@@ -383,6 +396,11 @@ label tmd_part_c:
     show balth cocky:
       ease 6.0 rotate -20.0
     with Dissolve(0.5)
+
+    scene black
+    camera:
+      matrixcolor TintMatrix("#FFF")
+      zoom 1.0
 
     $ renpy.pause(3.5, hard=True)
 
