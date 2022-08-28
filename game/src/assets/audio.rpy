@@ -10,9 +10,12 @@ init python in audio:
   distant_party  = "audio/music/distant_party.ogg"
 
   ## SFX
+  woosh        = "audio/sfx/woosh.ogg"
   bad_end      = "audio/sfx/bad_end.ogg"
   blanket      = "audio/sfx/blanket.ogg"
+  collapse     = "audio/sfx/collapse.ogg"
   into_bed     = "audio/sfx/into_bed.ogg"
+  clamoring    = "audio/sfx/clamoring.ogg"
   heartbeat    = "audio/sfx/heartbeat.ogg"
   door_open    = "audio/sfx/door_open.ogg"
   door_shut    = "audio/sfx/door_shut.ogg"
@@ -38,7 +41,11 @@ init python in audio:
   def guard_b(line):
     return "audio/voices/guard_b/{}.ogg".format(line)
 
+
 init python:
   config.has_sound = True  ## These three variables control, among other things, which mixers are shown
   config.has_music = True  ## to the player by default. Setting one of these to False will hide the
   config.has_voice = True  ## appropriate mixer.
+
+  preferences.emphasize_audio = True
+  config.emphasize_audio_channels = ["voice", "sound"]

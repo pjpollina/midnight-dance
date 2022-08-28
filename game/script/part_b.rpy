@@ -1,9 +1,8 @@
 label tmd_part_b:
   label .meet_balth:
     $ save_name = _("A stranger in the night...")
-    play music "<silence 2.0>"
-    queue music balthazar fadein 4.0
     scene cg balthcony with Fade(2.0, 1.0, 3.0)
+    play music balthazar
 
     "The man was clearly injured,{w=0.25} cradling his shoulder the way he was{dots=4.5}"
     "Also,{w=0.25} who knows how long he'd rap against the glass?{w=0.5} I'd lose all my sleep!"
@@ -31,16 +30,21 @@ label tmd_part_b:
     stop music fadeout 1.0
 
     voice audio.balth("b03")
-    balth "{cps=0}.{w=3.5}.{w=3.5}.{w=4.0}{nw}{/cps}" (advance=False)
+    balth "{dots=1.0}"
 
     voice audio.everett("b04")
     everett "{dots=4.5}Stranger?"
 
     "The man still didn't reply as I came up behind him,{w=0.25} gently touching his shoulder to turn him around."
+    play sound heartbeat
+    show cg balthcony:
+      align (0.5, 0.5)
+      linear 0.05 zoom 2.5 blur 10
+      linear 0.05 zoom 1.0 blur  0
+    with dissolve
     scene black with Dissolve(0.25)
 
-    # TODO: Thud sfx
-    soundfx "thud.{w=0.25}{nw}"
+    play sound collapse
 
     pause 2.0
 
@@ -56,10 +60,11 @@ label tmd_part_b:
     everett "I guess we'll have to fix this before I get any answers..."
     "I looped both of my arms beneath his armpits and started dragging him towards my bed."
 
-    pause 3.0
+    "{dots=4.5}"
 
   label .hideaway:
-    # TODO: Footstep scramble sfx
+    play sound clamoring fadein 0.5
+    $ renpy.pause(3.2, hard=True)
 
     voice audio.guard_a("b01")
     guarda "Where is that criminal fiend?!"
@@ -72,13 +77,14 @@ label tmd_part_b:
 
     "My heart leapt to my throat at the sounds of the scullery maid and some guards faintly outside."
 
+    play music distant_party
     scene bg bedroom
     show everett b frail:
       blur 5
       parallel:
-        rflip
+        xzoom -1.0
         linear 0.25 right
-        lflip
+        xzoom 1.0
         linear 0.25 left
         repeat
       parallel:
@@ -97,30 +103,39 @@ label tmd_part_b:
 
     "How could I hide the man in such a short time?"
 
-    show everett a frown at rflipturn:
-      blur 0 xalign 0.5
+    show everett a cough:
+      ease 0.1 xalign 0.75
+      rotate_pad False xzoom 1.0
+      rotate 2
+      ease 1.0 xalign 0.5 rotate 0 blur 0
+    $ renpy.pause(1.5, hard=True)
     voice audio.everett("b07")
     everett "Why am I... doing so much... for you?!"
     "Because I wanted to hear about the outside, of course."
 
-    show everett c cough at lflipturn
+    show everett c cough:
+      xzoom -1.0
+      ease 0.2 xzoom 1.0
     voice audio.everett("b08")
     everett "Come on! What could I do?"
 
-    show everett b shame at rflipturn
+    show everett b shame:
+      xzoom 1.0
+      ease 0.2 xzoom -1.0
     voice audio.everett("b09")
     everett "Think Everett, think..."
     "Racking my head for a solution, the pillows flung beneath my blankets spawned an idea."
 
-    # TODO: Lightbulb [metaphorical] SFX
-    show everett a smile at lflipturn
+    show everett a smile:
+      xzoom -1.0
+      ease 0.2 xzoom 1.0
     voice audio.everett("b10")
     everett "The pillows! I'll hide him under my pillows and blankets!"
 
-    # TODO: DRAG SFX
+    play sound ["<silence 1.5>", into_bed, dragging, "<silence 0.6>", dragging, "<silence 0.6>", dragging, "<silence 0.6>", dragging]
     show everett b frown:
       rotate_pad False
-      ease 0.25 ypos 0.5 rflip
+      ease 0.25 ypos 0.5 xzoom -1.0
       "everett b cough"
       pause 1.25
       ease 0.5 ypos 0.0
@@ -144,7 +159,7 @@ label tmd_part_b:
         repeat
     show balth a:
       rotate_pad False rotate -5
-      xalign 0.65 ypos 1.0 matrixcolor TintMatrix("#111") blur 5 rflip
+      xalign 0.65 ypos 1.0 matrixcolor TintMatrix("#111") blur 5 xzoom -1.0
       pause 1.5
       ease 0.5 ypos 0.25
       parallel:
@@ -168,6 +183,7 @@ label tmd_part_b:
         repeat
     with None
     scene black with MultipleTransition((False, Pause(4.0), False, Dissolve(4.0), True))
+    play sound [into_bed, blanket]
 
     "I hastened my grip and dragged the man towards the side of the bed. Half leant against the bed, I pull him on top trying not to lose my breath."
     "This was the most exertion I've had in awhile. My arms shook from the effort."
@@ -175,7 +191,7 @@ label tmd_part_b:
     "When half of the man was on the bed, I pushed the rest of him up and immediately flung pillows and blankets on top trying to make it look neat."
     "Taking a deep breath, I ran my fingers through my hair and straightened up trying to rub away the hot feeling in my face."
     "Look normal, Everett."
-    "Inhale..."
+    "Inhale{dots=4.5}"
 
   label .guests:
     $ save_name = _("Uninvited guests...")
@@ -184,10 +200,11 @@ label tmd_part_b:
 
     "They were quick!"
 
-    play music prince fadein 2.0
+    play music prince volume 0.125
 
     scene bg bedroom
-    show everett c frown at right, rflip
+    show everett c frown at right:
+      xzoom -1.0
     with Dissolve(2.0)
 
     voice audio.maid("b02")
@@ -195,14 +212,16 @@ label tmd_part_b:
 
     voice audio.everett("b11")
     everett "Everything{dots=4.5} {nw}"
-    show everett a shame at lflipturn
+    show everett a shame:
+      xzoom -1.0
+      ease 0.2 xzoom 1.0
     extend "is fine,{w=0.25} Miss! {w=0.15}{nw}"
     extend smile "Nothing is wrong here."
     voice audio.everett("b12")
     everett smile "What is the matter that you have to wake me up so late?"
 
     voice audio.guard_a("b02")
-    guarda "Forgive the intrusion, Your Royal Highness, but we must come in!"
+    guarda "Forgive the intrusion, Your Royal Highness,{w=0.25} but we must come in!"
     voice audio.guard_b("b02")
     guardb "There is a minor but urgent matter we must attend to at once!"
 
@@ -213,6 +232,7 @@ label tmd_part_b:
     everett b grimace "If you must,{w=0.25} come in."
 
     play sound door_open
+    pause 0.6
     show everett c smile:
       parallel:
         linear 1.0 center
@@ -220,8 +240,8 @@ label tmd_part_b:
         easein 0.2 yoffset 12
         easein 0.3 yoffset  0
         repeat 2
-    show maid worry at rflip:
-      xalign -0.5
+    show maid worry:
+      xalign -0.5 xzoom -1.0
       parallel:
         linear 1.5 leftest
       parallel:
@@ -250,12 +270,13 @@ label tmd_part_b:
     show bg lit with dissolve
     "The maid stood by the door with her candle as the guards explored the room."
     show guard_a:
-      xzoom 1.0
-      ease 0.2 xzoom -1.0
+      blur 5
+      ease 0.2 xzoom -1.0 blur 0
       pause 0.25
       ease 0.8 xalign 2.0
-    show  guard as guard_b:
-      rflipturn
+    show guard_b:
+      blur 5
+      ease 0.2 xzoom -1.0 blur 0
       pause 0.25
       ease 0.5 xalign 2.0
     "They mainly focused their attention on the balcony glass."
@@ -275,16 +296,16 @@ label tmd_part_b:
     everett a smile "Must be from before I retired to bed.{w=0.25} It's awfully cold outside."
 
     "We fell into silence again as the guards finished investigating every crevice. {w=0.25}{nw}{done}I leaned back slightly onto the bed, just to deter them from checking there."
-    show guard as guard_a:
-      lflip
+    show guard_a:
+      xzoom 1.0
       parallel:
         linear 1.0 right
       parallel:
         easein 0.2 yoffset 50
         easein 0.3 yoffset  0
         repeat 2
-    show guard as guard_b:
-      lflip
+    show guard_b:
+      xzoom 1.0
       parallel:
         linear 1.0 rightest
       parallel:
@@ -304,6 +325,7 @@ label tmd_part_b:
     voice audio.everett("b17")
     everett "Is that so?{w=0.25} I'm glad.{w=0.25} Thank you everyone for making me feel safe."
 
+    show maid smile
     show bg:
       matrixcolor BrightnessMatrix(0.0)
       easein 0.5 matrixcolor BrightnessMatrix(0.05)
@@ -320,24 +342,19 @@ label tmd_part_b:
     voice audio.maid("b08")
     maid "Goodnight."
 
-    voice "audio/voices/goodnight.ogg"
-    "Guards" "Goodnight!"
-
-    stop music fadeout 4.0
-
     show maid:
-      rflip
-      yalign 1.0
+      yalign 1.0 xzoom -1.0
       easein  0.25 ypos 1.05
       easeout 0.25 ypos 1.00
-      lflipturn
+      xzoom -1.0
+      ease 0.2 xzoom 1.0
       parallel:
         linear 3.0 xpos -1.0
       parallel:
         easein 0.2 yoffset 20
         easein 0.3 yoffset  0
         repeat
-    show guard as guard_a:
+    show guard_a:
       pause 0.33
       yalign 1.0
       easein  0.2 ypos 1.1
@@ -348,7 +365,7 @@ label tmd_part_b:
         easein 0.2 yoffset 50
         easein 0.3 yoffset  0
         repeat
-    show guard as guard_b:
+    show guard_b:
       pause 0.66
       yalign 1.0
       easein  0.2 ypos 1.1
@@ -380,9 +397,8 @@ label tmd_part_b:
     $ save_name = _("Rest for the wicked...")
     "{dots=3.0}"
 
-    play music "<silence 2.5>"
-    queue music balthazar fadein 4.0
     scene cg bedthazar with Fade(2.0, 1.0, 3.0)
+    play music balthazar
 
     "The man had long,{w=0.25} wispy blonde locks that cascaded down from his shoulders to his chest."
     "He was dressed in a gentleman's outfit,{w=0.25} with a noticeable scar poking from the top of his collarbone."
@@ -402,7 +418,7 @@ label tmd_part_b:
     "Thankfully Mother hired the best teachers to instruct me on medicine. Just so I can always take care of myself and cure any ailment that befalls me."
 
     voice audio.everett("b21")
-    everett "Now where had I left that first aid kit{dots=4.5}"
+    everett "Now{dots=4.5} where had I left that first aid kit{dots=4.5}"
     "Beneath the bed,{w=0.25} I pulled the cumbersome first aid kit and dropped it on the bedside rolling my sleeves up."
     voice audio.everett("b22")
     everett "I hope this works{dots=4.5}"
@@ -451,7 +467,7 @@ label tmd_part_b:
       repeat 3
     $ renpy.pause(11.0, hard=True)
 
-    play music prince fadein 4.0
+    play music prince fadein 4.0 volume 0.125
 
     "Eleven o'clock.{w=0.25} The fireworks would light up the sky by now."
     show everett c grimace
@@ -467,9 +483,11 @@ label tmd_part_b:
       alpha 0.0
       ease 0.2 alpha 0.75
 
+    stop music
     voice audio.balth("b04")
     balth "Nothing I couldn't handle, of course."
 
+    play sound blanket
     show everett c shame:
       ease 0.75 right
     hide cg
@@ -486,13 +504,17 @@ label tmd_part_b:
 
     voice audio.everett("b25")
     everett a frown "Are you okay?{w=0.25} I tried to patch you up the best I could."
-    show balth c frown
+    show balth c frown:
+      linear 0.05 xoffset -2
+      linear 0.05 xoffset  0
+      pause 0.5
+      repeat 2.0
     "The man blinked and checked his shoulder confused.{w=0.25} He was surprisingly mobile for someone with bullet wounds."
 
     voice audio.balth("b05")
     balth a smile "I'm doing better thanks to you."
     voice audio.everett("b26")
-    everett c frail "But you're so pale{dots=4.5}"
+    everett c frail "But{dots=4.5} you're so{dots=4.5} pale{dots=4.5}"
     show balth frown
 
     "I didn't want to sound rude,{w=0.25} but it was so noticeable."
@@ -502,6 +524,7 @@ label tmd_part_b:
     voice audio.balth("b06")
     balth c smirk "That's my natural complexion,{w=0.25} nothing for you to worry about."
 
+    play sound woosh
     show balth a smile:
       parallel:
         ease 0.34 leftest
@@ -535,6 +558,8 @@ label tmd_part_b:
   label .whiteboy_wasted:
     $ save_name = _("A breathtaking affair...")
 
+    play music hollow_wind
+    play sound woosh
     camera:
       align (0.8, 0.25)
       ease 1.0 zoom 30.0 blur 1000
@@ -547,6 +572,8 @@ label tmd_part_b:
     voice audio.everett("b30")
     everett "Where are you going?{w=0.25} You're still hurt!"
     "The man's speed didn't slow down."
+
+    play sound woosh
     camera:
       align (0.5, 0.3)
       ease 1.0 zoom 60.0 blur 1000
@@ -587,9 +614,9 @@ label tmd_part_b:
     "My chest grew tight,{w=0.25} straining to get a proper breath in."
     show balth:
       pause 1.0
-      lflipturn
+      ease 0.2 xzoom 1.0
       pause 0.2
-      rflipturn
+      ease 0.2 xzoom -1.0
       pause 1.2
       ease 0.5 xalign -1.0
 
@@ -614,9 +641,6 @@ label tmd_part_b:
     with fade
     "Slowly,{w=0.25} but surely,{w=0.25} the tightness in my chest went away.{w=0.25} The blurriness dissipating as well."
 
-    play music "<silence 2.0>"
-    queue music balthazar fadein 4.0
-
     scene bg bedroom
     show balth a aloof:
       align (0.25, 1.0) ypos 1.25 xzoom -1.0 rotate 5
@@ -624,8 +648,9 @@ label tmd_part_b:
       align (0.65, 1.0) ypos 1.40 rotate -25
     camera:
       align (0.5, 0.75)
-      blur 2.5 zoom 2.0
+      blur 0 zoom 2.0
     with Dissolve(1.5)
+    play music balthazar
     "When my vision cleared,{w=0.25} the man was kneeling right in front of me with an unreadable expression."
 
     voice audio.balth("b11")
@@ -671,16 +696,17 @@ label tmd_part_b:
     everett "You know?"
 
     voice audio.balth("b13")
-    balth smirk "Hehe, I think I understand now."
+    balth smirk "Hehe,{w=0.25} I think I understand now."
 
-    show balth:
-      rotate_pad False
-      ease 0.5 ypos 1.0 rotate 0
+    show balth a:
+      blur 5
+      ease 0.5 ypos 1.0 rotate 0 blur 0
       pause 0.25
-      lflipturn
+      blur 5
+      ease 0.2 xzoom 1.0 blur 0
       pause 0.2
       parallel:
-        linear 1.5 leftest
+        linear 1.5 xalign -0.75
       parallel:
         easein  0.2 yoffset 20
         easeout 0.3 yoffset  0
@@ -698,9 +724,12 @@ label tmd_part_b:
       ease 0.05 xoffset -2
       ease 0.05 xoffset  0
       ease 0.5 ypos 0.0 yalign 1.0 yoffset 0 rotate 0
+    show balth at leftest:
+      rotate_pad False
     camera:
       pause 0.2
       ease 0.5 zoom 1.0 blur 0
+    with dissolve
     "My heart skips a beat,{w=0.25} a smile growing as I eagerly stood."
 
     voice audio.everett("b41")
