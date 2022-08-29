@@ -2,7 +2,7 @@ label credits:
   scene bg bedroom
   show image Solid("#0007")
   with Dissolve(3.0)
-  play music midnight_waltz fadein 3.0
+  play music midnight_waltz volume 0.75 fadein 3.0
 
   $ _game_menu_screen = None
 

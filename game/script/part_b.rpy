@@ -200,7 +200,7 @@ label tmd_part_b:
 
     "They were quick!"
 
-    play music prince volume 0.125
+    play music prince volume 0.5
 
     scene bg bedroom
     show everett c frown at right:
@@ -467,8 +467,7 @@ label tmd_part_b:
       repeat 3
     $ renpy.pause(11.0, hard=True)
 
-    play music prince fadein 4.0 volume 0.125
-
+    play music prince volume 0.5
     "Eleven o'clock.{w=0.25} The fireworks would light up the sky by now."
     show everett c grimace
     "There was no chance I would fall back asleep with him in my bed{dots=4.5} I might as well stay up and watch."
@@ -725,7 +724,7 @@ label tmd_part_b:
       ease 0.05 xoffset  0
       ease 0.5 ypos 0.0 yalign 1.0 yoffset 0 rotate 0
     show balth at leftest:
-      rotate_pad False
+      rotate_pad False xzoom 1.0
     camera:
       pause 0.2
       ease 0.5 zoom 1.0 blur 0

@@ -42,11 +42,11 @@ init python in audio:
   def guard_b(line):
     return "audio/voices/guard_b/{}.ogg".format(line)
 
-
 init python:
   config.has_sound = True  ## These three variables control, among other things, which mixers are shown
   config.has_music = True  ## to the player by default. Setting one of these to False will hide the
   config.has_voice = True  ## appropriate mixer.
 
-  preferences.emphasize_audio = True
-  config.emphasize_audio_channels = ["voice", "sound"]
+  config.default_sfx_volume = 0.50
+  config.default_music_volume = 0.25
+  config.default_voice_volume = 0.50

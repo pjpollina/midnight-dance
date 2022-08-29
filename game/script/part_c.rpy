@@ -149,7 +149,7 @@ label tmd_part_c:
     $ save_name = _("The midnight waltz...")
 
     play music "<silence 3.0>"
-    queue music midnight_waltz volume 0.25 fadein 2.0
+    queue music midnight_waltz fadein 2.0
 
     scene cg waltazar
     with Fade(2.0, 1.0, 3.0)
@@ -232,7 +232,7 @@ label tmd_part_c:
   label .fireworks:
     $ save_name = _("Fires in the sky...")
 
-    play music fireworks volume 0.25
+    play music fireworks
     scene bg balcony lit
     show everett b smile at left:
       xzoom -1.0

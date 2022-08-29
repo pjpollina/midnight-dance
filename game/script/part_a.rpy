@@ -160,7 +160,7 @@ label tmd_part_a:
     show everett b frown at lefter:
       xzoom -1.0
     with Fade(0.0, 1.0, 2.0)
-    play music prince volume 0.125
+    play music prince volume 0.5
 
     play sound [door_shut, "<silence 0.25>", curtain_shut]
     "She closed the balcony doors and pulled the curtains from either side to conceal the outside."

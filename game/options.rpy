@@ -1,7 +1,7 @@
 ## Game Info ###################################################################
 init python:
   config.name           = _("The Midnight Dance")
-  config.version        = "1.0-prerelease"
+  config.version        = "1.0.0"
   config.save_directory = "midnight_dance"
   config.window_icon    = "gui/window_icon.webp"
   gui.about = _p("""
