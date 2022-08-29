@@ -6,7 +6,7 @@
     "**/*.rpyc":   true,
     "**/*.rpyb":   true,
     "**/*.rpymc":  true,
-  
+
     "game/saves":  true,
     "game/cache":  true,
     "game/tl":     true,
